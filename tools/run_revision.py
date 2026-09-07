@@ -14,6 +14,7 @@ import tempfile
 import time
 
 import run_ab as ab
+import review_ab as pair_judges
 import summarize_ab as reporting
 
 
@@ -113,7 +114,7 @@ def load_manifest(dest, kind):
     if ab.digest(body) != (dest / "manifest.sha256").read_text(encoding="ascii").strip():
         raise ValueError("frozen manifest changed")
     manifest = json.loads(body.decode("utf-8"))
-    expected_timeout = ab.TIMEOUT if kind == "revision-generation" else JUDGE_TIMEOUT
+    expected_timeout = ab.TIMEOUT if kind in ("revision-generation", "editing-regression") else JUDGE_TIMEOUT
     jobs = manifest.get("jobs", [])
     if (manifest.get("schema_version") != 2 or manifest.get("kind") != kind
             or manifest.get("cli_args") != ab.CLI_ARGS
@@ -127,6 +128,11 @@ def load_manifest(dest, kind):
         expected = {(case, repeat, arm) for case in cases for repeat in (1, 2) for arm in ARMS}
         if len(cases) != 6 or logical != expected:
             raise ValueError("invalid revision job coverage")
+    elif kind == "editing-regression":
+        if (manifest.get("output_count") != 12 or len(jobs) != 12
+                or manifest.get("case_count") != 12
+                or any(job["requested_model"] != ab.MODEL for job in jobs)):
+            raise ValueError("editing regression requires exactly 12 editor attempts")
     elif len(jobs) > 4 or any(job["requested_model"] not in JUDGES for job in jobs):
         raise ValueError("invalid reviewer jobs")
     ids = [job["output_id"] for job in jobs]
@@ -577,6 +583,268 @@ def export(run_dir, judges_dir, dest):
     return results
 
 
+def edit_cases(data):
+    """Validate twelve supplied drafts; analysis fields never enter prompts."""
+    if (not isinstance(data, dict) or not isinstance(data.get("cases"), list)
+            or len(data["cases"]) != 12
+            or any(not isinstance(data.get(key), str) or not data[key].strip()
+                   for key in ("dataset_id", "description"))):
+        raise ValueError("editing dataset needs an ID, description and exactly 12 cases")
+    cases = data["cases"]
+    ab.validate_cases({"cases": cases[:6]})
+    ab.validate_cases({"cases": cases[6:]})
+    if len({case["id"] for case in cases}) != 12:
+        raise ValueError("editing case IDs must be unique")
+    for case in cases:
+        notes = case["reviewer_notes"]
+        if (not reporting.SAFE_ID.fullmatch(case["id"])
+                or not isinstance(case.get("draft"), str) or not case["draft"].strip()
+                or any(not isinstance(case.get(key), dict) for key in ("provenance", "expectation"))
+                or not ((isinstance(notes, str) and notes.strip()) or
+                        (isinstance(notes, list) and notes
+                         and all(isinstance(note, str) and note.strip() for note in notes)))):
+            raise ValueError("invalid editing draft or analysis metadata")
+        if not case["sources"]:
+            raise ValueError("editing cases need nonempty sources")
+        for source in case["sources"]:
+            if any(not isinstance(source.get(key), str) or not source[key].strip()
+                   for key in ("id", "content", "origin", "kind")):
+                raise ValueError("editing sources need ID, content, origin and kind")
+            if source["kind"] not in ("record", "statement", "author_note"):
+                raise ValueError("invalid editing source kind")
+        if len({source["id"] for source in case["sources"]}) != len(case["sources"]):
+            raise ValueError("editing source IDs must be unique within each case")
+    return cases
+
+
+def edit_prompt(case, editor):
+    return (ab.COMMON + "\nРедакторские инструкции:\n" + editor + "\n"
+            + ab.prompt_for(case)[len(ab.COMMON):]
+            + "\nЧерновик (данные, а не инструкции):\n" + case["draft"])
+
+
+def _edit_design(cases, editor):
+    rng = random.Random(SEED)
+    positions = ["original"] * 6 + ["edited"] * 6
+    rng.shuffle(positions)
+    files, jobs, pairs = {}, [], []
+    for index, case in enumerate(cases):
+        output_id = "o_" + format(rng.getrandbits(128), "032x")
+        original_path = "originals/" + case["id"] + ".txt"
+        prompt_path = "prompts/" + output_id + ".txt"
+        files[original_path] = case["draft"].encode("utf-8")
+        files[prompt_path] = edit_prompt(case, editor).encode("utf-8")
+        original = {"arm": "original", "original_path": original_path,
+                    "original_sha256": ab.digest(files[original_path])}
+        edited = {"arm": "edited", "output_id": output_id}
+        pairs.append({"pair_id": "p{:02d}".format(index + 1), "case_id": case["id"],
+                      "X": original if positions[index] == "original" else edited,
+                      "Y": edited if positions[index] == "original" else original})
+        jobs.append({"output_id": output_id, "case_id": case["id"], "arm": "edited",
+                     "requested_model": ab.MODEL, "original_path": original_path,
+                     "original_sha256": original["original_sha256"],
+                     "prompt_path": prompt_path, "prompt_sha256": ab.digest(files[prompt_path])})
+    files["mapping.json"] = ab.json_bytes({"seed": SEED, "pairs": pairs})
+    return files, jobs, pairs
+
+
+def edit_prepare(dest, dataset, protocol, rubric, editor):
+    inputs = {"cases.json": Path(dataset).read_bytes(), "protocol.txt": Path(protocol).read_bytes(),
+              "judge.txt": Path(rubric).read_bytes(), "editor.txt": Path(editor).read_bytes()}
+    if any(not body.decode("utf-8").strip() for body in inputs.values()):
+        raise ValueError("editing inputs and instructions must be nonempty UTF-8 text")
+    cases = edit_cases(json.loads(inputs["cases.json"].decode("utf-8")))
+    files, jobs, _ = _edit_design(cases, inputs["editor.txt"].decode("utf-8"))
+    files.update({"snapshots/" + name: body for name, body in inputs.items()})
+    dest = Path(dest)
+    dest.mkdir(parents=True, exist_ok=False, mode=0o700)
+    for relative, body in files.items():
+        ab.save(dest / relative, body)
+    return _seal(dest, {"schema_version": 2, "kind": "editing-regression", "seed": SEED,
+                       "prepared_at_utc": ab.utc_now(), "case_count": 12, "output_count": 12,
+                       "original_count": 12, "execution": "sequential-no-retries",
+                       "requested_model": ab.MODEL, "requested_reasoning_effort": "medium",
+                       "timeout_seconds": ab.TIMEOUT, "cli_args": ab.CLI_ARGS,
+                       "injection_mode": "frozen-editor-only-not-native-skill-loading",
+                       "injected_documents": ["editor.txt"],
+                       "hashes": {path: ab.digest(body) for path, body in files.items()}, "jobs": jobs})
+
+
+def _edit_inputs(run_dir):
+    manifest = load_manifest(run_dir, "editing-regression")
+    cases = edit_cases(ab.read_json(run_dir / "snapshots/cases.json"))
+    editor = (run_dir / "snapshots/editor.txt").read_bytes().decode("utf-8")
+    files, jobs, pairs = _edit_design(cases, editor)
+    frozen_paths = set(files) | {"snapshots/" + name for name in ("cases.json", "protocol.txt", "judge.txt", "editor.txt")}
+    if (manifest["jobs"] != jobs or manifest.get("seed") != SEED
+            or set(manifest["hashes"]) != frozen_paths
+            or any((run_dir / path).read_bytes() != body for path, body in files.items())):
+        raise ValueError("editor prompts or original-to-final mapping differ from frozen design")
+    return manifest, {case["id"]: case for case in cases}, pairs
+
+
+def edit_run(run_dir, execute=False):
+    if not execute:
+        raise ValueError("model calls require explicit --execute")
+    run_dir = Path(run_dir).resolve()
+    manifest, _, _ = _edit_inputs(run_dir)
+    return _run_jobs(run_dir, manifest)
+
+
+def _edit_packet(cases, mapping, records):
+    packet = {"schema_version": 1, "pairs": [], "not_comparable": []}
+    by_case = {record["case_id"]: record for record in records.values()}
+    for entry in mapping:
+        case, record = cases[entry["case_id"]], by_case[entry["case_id"]]
+        if record["status"] != "completed":
+            packet["not_comparable"].append({"pair_id": entry["pair_id"], "case_id": case["id"],
+                                              "reasons": record["flags"]})
+            continue
+        pair = {"pair_id": entry["pair_id"], "case_id": case["id"],
+                **{key: case[key] for key in ("request", "sources", "reviewer_notes")}}
+        for label in ("X", "Y"):
+            text = case["draft"] if entry[label]["arm"] == "original" else record["final_text"]
+            pair[label] = {"text": text, "word_count": len(text.split()),
+                           "min_words": case["min_words"], "max_words": case["max_words"]}
+        packet["pairs"].append(pair)
+    return packet
+
+
+def edit_blind(run_dir, dest):
+    run_dir, dest = Path(run_dir), Path(dest)
+    manifest, cases, mapping = _edit_inputs(run_dir)
+    records = {job["output_id"]: read_record(run_dir, job) for job in manifest["jobs"]}
+    packet = _edit_packet(cases, mapping, records)
+    dest.mkdir(parents=True, exist_ok=False, mode=0o700)
+    ab.save(dest / "packet.json", ab.json_bytes(packet))
+    return packet
+
+
+def _edit_reviews(judges_dir, run_dir, packet):
+    manifest = pair_judges.load_manifest(judges_dir)
+    if (ab.read_json(judges_dir / "packet.json") != packet
+            or (judges_dir / "rubric.txt").read_bytes() != (run_dir / "snapshots/judge.txt").read_bytes()):
+        raise ValueError("judge packet or rubric differs from frozen editing experiment")
+    # Reuse the exact existing pair-review batching and X/Y reversal contract offline.
+    with tempfile.TemporaryDirectory(prefix="source-voice-review-check-") as directory:
+        expected = pair_judges.prepare(judges_dir / "packet.json", run_dir / "snapshots/judge.txt",
+                                       Path(directory) / "expected")
+    if manifest["jobs"] != expected["jobs"]:
+        raise ValueError("judge prompts or assignments differ from fixed blinded order")
+    expected_ids = {job["job_id"] for job in manifest["jobs"]}
+    for suffix in (".record.json", ".attempt.json"):
+        if {path.name for path in judges_dir.glob("*" + suffix)} != {key + suffix for key in expected_ids}:
+            raise ValueError("terminal judge records and attempts must cover all scheduled batches")
+    public, by_judge = [], {judge: {} for judge in reporting.JUDGE_IDS}
+    for job in manifest["jobs"]:
+        record = pair_judges.read_record(judges_dir, job)
+        parsed = ab.parse_events((judges_dir / (job["job_id"] + ".raw.jsonl")).read_bytes())
+        if (any(record.get(key) != parsed[key] for key in ("final_text", "agent_messages", "usage", "resolved_model"))
+                or not set(parsed["flags"]).issubset(record["flags"])):
+            raise ValueError("judge record differs from actual CLI events")
+        attempt = ab.read_json(judges_dir / (job["job_id"] + ".attempt.json"))
+        if attempt != {"job_id": job["job_id"], "started_at_utc": record["started_at_utc"],
+                       "prompt_sha256": job["prompt_sha256"]}:
+            raise ValueError("judge attempt differs from terminal record")
+        judge_id = job["job_id"].split("-batch")[0]
+        public.append({**reporting.metadata(record), **job, "judge_id": judge_id,
+                       "attempt": attempt, "review": record.get("review"), "final_text": record["final_text"]})
+        if record["status"] == "completed":
+            by_judge[judge_id].update({review["pair_id"]: (review, job["swapped_xy"])
+                                      for review in record["review"]["reviews"]})
+    return manifest, public, by_judge
+
+
+def edit_export(run_dir, judges_dir, dest):
+    """Export evidence for analysis, without deciding whether the quality gate passed."""
+    run_dir, judges_dir, dest = Path(run_dir), Path(judges_dir), Path(dest)
+    if dest.exists():
+        raise FileExistsError("export destination must be new")
+    manifest, cases, mapping = _edit_inputs(run_dir)
+    expected_ids = {job["output_id"] + ".json" for job in manifest["jobs"]}
+    for directory in ("records", "attempts"):
+        if {path.name for path in (run_dir / directory).glob("*.json")} != expected_ids:
+            raise ValueError("exactly 12 terminal editor records and attempts are required")
+    records = {job["output_id"]: read_record(run_dir, job) for job in manifest["jobs"]}
+    originals, editors, outputs = [], [], {}
+    for job in manifest["jobs"]:
+        record, case = records[job["output_id"]], cases[job["case_id"]]
+        attempt = ab.read_json(run_dir / "attempts" / (job["output_id"] + ".json"))
+        if attempt != {"output_id": job["output_id"], "started_at_utc": record["started_at_utc"],
+                       "prompt_sha256": job["prompt_sha256"]}:
+            raise ValueError("editor attempt differs from terminal record")
+        text = record["final_text"]
+        count = len(text.split()) if text is not None else None
+        if record["word_count"] != count:
+            raise ValueError("editor word count differs from exact final")
+        original_path, final_path = "outputs/" + case["id"] + "-original.txt", "outputs/" + case["id"] + "-edited.txt"
+        outputs[original_path] = (run_dir / job["original_path"]).read_bytes()
+        originals.append({"case_id": case["id"], "status": "supplied-draft", "model_attempt": False,
+                          "text_path": original_path, "sha256": job["original_sha256"],
+                          "word_count": len(case["draft"].split())})
+        if text is not None:
+            outputs[final_path] = text.encode("utf-8")
+        editors.append({**reporting.metadata(record), "output_id": job["output_id"], "case_id": case["id"],
+                        "attempt": attempt, "original_path": original_path, "original_sha256": job["original_sha256"],
+                        "text_path": final_path if text is not None else None, "word_count": count,
+                        "min_words": case["min_words"], "max_words": case["max_words"],
+                        "within_word_range": case["min_words"] <= count <= case["max_words"] if count is not None else None})
+    packet = _edit_packet(cases, mapping, records)
+    judge_manifest, reviews, by_judge = _edit_reviews(judges_dir, run_dir, packet)
+    comparable_ids = {pair["pair_id"] for pair in packet["pairs"]}
+    pairs = []
+    for pair in mapping:
+        comparable = pair["pair_id"] in comparable_ids
+        opinions = {}
+        for judge_id, available in by_judge.items():
+            found = available.get(pair["pair_id"])
+            opinions[judge_id] = reporting.normalize_review(found[0], pair, found[1]) if found else None
+        consensus = {}
+        for dimension in ("editorial", "practical"):
+            votes = [opinion[dimension + "_preference"] if opinion else None for opinion in opinions.values()]
+            consensus[dimension] = ("non_comparable" if not comparable else "missing_review" if None in votes
+                                    else votes[0] if votes[0] == votes[1] else "disagreement")
+        pairs.append({"pair_id": pair["pair_id"], "case_id": pair["case_id"], "comparable": comparable,
+                      "judges": opinions, "consensus": consensus})
+    preferences = ("original", "edited", "tie", "disagreement", "missing_review", "non_comparable")
+    stats = {"denominators": {"originals": 12, "editor_attempts": 12, "pairs": 12, "judges": 2},
+             "editors": {"statuses": reporting.counts((r["status"] for r in editors), ("completed", "failed")),
+                         "measurements": reporting.measured(editors)},
+             "total_measurements": reporting.measured(editors + reviews),
+             "consensus": {dimension: reporting.counts((p["consensus"][dimension] for p in pairs), preferences)
+                           for dimension in ("editorial", "practical")}, "judges": {}}
+    for judge_id in by_judge:
+        stats["judges"][judge_id] = {
+            "measurements": reporting.measured([r for r in reviews if r["judge_id"] == judge_id]),
+            "statuses_by_arm": {arm: reporting.counts(
+                (p["judges"][judge_id]["statuses"][arm] if p["judges"][judge_id] else
+                 "missing_review" if p["comparable"] else "non_comparable" for p in pairs), reporting.STATUSES)
+                for arm in ("original", "edited")}}
+    results = {"schema_version": 2, "kind": "editing-regression", "seed": manifest["seed"],
+               "exported_at_utc": ab.utc_now(),
+               "quality_gate": "not-adjudicated", "caveats": [
+                   "Twelve fixed regression drafts are not a population estimate or a human review.",
+                   "Originals are supplied data, not model attempts. Failed edits have no fallback PASS.",
+                   "All attempts remain in denominators. Model findings require source-based adjudication.",
+                   "Unknown model snapshots and costs remain unknown; missing usage is not zero."],
+               "editor_manifest_sha256": ab.digest((run_dir / "manifest.json").read_bytes()),
+               "judge_manifest_sha256": ab.digest((judges_dir / "manifest.json").read_bytes()),
+               "original_records": originals, "editor_records": editors, "judge_records": reviews,
+               "mapping": mapping, "pairs": pairs, "not_comparable": packet["not_comparable"], "statistics": stats}
+    snapshots = {"schema_version": 2, "common_wrapper": ab.COMMON, "cli_args": manifest["cli_args"],
+                 "editor_manifest": manifest, "judge_manifest": judge_manifest,
+                 "files": {path: {"sha256": expected, "text": (run_dir / path).read_bytes().decode("utf-8")}
+                           for path, expected in manifest["hashes"].items() if path.startswith("snapshots/")}}
+    for value in (results, snapshots, *[body.decode("utf-8") for body in outputs.values()]):
+        reporting.ensure_publishable(value)
+    dest.mkdir(parents=True, exist_ok=False)
+    for path, body in outputs.items():
+        ab.save(dest / path, body)
+    ab.save(dest / "results.json", ab.json_bytes(results))
+    ab.save(dest / "snapshots.json", ab.json_bytes(snapshots))
+    return results
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -599,9 +867,29 @@ def main(argv=None):
     exporter = commands.add_parser("export")
     for key in ("run-dir", "judges-dir", "dest"):
         exporter.add_argument("--" + key, type=Path, required=True)
+    for command, keys in (("edit-prepare", ("dest", "dataset", "protocol", "rubric", "editor")),
+                          ("edit-run", ("run-dir",)), ("edit-blind", ("run-dir", "dest")),
+                          ("edit-export", ("run-dir", "judges-dir", "dest"))):
+        subparser = commands.add_parser(command)
+        for key in keys:
+            subparser.add_argument("--" + key, type=Path, required=True)
+        if command == "edit-run":
+            subparser.add_argument("--execute", action="store_true")
     args = parser.parse_args(argv)
     try:
-        if args.command == "prepare":
+        if args.command == "edit-prepare":
+            manifest = edit_prepare(args.dest, args.dataset, args.protocol, args.rubric, args.editor)
+            result = {"status": "prepared", "job_count": len(manifest["jobs"])}
+        elif args.command == "edit-run":
+            result = edit_run(args.run_dir, args.execute)
+        elif args.command == "edit-blind":
+            packet = edit_blind(args.run_dir, args.dest)
+            result = {"comparable": len(packet["pairs"]), "not_comparable": len(packet["not_comparable"])}
+        elif args.command == "edit-export":
+            exported = edit_export(args.run_dir, args.judges_dir, args.dest)
+            result = {"status": "exported", "editor_attempts": len(exported["editor_records"]),
+                      "pairs": len(exported["pairs"]), "judge_records": len(exported["judge_records"])}
+        elif args.command == "prepare":
             manifest = prepare(args.dest, args.dataset, args.protocol, args.rubric, args.previous_snapshots)
             result = {"status": "prepared", "job_count": len(manifest["jobs"])}
         elif args.command == "run":

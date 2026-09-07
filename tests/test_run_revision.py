@@ -304,6 +304,281 @@ class RevisionRunnerTests(unittest.TestCase):
         self.assertFalse((self.root / "export").exists())
 
 
+class EditingRegressionTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.dataset, self.protocol = self.root / "cases.json", self.root / "PROTOCOL.md"
+        self.rubric, self.editor = self.root / "JUDGE.md", self.root / "EDITOR.md"
+        self.run_dir, self.judges_dir = self.root / "run", self.root / "judges"
+        self.cases = [{"id": "synthetic-" + str(index), "request": "Edit a synthetic report.",
+                       "sources": [{"id": "s1", "content": "Synthetic fact.", "use": "public",
+                                    "origin": "Synthetic fixture", "kind": "record"}],
+                       "min_words": 2, "max_words": 10, "reviewer_notes": "SECRET REVIEW NOTE",
+                       "draft": "  Original текст {}.\r\n\n".format(index),
+                       "provenance": {"marker": "SECRET PROVENANCE"},
+                       "expectation": {"marker": "SECRET EXPECTATION"}} for index in range(12)]
+        self.dataset.write_bytes(ab.json_bytes({"dataset_id": "synthetic-editing",
+                                                "description": "Offline fixture", "cases": self.cases}))
+        self.protocol.write_bytes(b"FROZEN PROTOCOL\r\n")
+        self.rubric.write_bytes(b"FROZEN JUDGE RUBRIC\r\n")
+        self.editor.write_bytes(b"FROZEN EDITOR\r\n")
+
+    def prepare(self, dest=None):
+        return revision.edit_prepare(dest or self.run_dir, self.dataset, self.protocol, self.rubric, self.editor)
+
+    def run_fake(self, side_effect=None, reviewer=False):
+        method = revision.pair_judges.run if reviewer else revision.edit_run
+        dest = self.judges_dir if reviewer else self.run_dir
+        with patch.object(revision.shutil, "which", return_value="synthetic-codex"), patch.object(
+                revision.subprocess, "run", side_effect=side_effect,
+                return_value=subprocess.CompletedProcess([], 0, events(), b"private raw stderr")) as call, redirect_stdout(io.StringIO()):
+            result = method(dest, execute=True)
+        return result, call
+
+    def prepare_judges(self, packet=None, rubric=None):
+        if packet is None:
+            revision.edit_blind(self.run_dir, self.root / "blind")
+            packet = self.root / "blind/packet.json"
+        return revision.pair_judges.prepare(packet, rubric or self.rubric, self.judges_dir)
+
+    def fake_judge(self, command, **kwargs):
+        prompt = kwargs["input"].decode("utf-8")
+        self.assertNotIn("SECRET EXPECTATION", prompt)
+        self.assertNotIn("SECRET PROVENANCE", prompt)
+        self.assertIn("SECRET REVIEW NOTE", prompt)
+        pairs = json.loads(prompt.split("Пары для оценки:\n")[1])["pairs"]
+        reviews = []
+        for pair in pairs:
+            original = "X" if "Original" in pair["X"]["text"] else "Y"
+            reviews.append({"pair_id": pair["pair_id"],
+                            "X": {"status": "revision" if original == "X" else "pass", "findings": []},
+                            "Y": {"status": "revision" if original == "Y" else "pass", "findings": []},
+                            "editorial_preference": "Y" if original == "X" else "X",
+                            "editorial_reason": "Synthetic improvement.", "practical_preference": "tie",
+                            "practical_reason": "Synthetic tie."})
+        final = json.dumps({"reviews": reviews, "limits": "Offline fake reviewer only."})
+        return subprocess.CompletedProcess(command, 0, events(final), b"")
+
+    def test_prepare_freezes_twelve_drafts_without_skill_or_analysis_in_editor_prompts(self):
+        manifest = self.prepare()
+        second = self.prepare(self.root / "second")
+        self.assertEqual(manifest["kind"], "editing-regression")
+        self.assertEqual(manifest["jobs"], second["jobs"])
+        self.assertEqual(manifest["hashes"], second["hashes"])
+        self.assertEqual(len(manifest["jobs"]), 12)
+        self.assertEqual((self.run_dir / "snapshots/cases.json").read_bytes(), self.dataset.read_bytes())
+        mapping = ab.read_json(self.run_dir / "mapping.json")["pairs"]
+        self.assertEqual(Counter(pair["X"]["arm"] for pair in mapping), {"original": 6, "edited": 6})
+        for case, job in zip(self.cases, manifest["jobs"]):
+            prompt = (self.run_dir / job["prompt_path"]).read_bytes().decode("utf-8")
+            self.assertIn(ab.COMMON, prompt)
+            self.assertIn("FROZEN EDITOR\r\n", prompt)
+            self.assertTrue(prompt.endswith(case["draft"]))
+            self.assertNotIn("SECRET", prompt)
+            self.assertNotIn("FROZEN PROTOCOL", prompt)
+            self.assertNotIn("FROZEN JUDGE", prompt)
+            self.assertEqual((self.run_dir / job["original_path"]).read_bytes(), case["draft"].encode("utf-8"))
+        self.assertEqual(manifest["injected_documents"], ["editor.txt"])
+
+    def test_invalid_case_count_and_duplicate_ids_are_rejected_before_prepare(self):
+        data = ab.read_json(self.dataset)
+        data["cases"].pop()
+        self.dataset.write_bytes(ab.json_bytes(data))
+        with self.assertRaises(ValueError):
+            self.prepare()
+        data["cases"].append(copy.deepcopy(data["cases"][0]))
+        self.dataset.write_bytes(ab.json_bytes(data))
+        with self.assertRaises(ValueError):
+            self.prepare()
+        self.assertFalse(self.run_dir.exists())
+
+    def test_execute_gate_and_each_frozen_input_tamper_prevent_calls(self):
+        manifest = self.prepare()
+        targets = ["manifest.json", "snapshots/cases.json", "snapshots/protocol.txt", "snapshots/judge.txt",
+                   "snapshots/editor.txt", "mapping.json", manifest["jobs"][0]["original_path"],
+                   manifest["jobs"][0]["prompt_path"]]
+        with patch.object(revision.subprocess, "run") as call:
+            with self.assertRaises(ValueError):
+                revision.edit_run(self.run_dir)
+            for relative in targets:
+                with self.subTest(relative=relative):
+                    path = self.run_dir / relative
+                    original = path.read_bytes()
+                    path.write_bytes(original + b"changed")
+                    with self.assertRaises(ValueError):
+                        revision.edit_run(self.run_dir, execute=True)
+                    path.write_bytes(original)
+        call.assert_not_called()
+
+    def test_empty_instructions_and_invalid_source_contract_are_rejected(self):
+        data = ab.read_json(self.dataset)
+        bad_sources = [[], data["cases"][0]["sources"] * 2,
+                       [{**data["cases"][0]["sources"][0], "kind": "unknown"}],
+                       [{**data["cases"][0]["sources"][0], "content": "  "}]]
+        for sources in bad_sources:
+            with self.subTest(sources=sources):
+                changed = copy.deepcopy(data)
+                changed["cases"][0]["sources"] = sources
+                self.dataset.write_bytes(ab.json_bytes(changed))
+                with self.assertRaises(ValueError):
+                    self.prepare()
+                self.assertFalse(self.run_dir.exists())
+        self.dataset.write_bytes(ab.json_bytes(data))
+        for path in (self.protocol, self.rubric, self.editor):
+            with self.subTest(path=path.name):
+                original = path.read_bytes()
+                path.write_bytes(b" \r\n")
+                with self.assertRaises(ValueError):
+                    self.prepare()
+                self.assertFalse(self.run_dir.exists())
+                path.write_bytes(original)
+        data["cases"][0]["reviewer_notes"] = ["SECRET REVIEW NOTE"]
+        self.dataset.write_bytes(ab.json_bytes(data))
+        self.assertEqual(len(self.prepare()["jobs"]), 12)
+
+    def test_exactly_twelve_fresh_calls_and_terminal_records_are_not_repeated(self):
+        manifest = self.prepare()
+        directories = []
+
+        def fake(command, **kwargs):
+            directory = Path(kwargs["cwd"])
+            self.assertEqual(list(directory.iterdir()), [])
+            self.assertEqual(command, ["synthetic-codex"] + ab.CLI_ARGS)
+            self.assertEqual(kwargs["input"], (self.run_dir / manifest["jobs"][len(directories)]["prompt_path"]).read_bytes())
+            directories.append(directory)
+            return subprocess.CompletedProcess(command, 0, events(), b"")
+
+        result, call = self.run_fake(fake)
+        self.assertEqual(result, {"completed": 12, "failed": 0, "executed_now": 12, "skipped": 0})
+        self.assertEqual((call.call_count, len(set(directories))), (12, 12))
+        self.assertFalse(any(path.exists() for path in directories))
+        result, repeated = self.run_fake()
+        repeated.assert_not_called()
+        self.assertEqual(result["skipped"], 12)
+
+    def test_unfinished_attempt_blocks_every_pending_call(self):
+        manifest = self.prepare()
+        ab.save(self.run_dir / "attempts" / (manifest["jobs"][3]["output_id"] + ".json"), b"{}")
+        with patch.object(revision.subprocess, "run") as call, self.assertRaises(ValueError):
+            revision.edit_run(self.run_dir, execute=True)
+        call.assert_not_called()
+
+    def test_complete_pair_review_export_preserves_bytes_and_normalizes_both_judges(self):
+        self.prepare()
+        self.run_fake()
+        manifest = self.prepare_judges()
+        self.assertEqual(len(manifest["jobs"]), 4)
+        self.assertEqual(manifest["jobs"][0]["pair_ids"], ["p01", "p02", "p03", "p04", "p05", "p06"])
+        self.assertEqual(manifest["jobs"][2]["pair_ids"], ["p12", "p11", "p10", "p09", "p08", "p07"])
+        self.assertTrue(manifest["jobs"][2]["swapped_xy"])
+        result, call = self.run_fake(self.fake_judge, reviewer=True)
+        self.assertEqual((result["completed"], call.call_count), (4, 4))
+        dest = self.root / "export"
+        exported = revision.edit_export(self.run_dir, self.judges_dir, dest)
+        self.assertEqual((len(exported["original_records"]), len(exported["editor_records"])), (12, 12))
+        self.assertEqual(exported["statistics"]["total_measurements"]["input_tokens"]["observed_total"], 160)
+        self.assertEqual(exported["quality_gate"], "not-adjudicated")
+        self.assertEqual(len(list((dest / "outputs").glob("*.txt"))), 24)
+        for case in self.cases:
+            self.assertEqual((dest / ("outputs/" + case["id"] + "-original.txt")).read_bytes(), case["draft"].encode("utf-8"))
+            self.assertEqual((dest / ("outputs/" + case["id"] + "-edited.txt")).read_bytes(), b"  Synthetic final.\r\n\n")
+        for pair in exported["pairs"]:
+            self.assertEqual(pair["consensus"], {"editorial": "edited", "practical": "tie"})
+            self.assertEqual(pair["judges"]["judge1"]["statuses"], {"original": "revision", "edited": "pass"})
+            self.assertEqual(pair["judges"]["judge2"]["statuses"], {"original": "revision", "edited": "pass"})
+        self.assertFalse(any(row["model_attempt"] for row in exported["original_records"]))
+        serialized = json.dumps(exported)
+        self.assertNotIn(str(self.root), serialized)
+        self.assertNotIn("private raw stderr", serialized)
+        self.assertNotIn('"prompt":', serialized)
+
+    def test_failed_edit_and_failed_judges_remain_in_twelve_pair_denominator(self):
+        self.prepare()
+        failure = subprocess.TimeoutExpired("synthetic", 180, output=b"partial")
+        result, call = self.run_fake([failure] + [subprocess.CompletedProcess([], 0, events(), b"")] * 11)
+        self.assertEqual((result["failed"], call.call_count), (1, 12))
+        _, repeated = self.run_fake()
+        repeated.assert_not_called()
+        self.prepare_judges()
+        packet = ab.read_json(self.judges_dir / "packet.json")
+        self.assertEqual((len(packet["pairs"]), len(packet["not_comparable"])), (11, 1))
+        self.assertNotIn("original_path", json.dumps(packet))
+        self.assertNotIn("output_id", json.dumps(packet))
+        self.run_fake(reviewer=True)
+        exported = revision.edit_export(self.run_dir, self.judges_dir, self.root / "export")
+        votes = exported["statistics"]["consensus"]["editorial"]
+        self.assertEqual((votes["non_comparable"], votes["missing_review"], votes["tie"]), (1, 11, 0))
+        self.assertEqual(sum(votes.values()), 12)
+        self.assertIsNone(exported["editor_records"][0]["text_path"])
+        self.assertEqual(exported["editor_records"][0]["status"], "failed")
+        self.assertEqual(len(exported["editor_records"]), 12)
+
+    def test_raw_events_and_forged_final_are_checked_against_cli_events(self):
+        manifest = self.prepare()
+        self.run_fake()
+        self.prepare_judges()
+        self.run_fake(self.fake_judge, reviewer=True)
+        record_path = self.judges_dir / "judge1-batch1.record.json"
+        record = ab.read_json(record_path)
+        changed = record["final_text"].replace("Synthetic improvement.", "Forged improvement.")
+        record.update(final_text=changed, final_sha256=ab.digest(changed.encode("utf-8")),
+                      review=json.loads(changed), agent_messages=[changed])
+        record_path.write_bytes(ab.json_bytes(record))
+        with self.assertRaisesRegex(ValueError, "actual CLI events"):
+            revision.edit_export(self.run_dir, self.judges_dir, self.root / "export")
+        raw = self.run_dir / "raw" / (manifest["jobs"][0]["output_id"] + ".jsonl")
+        raw.write_bytes(b"tampered")
+        with self.assertRaises(ValueError):
+            revision.edit_blind(self.run_dir, self.root / "second-blind")
+
+    def test_export_rejects_changed_reviewer_materials_and_original_final_mapping(self):
+        manifest = self.prepare()
+        self.run_fake()
+        packet = revision.edit_blind(self.run_dir, self.root / "blind")
+        packet["pairs"][0]["sources"][0]["content"] = "Forged source."
+        changed = self.root / "changed-packet.json"
+        changed.write_bytes(ab.json_bytes(packet))
+        self.prepare_judges(packet=changed)
+        self.run_fake(self.fake_judge, reviewer=True)
+        with self.assertRaisesRegex(ValueError, "packet or rubric"):
+            revision.edit_export(self.run_dir, self.judges_dir, self.root / "export")
+        mapping = ab.read_json(self.run_dir / "mapping.json")
+        mapping["pairs"][0]["case_id"] = self.cases[1]["id"]
+        body = ab.json_bytes(mapping)
+        (self.run_dir / "mapping.json").write_bytes(body)
+        manifest["hashes"]["mapping.json"] = ab.digest(body)
+        body = ab.json_bytes(manifest)
+        (self.run_dir / "manifest.json").write_bytes(body)
+        (self.run_dir / "manifest.sha256").write_bytes((ab.digest(body) + "\n").encode("ascii"))
+        with self.assertRaisesRegex(ValueError, "original-to-final mapping"):
+            revision.edit_blind(self.run_dir, self.root / "second-blind")
+
+    def test_export_rejects_changed_rubric_and_resealed_judge_prompt(self):
+        self.prepare()
+        self.run_fake()
+        revision.edit_blind(self.run_dir, self.root / "blind")
+        self.rubric.write_bytes(b"DIFFERENT RUBRIC")
+        manifest = self.prepare_judges(packet=self.root / "blind/packet.json")
+        self.run_fake(self.fake_judge, reviewer=True)
+        with self.assertRaisesRegex(ValueError, "packet or rubric"):
+            revision.edit_export(self.run_dir, self.judges_dir, self.root / "export")
+        # A valid, re-sealed review manifest still must match reconstructed prompts.
+        self.judges_dir = self.root / "second-judges"
+        self.rubric.write_bytes(b"FROZEN JUDGE RUBRIC\r\n")
+        manifest = self.prepare_judges(packet=self.root / "blind/packet.json")
+        prompt_path = self.judges_dir / "judge1-batch1.prompt.txt"
+        body = prompt_path.read_bytes() + b"Extra judge instruction."
+        prompt_path.write_bytes(body)
+        manifest["jobs"][0]["prompt_sha256"] = ab.digest(body)
+        body = ab.json_bytes(manifest)
+        (self.judges_dir / "manifest.json").write_bytes(body)
+        (self.judges_dir / "manifest.sha256").write_bytes((ab.digest(body) + "\n").encode("ascii"))
+        with self.assertRaisesRegex(ValueError, "fixed blinded order"):
+            revision.edit_export(self.run_dir, self.judges_dir, self.root / "export")
+
+
 class RevisionArtifactTests(unittest.TestCase):
     def test_recorded_checker_reports_match_exact_public_outputs_and_sources(self):
         directory = ROOT / "evals/revision-2026-09-07"
