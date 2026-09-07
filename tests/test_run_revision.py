@@ -382,6 +382,95 @@ class EditingRegressionTests(unittest.TestCase):
             self.assertEqual((self.run_dir / job["original_path"]).read_bytes(), case["draft"].encode("utf-8"))
         self.assertEqual(manifest["injected_documents"], ["editor.txt"])
 
+    def test_astra_selection_is_frozen_executed_and_exported_without_changing_prompts(self):
+        default = self.prepare(self.root / "default")
+        argv = ["edit-prepare", "--dest", str(self.run_dir), "--dataset", str(self.dataset),
+                "--protocol", str(self.protocol), "--rubric", str(self.rubric),
+                "--editor", str(self.editor), "--model", "gpt-6-astra"]
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(revision.main(argv), 0)
+        manifest = revision.load_manifest(self.run_dir, "editing-regression")
+        self.assertEqual(manifest["requested_model"], "gpt-6-astra")
+        self.assertEqual(manifest["hashes"], default["hashes"])
+        expected_args = list(ab.CLI_ARGS)
+        expected_args[expected_args.index("--model") + 1] = "gpt-6-astra"
+        self.assertEqual(manifest["cli_args"], expected_args)
+        result, calls = self.run_fake()
+        self.assertEqual(result["completed"], 12)
+        for call in calls.call_args_list:
+            self.assertEqual(call.args[0], ["synthetic-codex"] + expected_args)
+        self.prepare_judges()
+        self.run_fake(self.fake_judge, reviewer=True)
+        dest = self.root / "export"
+        exported = revision.edit_export(self.run_dir, self.judges_dir, dest)
+        self.assertEqual({record["requested_model"] for record in exported["editor_records"]}, {"gpt-6-astra"})
+        snapshots = ab.read_json(dest / "snapshots.json")
+        self.assertEqual(snapshots["cli_args"], expected_args)
+        self.assertEqual(snapshots["editor_manifest"], manifest)
+        self.assertEqual(ab.CLI_ARGS[ab.CLI_ARGS.index("--model") + 1], "gpt-5.6-sol")
+
+    def test_unknown_editor_model_is_rejected_before_creating_run_directory(self):
+        with self.assertRaisesRegex(ValueError, "unsupported editor model"):
+            revision.edit_prepare(self.run_dir, self.dataset, self.protocol, self.rubric,
+                                  self.editor, model="unsupported-model")
+        self.assertFalse(self.run_dir.exists())
+
+    def test_resealed_inconsistent_editor_model_is_rejected_before_run_blind_and_export(self):
+        manifest = self.prepare()
+        unsupported = copy.deepcopy(manifest)
+        unsupported["requested_model"] = "unsupported-model"
+        changed_model = copy.deepcopy(manifest)
+        changed_model["requested_model"] = "gpt-6-astra"
+        changed_job = copy.deepcopy(manifest)
+        changed_job["jobs"][0]["requested_model"] = "gpt-6-astra"
+        changed_args = copy.deepcopy(manifest)
+        changed_args["cli_args"][changed_args["cli_args"].index("--model") + 1] = "gpt-6-astra"
+        for variant in (unsupported, changed_model, changed_job, changed_args):
+            with self.subTest(model=variant["requested_model"], jobs=variant["jobs"][0]["requested_model"]):
+                body = ab.json_bytes(variant)
+                (self.run_dir / "manifest.json").write_bytes(body)
+                (self.run_dir / "manifest.sha256").write_bytes((ab.digest(body) + "\n").encode("ascii"))
+                with patch.object(revision.subprocess, "run") as call:
+                    with self.assertRaises(ValueError):
+                        revision.edit_run(self.run_dir, execute=True)
+                    with self.assertRaises(ValueError):
+                        revision.edit_blind(self.run_dir, self.root / "blind")
+                    with self.assertRaises(ValueError):
+                        revision.edit_export(self.run_dir, self.judges_dir, self.root / "export")
+                call.assert_not_called()
+                self.assertFalse((self.root / "blind").exists())
+                self.assertFalse((self.root / "export").exists())
+
+    def test_astra_record_cannot_claim_a_different_editor_model(self):
+        manifest = revision.edit_prepare(self.run_dir, self.dataset, self.protocol, self.rubric,
+                                         self.editor, model="gpt-6-astra")
+        self.run_fake()
+        job = manifest["jobs"][0]
+        record_path = self.run_dir / "records" / (job["output_id"] + ".json")
+        record = ab.read_json(record_path)
+        record["requested_model"] = ab.MODEL
+        record_path.write_bytes(ab.json_bytes(record))
+        with self.assertRaisesRegex(ValueError, "frozen job"):
+            revision.edit_blind(self.run_dir, self.root / "blind")
+
+    def test_default_model_reproduces_both_historical_editor_manifests_exactly(self):
+        for name, results_dir in (("reliability-next", "regression-results"),
+                                  ("reliability-source-first-2026-09-07", "results")):
+            with self.subTest(experiment=name):
+                snapshots = ab.read_json(ROOT / "evals" / name / results_dir / "snapshots.json")
+                historical = snapshots["editor_manifest"]
+                files = snapshots["files"]
+                self.dataset.write_bytes(files["snapshots/cases.json"]["text"].encode("utf-8"))
+                self.protocol.write_bytes(files["snapshots/protocol.txt"]["text"].encode("utf-8"))
+                self.rubric.write_bytes(files["snapshots/judge.txt"]["text"].encode("utf-8"))
+                self.editor.write_bytes(files["snapshots/editor.txt"]["text"].encode("utf-8"))
+                dest = self.root / name
+                with patch.object(ab, "utc_now", return_value=historical["prepared_at_utc"]):
+                    generated = self.prepare(dest)
+                self.assertEqual(generated, historical)
+                self.assertEqual((dest / "manifest.json").read_bytes(), ab.json_bytes(historical))
+                self.assertEqual(revision._edit_inputs(dest)[0], historical)
+
     def test_invalid_case_count_and_duplicate_ids_are_rejected_before_prepare(self):
         data = ab.read_json(self.dataset)
         data["cases"].pop()

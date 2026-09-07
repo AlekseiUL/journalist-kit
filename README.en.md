@@ -4,6 +4,14 @@ A Russian-first editorial skill for the writing agent you already use.
 
 [Русский README](README.md) · [Installation](docs/integrations.md) · [Evaluation](docs/evaluation.md)
 
+**New six-form pilot:** 24 fresh outputs did not establish a consistent beta.3
+advantage over a plain writer; source-based auditing found meaning distortions.
+A reader packet is ready, with zero human reviews so far.
+[Results and limitations](evals/product-six-forms-2026-09-07/README.md).
+A separate Astra editor repaired 6/6 known defects, but it is not installed
+or tested in combination with the skill on new tasks.
+[Editor regression](evals/editor-astra-2026-09-07/README.md).
+
 Source-bound journalism, a configurable author voice, and structural anti-slop
 editing. One writer by default; specialist help only when it adds real value.
 The core workflow is provider-independent. The reference material and primary
@@ -22,9 +30,9 @@ This is an **experimental beta**, not an unconditionally recommended upgrade.
 The [first beta.1 pilot](evals/ab-2026-09-07/README.md) and
 [beta.2 experiment](evals/revision-2026-09-07/README.md) remain unchanged.
 
-This is currently an unpublished local release candidate. The owner has not yet
-confirmed the proposed public repository and license. The clone command below
-is for the eventual publication; local checkout users can test the installer now.
+This is a private beta in `AlekseiUL/journalist-kit`. The clone command below
+requires repository access and GitHub authentication. A public release and
+distribution license have not been approved.
 
 ## Install
 

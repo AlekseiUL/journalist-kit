@@ -1,0 +1,2118 @@
+{
+  "schema_version": 2,
+  "kind": "editing-regression",
+  "seed": 20260908,
+  "exported_at_utc": "2026-09-07T18:43:15.951518Z",
+  "quality_gate": "not-adjudicated",
+  "caveats": [
+    "Twelve fixed regression drafts are not a population estimate or a human review.",
+    "Originals are supplied data, not model attempts. Failed edits have no fallback PASS.",
+    "All attempts remain in denominators. Model findings require source-based adjudication.",
+    "Unknown model snapshots and costs remain unknown; missing usage is not zero."
+  ],
+  "editor_manifest_sha256": "5e85c039bbeac638b0ddeb0d59066f2220319f03c055237204522095aeee3b95",
+  "judge_manifest_sha256": "4749c8fd714f1fc644dfb50c256bca422d8eb18cf9bbf3ade0352117e4384c4f",
+  "original_records": [
+    {
+      "case_id": "e01",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e01-original.txt",
+      "sha256": "c7eb03c8a57dbbfc7bbc1c4299ff98cba4c32115f02e0c7fef266b59681fac96",
+      "word_count": 105
+    },
+    {
+      "case_id": "e02",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e02-original.txt",
+      "sha256": "0e1064474592b780fd023da2f79e548c7dc82583cfcdd9421669d4ecd368c318",
+      "word_count": 210
+    },
+    {
+      "case_id": "e03",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e03-original.txt",
+      "sha256": "e6e785352427def5b42a132fc54faa77e5de40800943c909be498afb7cba38d2",
+      "word_count": 237
+    },
+    {
+      "case_id": "e04",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e04-original.txt",
+      "sha256": "b799182e382d73bb7ad810c9d507f809e9d001f53df0a67601780807a39a6fcc",
+      "word_count": 104
+    },
+    {
+      "case_id": "e05",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e05-original.txt",
+      "sha256": "aadbfae3bd97058ee0dffd138969a98fde5113131c83aa37621b0b5ff64919be",
+      "word_count": 122
+    },
+    {
+      "case_id": "e06",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e06-original.txt",
+      "sha256": "25c08e5504183a36846484169f541ecd8439b308f94b10f2be9677e0d82cffd4",
+      "word_count": 119
+    },
+    {
+      "case_id": "e07",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e07-original.txt",
+      "sha256": "3b81fd045d8919e75b9b8058e5db5d5f011fe5b6f49ea8d06d2db85044f392f6",
+      "word_count": 107
+    },
+    {
+      "case_id": "e08",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e08-original.txt",
+      "sha256": "02d6edd13b4496ac6c22f6d831caffe3a85a4dc5ba2077be174435c7d1d4cc14",
+      "word_count": 203
+    },
+    {
+      "case_id": "e09",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e09-original.txt",
+      "sha256": "d7472f32e859aa7f9b8c3810eed5bf08cb5e3bc101b6c7e95868028b8cb467dd",
+      "word_count": 107
+    },
+    {
+      "case_id": "e10",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e10-original.txt",
+      "sha256": "a37c8583ad09f13dbcfd6c490787b619d76a2a454651f64a3a44823836e2f1a8",
+      "word_count": 241
+    },
+    {
+      "case_id": "e11",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e11-original.txt",
+      "sha256": "13393ae77c5cba01c92f492bc44decc19e533cc9cc41a85b2aefc0c1817707dc",
+      "word_count": 140
+    },
+    {
+      "case_id": "e12",
+      "status": "supplied-draft",
+      "model_attempt": false,
+      "text_path": "outputs/e12-original.txt",
+      "sha256": "24bf50b40af6bc3c05149ca32294d561b497d163fd6820d561439ceaf5557d61",
+      "word_count": 103
+    }
+  ],
+  "editor_records": [
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:31:31.315531Z",
+      "ended_at_utc": "2026-09-07T18:31:45.374545Z",
+      "wall_seconds": 14.058884,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 10928,
+        "cached_input_tokens": 7424,
+        "output_tokens": 226,
+        "reasoning_output_tokens": 22
+      },
+      "prompt_sha256": "c7bae70b9ea735de42508527c2a6cfd4da7c20e3b4273f9a55c8143afba49a54",
+      "final_sha256": "c7eb03c8a57dbbfc7bbc1c4299ff98cba4c32115f02e0c7fef266b59681fac96",
+      "raw_stdout_sha256": "b64ddb3c15859e5d3aeb56dcb2b032fb3aad2b70a003842ae736b17a6c4b9edf",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_8133fb9dfa1486061c9c08d37bf71937",
+      "case_id": "e01",
+      "attempt": {
+        "output_id": "o_8133fb9dfa1486061c9c08d37bf71937",
+        "started_at_utc": "2026-09-07T18:31:31.315531Z",
+        "prompt_sha256": "c7bae70b9ea735de42508527c2a6cfd4da7c20e3b4273f9a55c8143afba49a54"
+      },
+      "original_path": "outputs/e01-original.txt",
+      "original_sha256": "c7eb03c8a57dbbfc7bbc1c4299ff98cba4c32115f02e0c7fef266b59681fac96",
+      "text_path": "outputs/e01-edited.txt",
+      "word_count": 105,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:31:45.376211Z",
+      "ended_at_utc": "2026-09-07T18:32:08.440958Z",
+      "wall_seconds": 23.064617,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11652,
+        "cached_input_tokens": 7424,
+        "output_tokens": 512,
+        "reasoning_output_tokens": 78
+      },
+      "prompt_sha256": "15e2609220c675bf45c17f2445a5983f697c47293db4d247cbdee2b243eae36d",
+      "final_sha256": "e55ba543f31813914fa5498496e1ddb6c3bd57cd4e8428ef5ad1b2bf7689b07b",
+      "raw_stdout_sha256": "7263c6b3cb8723f9d89b4a55777def7f3bde8d2d435c39b2e1a4627093e96949",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_6f076ef969646e413625c3edfbf48200",
+      "case_id": "e02",
+      "attempt": {
+        "output_id": "o_6f076ef969646e413625c3edfbf48200",
+        "started_at_utc": "2026-09-07T18:31:45.376211Z",
+        "prompt_sha256": "15e2609220c675bf45c17f2445a5983f697c47293db4d247cbdee2b243eae36d"
+      },
+      "original_path": "outputs/e02-original.txt",
+      "original_sha256": "0e1064474592b780fd023da2f79e548c7dc82583cfcdd9421669d4ecd368c318",
+      "text_path": "outputs/e02-edited.txt",
+      "word_count": 226,
+      "min_words": 180,
+      "max_words": 260,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:32:08.443351Z",
+      "ended_at_utc": "2026-09-07T18:32:37.799009Z",
+      "wall_seconds": 29.355486,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11673,
+        "cached_input_tokens": 7424,
+        "output_tokens": 779,
+        "reasoning_output_tokens": 323
+      },
+      "prompt_sha256": "cd6c5b4fa4916aab388eae31933861ea470f76d4a21a376c0ca861732443fd75",
+      "final_sha256": "d4e87bc2c26324c11294352fc5fb2af05aa2b86fa70d77d0a46058889d20935c",
+      "raw_stdout_sha256": "04f35aec51af1688b0cd4e69d0e639a746dc8e91c9e8ffc642c1c2b92c26d48e",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_320bead6e0f443ae9a44c36ede487065",
+      "case_id": "e03",
+      "attempt": {
+        "output_id": "o_320bead6e0f443ae9a44c36ede487065",
+        "started_at_utc": "2026-09-07T18:32:08.443351Z",
+        "prompt_sha256": "cd6c5b4fa4916aab388eae31933861ea470f76d4a21a376c0ca861732443fd75"
+      },
+      "original_path": "outputs/e03-original.txt",
+      "original_sha256": "e6e785352427def5b42a132fc54faa77e5de40800943c909be498afb7cba38d2",
+      "text_path": "outputs/e03-edited.txt",
+      "word_count": 255,
+      "min_words": 180,
+      "max_words": 260,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:32:37.800850Z",
+      "ended_at_utc": "2026-09-07T18:32:53.004046Z",
+      "wall_seconds": 15.203106,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 10924,
+        "cached_input_tokens": 7424,
+        "output_tokens": 204,
+        "reasoning_output_tokens": 0
+      },
+      "prompt_sha256": "9716aa405d2ac1b11f9971b9e63b9b7cb96cfb21a979f6ac0e2913a2141df08f",
+      "final_sha256": "b799182e382d73bb7ad810c9d507f809e9d001f53df0a67601780807a39a6fcc",
+      "raw_stdout_sha256": "1c20abb18b7916aaabb51263d34eb98dd9f731683e42ff77aa14e1d5f6a1e16c",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_68671530c13deb80f70cfeaa39121498",
+      "case_id": "e04",
+      "attempt": {
+        "output_id": "o_68671530c13deb80f70cfeaa39121498",
+        "started_at_utc": "2026-09-07T18:32:37.800850Z",
+        "prompt_sha256": "9716aa405d2ac1b11f9971b9e63b9b7cb96cfb21a979f6ac0e2913a2141df08f"
+      },
+      "original_path": "outputs/e04-original.txt",
+      "original_sha256": "b799182e382d73bb7ad810c9d507f809e9d001f53df0a67601780807a39a6fcc",
+      "text_path": "outputs/e04-edited.txt",
+      "word_count": 104,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:32:53.005991Z",
+      "ended_at_utc": "2026-09-07T18:33:05.169552Z",
+      "wall_seconds": 12.163507,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 10888,
+        "cached_input_tokens": 0,
+        "output_tokens": 212,
+        "reasoning_output_tokens": 0
+      },
+      "prompt_sha256": "2734676c56b03174e67d845103f33fb5f4c904f959ae05563fe1284ebab54c4f",
+      "final_sha256": "aadbfae3bd97058ee0dffd138969a98fde5113131c83aa37621b0b5ff64919be",
+      "raw_stdout_sha256": "442fa7646b712cab8d8c0c9a4be64147641b29d68d8b1e3ddc793a75c511f28c",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_6528615a447eb9856ac2699bb4bb0e9f",
+      "case_id": "e05",
+      "attempt": {
+        "output_id": "o_6528615a447eb9856ac2699bb4bb0e9f",
+        "started_at_utc": "2026-09-07T18:32:53.005991Z",
+        "prompt_sha256": "2734676c56b03174e67d845103f33fb5f4c904f959ae05563fe1284ebab54c4f"
+      },
+      "original_path": "outputs/e05-original.txt",
+      "original_sha256": "aadbfae3bd97058ee0dffd138969a98fde5113131c83aa37621b0b5ff64919be",
+      "text_path": "outputs/e05-edited.txt",
+      "word_count": 122,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:33:05.171478Z",
+      "ended_at_utc": "2026-09-07T18:33:20.786175Z",
+      "wall_seconds": 15.614606,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11050,
+        "cached_input_tokens": 0,
+        "output_tokens": 280,
+        "reasoning_output_tokens": 64
+      },
+      "prompt_sha256": "dbb6d3b5a00df0fc4d364e41fccd96a5bc658ed90992c493de62459b0570c028",
+      "final_sha256": "cd14be835777385a050c2c24987d0617e6a3ef35b195f20451fbdde38569b3bb",
+      "raw_stdout_sha256": "35bf1bcbfb0d10aca60b559cd064a80723352ff8215519914aabf55280878e62",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_6b06b5e1bb0699e60ae944d914f4ba3f",
+      "case_id": "e06",
+      "attempt": {
+        "output_id": "o_6b06b5e1bb0699e60ae944d914f4ba3f",
+        "started_at_utc": "2026-09-07T18:33:05.171478Z",
+        "prompt_sha256": "dbb6d3b5a00df0fc4d364e41fccd96a5bc658ed90992c493de62459b0570c028"
+      },
+      "original_path": "outputs/e06-original.txt",
+      "original_sha256": "25c08e5504183a36846484169f541ecd8439b308f94b10f2be9677e0d82cffd4",
+      "text_path": "outputs/e06-edited.txt",
+      "word_count": 115,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:33:20.788198Z",
+      "ended_at_utc": "2026-09-07T18:33:35.994122Z",
+      "wall_seconds": 15.205838,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11002,
+        "cached_input_tokens": 7424,
+        "output_tokens": 252,
+        "reasoning_output_tokens": 50
+      },
+      "prompt_sha256": "1247e80b47c4b0bce401785ae98f680d13ad25cabba4b28405d2abac9395fa28",
+      "final_sha256": "707ff1c3836b0148a4734973d02a21a9139b6fc5ef41d41bbfb2bd1d441c6361",
+      "raw_stdout_sha256": "d5feaa6f3ef3a889b083fb5b4d544fafee55340c038c1748cf0c81e45f4e596e",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_d5662b40134773debdbb5531e7131329",
+      "case_id": "e07",
+      "attempt": {
+        "output_id": "o_d5662b40134773debdbb5531e7131329",
+        "started_at_utc": "2026-09-07T18:33:20.788198Z",
+        "prompt_sha256": "1247e80b47c4b0bce401785ae98f680d13ad25cabba4b28405d2abac9395fa28"
+      },
+      "original_path": "outputs/e07-original.txt",
+      "original_sha256": "3b81fd045d8919e75b9b8058e5db5d5f011fe5b6f49ea8d06d2db85044f392f6",
+      "text_path": "outputs/e07-edited.txt",
+      "word_count": 109,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:33:35.996570Z",
+      "ended_at_utc": "2026-09-07T18:34:00.106607Z",
+      "wall_seconds": 24.109891,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11646,
+        "cached_input_tokens": 7424,
+        "output_tokens": 603,
+        "reasoning_output_tokens": 195
+      },
+      "prompt_sha256": "2c3b5477ecac89bfddc61f1ffb946d6307b1e36495260f8d814baa3e7cd5d5aa",
+      "final_sha256": "1fd96934d9019be2bcd11ba5b0df7ee33ad68fdb594d8a595693a00d2a69df04",
+      "raw_stdout_sha256": "ff633f830608df411518a614d7bb51d152978ee86cb297a162725fd0669dd8e0",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_d47a957c2c7e08de7ec0858b4685ddb4",
+      "case_id": "e08",
+      "attempt": {
+        "output_id": "o_d47a957c2c7e08de7ec0858b4685ddb4",
+        "started_at_utc": "2026-09-07T18:33:35.996570Z",
+        "prompt_sha256": "2c3b5477ecac89bfddc61f1ffb946d6307b1e36495260f8d814baa3e7cd5d5aa"
+      },
+      "original_path": "outputs/e08-original.txt",
+      "original_sha256": "02d6edd13b4496ac6c22f6d831caffe3a85a4dc5ba2077be174435c7d1d4cc14",
+      "text_path": "outputs/e08-edited.txt",
+      "word_count": 227,
+      "min_words": 180,
+      "max_words": 260,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:34:00.108436Z",
+      "ended_at_utc": "2026-09-07T18:34:11.117512Z",
+      "wall_seconds": 11.009,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 10879,
+        "cached_input_tokens": 7424,
+        "output_tokens": 181,
+        "reasoning_output_tokens": 0
+      },
+      "prompt_sha256": "6a98f8a33d98e41a532120bee8894e8af78991b6f8c58ffd72547efab96db3b7",
+      "final_sha256": "d7472f32e859aa7f9b8c3810eed5bf08cb5e3bc101b6c7e95868028b8cb467dd",
+      "raw_stdout_sha256": "7d1c55c0fd4ab48a5eb8478a8cc0d4653e569c3eb1fc93ca024baa954d57fd75",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_0d6aec4643caf87c80bfeda8d4d4ae87",
+      "case_id": "e09",
+      "attempt": {
+        "output_id": "o_0d6aec4643caf87c80bfeda8d4d4ae87",
+        "started_at_utc": "2026-09-07T18:34:00.108436Z",
+        "prompt_sha256": "6a98f8a33d98e41a532120bee8894e8af78991b6f8c58ffd72547efab96db3b7"
+      },
+      "original_path": "outputs/e09-original.txt",
+      "original_sha256": "d7472f32e859aa7f9b8c3810eed5bf08cb5e3bc101b6c7e95868028b8cb467dd",
+      "text_path": "outputs/e09-edited.txt",
+      "word_count": 107,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:34:11.120573Z",
+      "ended_at_utc": "2026-09-07T18:34:43.712594Z",
+      "wall_seconds": 32.591811,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11680,
+        "cached_input_tokens": 7424,
+        "output_tokens": 745,
+        "reasoning_output_tokens": 292
+      },
+      "prompt_sha256": "2beb0d7f65737cdafabf4887c6be89f470c1dfcee11f9dc0721985d29e4e02ce",
+      "final_sha256": "fbcad61bdcb01c99231d455449d00fb35c577f645468b5588ac3f26974f6beef",
+      "raw_stdout_sha256": "6c9519e803c1cb17a040cef5f4c2f0f7e1a9cacf479f04959655d8a2e98bbe96",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_e643db5b1e4d0d4814960633f8745c6e",
+      "case_id": "e10",
+      "attempt": {
+        "output_id": "o_e643db5b1e4d0d4814960633f8745c6e",
+        "started_at_utc": "2026-09-07T18:34:11.120573Z",
+        "prompt_sha256": "2beb0d7f65737cdafabf4887c6be89f470c1dfcee11f9dc0721985d29e4e02ce"
+      },
+      "original_path": "outputs/e10-original.txt",
+      "original_sha256": "a37c8583ad09f13dbcfd6c490787b619d76a2a454651f64a3a44823836e2f1a8",
+      "text_path": "outputs/e10-edited.txt",
+      "word_count": 255,
+      "min_words": 180,
+      "max_words": 260,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:34:43.713786Z",
+      "ended_at_utc": "2026-09-07T18:34:59.347839Z",
+      "wall_seconds": 15.633994,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11263,
+        "cached_input_tokens": 7424,
+        "output_tokens": 326,
+        "reasoning_output_tokens": 83
+      },
+      "prompt_sha256": "80ab2ebd81b7907b7aadeeab552e58462fe281cf71cfbe77f8b90381963809fe",
+      "final_sha256": "8a82f5ba1885067f9540176a433cff80f9e4df2f35930343f526c24dd0910eb9",
+      "raw_stdout_sha256": "0b786299afea43cd5725621b7f8b5ec3f0cbf7c05b97a88ed19e4ca685827d6e",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_5d675092d70fb33730ed5accdb39c3e1",
+      "case_id": "e11",
+      "attempt": {
+        "output_id": "o_5d675092d70fb33730ed5accdb39c3e1",
+        "started_at_utc": "2026-09-07T18:34:43.713786Z",
+        "prompt_sha256": "80ab2ebd81b7907b7aadeeab552e58462fe281cf71cfbe77f8b90381963809fe"
+      },
+      "original_path": "outputs/e11-original.txt",
+      "original_sha256": "13393ae77c5cba01c92f492bc44decc19e533cc9cc41a85b2aefc0c1817707dc",
+      "text_path": "outputs/e11-edited.txt",
+      "word_count": 140,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 2,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:34:59.350242Z",
+      "ended_at_utc": "2026-09-07T18:35:13.658693Z",
+      "wall_seconds": 14.308385,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 11004,
+        "cached_input_tokens": 7424,
+        "output_tokens": 298,
+        "reasoning_output_tokens": 99
+      },
+      "prompt_sha256": "dfbabb28a7864fe4baf12de4ac828597042b398dfddc380c70a2a6723ce968e8",
+      "final_sha256": "49befa5e78b4d151983a77065641309f63ee6dba02b7fcca0a7528c5794217e2",
+      "raw_stdout_sha256": "3e2798d02748eef679cce1338659724df202d08cb7d28913ec18ef280289a332",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "a46b28d12f0da8adef064b592d0a2e525352f2cccbe0223fa9787b398bc8b1fe",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_5d76dadfc32de594ca584e5d48db233e",
+      "case_id": "e12",
+      "attempt": {
+        "output_id": "o_5d76dadfc32de594ca584e5d48db233e",
+        "started_at_utc": "2026-09-07T18:34:59.350242Z",
+        "prompt_sha256": "dfbabb28a7864fe4baf12de4ac828597042b398dfddc380c70a2a6723ce968e8"
+      },
+      "original_path": "outputs/e12-original.txt",
+      "original_sha256": "24bf50b40af6bc3c05149ca32294d561b497d163fd6820d561439ceaf5557d61",
+      "text_path": "outputs/e12-edited.txt",
+      "word_count": 107,
+      "min_words": 90,
+      "max_words": 180,
+      "within_word_range": true
+    }
+  ],
+  "judge_records": [
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:36:10.754798Z",
+      "ended_at_utc": "2026-09-07T18:37:43.447910Z",
+      "wall_seconds": 92.692506,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 17020,
+        "cached_input_tokens": 6528,
+        "output_tokens": 2727,
+        "reasoning_output_tokens": 1316
+      },
+      "prompt_sha256": "d4e0a4775b56bd258a6c3b1071af4a696e48eca3589c85ed9725423262289180",
+      "final_sha256": "6ff1b00dcf294ead3e20f10eaff1668bdc317099f9583a379cee253a0bce9322",
+      "raw_stdout_sha256": "054ab9d559fc50be03455091abf40074f172c6fbf42fcb001902701abff0722e",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge1-batch1",
+      "swapped_xy": false,
+      "pair_ids": [
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06"
+      ],
+      "judge_id": "judge1",
+      "attempt": {
+        "job_id": "judge1-batch1",
+        "started_at_utc": "2026-09-07T18:36:10.754798Z",
+        "prompt_sha256": "d4e0a4775b56bd258a6c3b1071af4a696e48eca3589c85ed9725423262289180"
+      },
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p01",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты полностью совпадают.",
+            "practical_preference": "tie",
+            "practical_reason": "Тексты идентичны, соответствуют источнику, жанру и заданному объёму."
+          },
+          {
+            "pair_id": "p02",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "facts",
+                  "quote": "Маршрут № 6 начал останавливаться у площадки в тот же день",
+                  "source_id": "r04-municipal-notice",
+                  "reason": "Муниципальное сообщение содержит только план: маршрут «будет останавливаться» с 16:30, причём источник отдельно предупреждает, что это не отчёт о выполнении. Текст превращает запланированное изменение в подтверждённое событие первых суток.",
+                  "minimal_fix": "Заменить на: «По плану администрации, маршрут № 6 должен был начать останавливаться у площадки с 16:30 того же дня»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "В кассе продали 286 билетов",
+                  "source_id": "r04-operations-log",
+                  "reason": "В журнале сказано только «Продано 286 билетов»; канал продажи не указан, а число билетов, купленных заранее или онлайн, отдельно названо неизвестным. Уточнение «в кассе» необоснованно сужает показатель.",
+                  "minimal_fix": "Заменить на: «Продали 286 билетов»."
+                }
+              ]
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X яснее отделяет свидетельство очевидца, диспетчерские данные и муниципальный план; хронология читается последовательно.",
+            "practical_preference": "X",
+            "practical_reason": "X сохраняет различие между планом и подтверждёнными событиями, тогда как Y выдаёт плановую остановку маршрута № 6 за состоявшийся факт."
+          },
+          {
+            "pair_id": "p03",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Заказчики нередко приходят с фотографией понравившейся модели",
+                  "source_id": "r03-interview-paraphrase",
+                  "reason": "Источник сообщает лишь, что заказчик может принести фотографию, но не устанавливает частоту таких случаев. Слово «нередко» добавляет неподтверждённую распространённость.",
+                  "minimal_fix": "Заменить на: «Заказчик может прийти с фотографией понравившейся модели»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X немного компактнее и заканчивается более естественной для журнального профиля фразой; служебная датировка в финале Y звучит формальнее.",
+            "practical_preference": "Y",
+            "practical_reason": "Y точнее передаёт процесс и не приписывает случаям с фотографиями неподтверждённую частоту."
+          },
+          {
+            "pair_id": "p04",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты полностью совпадают.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба идентично и ясно сообщают предварительную дату открытия и доступные во время ремонта услуги."
+          },
+          {
+            "pair_id": "p05",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты полностью совпадают.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста верно объясняют абсолютные числа и доли и не объявляют непроверенную причину изменения."
+          },
+          {
+            "pair_id": "p06",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "permissions",
+                  "quote": "«Мне нравится возвращать к жизни любимые вещи», — говорит Артём.",
+                  "source_id": "s06-interview",
+                  "reason": "Источник разрешает только пересказ и прямо указывает, что дословные формулировки не согласованы. Эта прямая речь отсутствует в источнике и дополнительно заменяет мысль о сохранении привычных владельцу вещей на слова о «любимых» вещах и «возвращении к жизни».",
+                  "minimal_fix": "Убрать прямую цитату и пересказать: «Артёму нравится сохранять вещи, к которым привыкли владельцы»."
+                }
+              ]
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Прямая реплика делает Y чуть живее как профиль, хотя её использование и формулировка не разрешены источником.",
+            "practical_preference": "X",
+            "practical_reason": "X корректно пересказывает интервью, а Y нарушает ограничение paraphrase_only и приписывает Артёму несогласованную прямую речь."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p01\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты полностью совпадают.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Тексты идентичны, соответствуют источнику, жанру и заданному объёму.\"\n    },\n    {\n      \"pair_id\": \"p02\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"facts\",\n            \"quote\": \"Маршрут № 6 начал останавливаться у площадки в тот же день\",\n            \"source_id\": \"r04-municipal-notice\",\n            \"reason\": \"Муниципальное сообщение содержит только план: маршрут «будет останавливаться» с 16:30, причём источник отдельно предупреждает, что это не отчёт о выполнении. Текст превращает запланированное изменение в подтверждённое событие первых суток.\",\n            \"minimal_fix\": \"Заменить на: «По плану администрации, маршрут № 6 должен был начать останавливаться у площадки с 16:30 того же дня».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"В кассе продали 286 билетов\",\n            \"source_id\": \"r04-operations-log\",\n            \"reason\": \"В журнале сказано только «Продано 286 билетов»; канал продажи не указан, а число билетов, купленных заранее или онлайн, отдельно названо неизвестным. Уточнение «в кассе» необоснованно сужает показатель.\",\n            \"minimal_fix\": \"Заменить на: «Продали 286 билетов».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X яснее отделяет свидетельство очевидца, диспетчерские данные и муниципальный план; хронология читается последовательно.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X сохраняет различие между планом и подтверждёнными событиями, тогда как Y выдаёт плановую остановку маршрута № 6 за состоявшийся факт.\"\n    },\n    {\n      \"pair_id\": \"p03\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Заказчики нередко приходят с фотографией понравившейся модели\",\n            \"source_id\": \"r03-interview-paraphrase\",\n            \"reason\": \"Источник сообщает лишь, что заказчик может принести фотографию, но не устанавливает частоту таких случаев. Слово «нередко» добавляет неподтверждённую распространённость.\",\n            \"minimal_fix\": \"Заменить на: «Заказчик может прийти с фотографией понравившейся модели».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X немного компактнее и заканчивается более естественной для журнального профиля фразой; служебная датировка в финале Y звучит формальнее.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y точнее передаёт процесс и не приписывает случаям с фотографиями неподтверждённую частоту.\"\n    },\n    {\n      \"pair_id\": \"p04\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты полностью совпадают.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба идентично и ясно сообщают предварительную дату открытия и доступные во время ремонта услуги.\"\n    },\n    {\n      \"pair_id\": \"p05\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты полностью совпадают.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста верно объясняют абсолютные числа и доли и не объявляют непроверенную причину изменения.\"\n    },\n    {\n      \"pair_id\": \"p06\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"permissions\",\n            \"quote\": \"«Мне нравится возвращать к жизни любимые вещи», — говорит Артём.\",\n            \"source_id\": \"s06-interview\",\n            \"reason\": \"Источник разрешает только пересказ и прямо указывает, что дословные формулировки не согласованы. Эта прямая речь отсутствует в источнике и дополнительно заменяет мысль о сохранении привычных владельцу вещей на слова о «любимых» вещах и «возвращении к жизни».\",\n            \"minimal_fix\": \"Убрать прямую цитату и пересказать: «Артёму нравится сохранять вещи, к которым привыкли владельцы».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Прямая реплика делает Y чуть живее как профиль, хотя её использование и формулировка не разрешены источником.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X корректно пересказывает интервью, а Y нарушает ограничение paraphrase_only и приписывает Артёму несогласованную прямую речь.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    },
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:37:43.451200Z",
+      "ended_at_utc": "2026-09-07T18:40:23.350198Z",
+      "wall_seconds": 159.898011,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 17334,
+        "cached_input_tokens": 6528,
+        "output_tokens": 4833,
+        "reasoning_output_tokens": 3106
+      },
+      "prompt_sha256": "9aaedf665e37a65144c6f2be78183ca43b617b9ebb7e84a03c888d9d9aa3e517",
+      "final_sha256": "cf8c981952ba9f274fb01e6e6193f10486c8a21c6eb039c9c8c4c36d745d1592",
+      "raw_stdout_sha256": "d2fadefab953a55041527488cccdea09b2c46763bd3a601ae677074c3b3a52f2",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge1-batch2",
+      "swapped_xy": false,
+      "pair_ids": [
+        "p07",
+        "p08",
+        "p09",
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "judge_id": "judge1",
+      "attempt": {
+        "job_id": "judge1-batch2",
+        "started_at_utc": "2026-09-07T18:37:43.451200Z",
+        "prompt_sha256": "9aaedf665e37a65144c6f2be78183ca43b617b9ebb7e84a03c888d9d9aa3e517"
+      },
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p07",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Прежняя работа пригодилась: она научила его замечать, где книга начинает расходиться.",
+                  "source_id": "s07-notes",
+                  "reason": "Исходник передаёт это как объяснение самого Льва: «Лев говорит, что библиотечная работа научила его…». Текст без атрибуции превращает его личную оценку причинной связи в установленный факт.",
+                  "minimal_fix": "Добавить атрибуцию: «Прежняя работа пригодилась: по его словам, она научила его замечать, где книга начинает расходиться»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты практически одинаковы по структуре, ясности и ритму.",
+            "practical_preference": "X",
+            "practical_reason": "X сохраняет атрибуцию личного объяснения Льва; Y требует небольшой правки."
+          },
+          {
+            "pair_id": "p08",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Последнее дежурство на метеопосту в Кедровом закончилось 15 апреля в девять вечера.",
+                  "source_id": "station_last_log",
+                  "reason": "Документ подтверждает лишь последнюю запись в 21:00. По воспоминаниям Лукина, после неё он ещё звонил в районную службу и проверял калитку, поэтому дежурство не могло закончиться ровно в девять.",
+                  "minimal_fix": "Заменить на: «Последняя запись в журнале метеопоста в Кедровом сделана 15 апреля в девять вечера»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "brief",
+                  "quote": "Лукин дежурил здесь восемь лет.",
+                  "source_id": "lukin_single_witness",
+                  "reason": "Эти восемь лет указаны только в рассказе единственного собеседника, тогда как задание требует ясно отличать документы от воспоминаний.",
+                  "minimal_fix": "Написать: «По словам Лукина, он дежурил здесь восемь лет»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба рассказа живые, последовательно выстроены и используют конкретные детали без заметной разницы в качестве подачи.",
+            "practical_preference": "X",
+            "practical_reason": "X точнее сохраняет хронологию и последовательно обозначает, какие сведения принадлежат воспоминаниям Лукина."
+          },
+          {
+            "pair_id": "p09",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты идентичны.",
+            "practical_preference": "tie",
+            "practical_reason": "Тексты идентичны и соответствуют источнику, объёму и заданной позиции автора."
+          },
+          {
+            "pair_id": "p10",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Продавать готовые вещи в интернете и наращивать число заказов Нина пока не собирается",
+                  "source_id": "r03-fact-sheet",
+                  "reason": "Источник сообщает как текущий факт, что Нина не продаёт готовые вещи через интернет и начинает заказ с личной встречи. Намерение «пока не собираться» подтверждено лишь применительно к увеличению числа заказов, поэтому фраза необоснованно распространяет это намерение и на интернет-продажи.",
+                  "minimal_fix": "Разделить утверждения: «Готовые вещи Нина не продаёт через интернет: заказ начинается с личной встречи. Наращивать число заказов она пока не собирается»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X немного компактнее и завершается более цельной фразой; в Y отдельная строка с датой слегка прерывает журнальный ритм.",
+            "practical_preference": "Y",
+            "practical_reason": "Y точно разделяет текущий способ продаж и заявленное намерение не увеличивать число заказов."
+          },
+          {
+            "pair_id": "p11",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "facts",
+                  "quote": "Я не считаю новости вредными",
+                  "source_id": "canteen_author_draft",
+                  "reason": "В черновике автор говорит лишь, что не хочет доказывать вред новостей: «Не хочу доказывать, что новости вредны». Это не означает, что она считает их невредными. Y приписывает автору новую позицию вместо сохранения её отказа вступать в спор.",
+                  "minimal_fix": "Заменить на: «Я не хочу доказывать, что новости вредны»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба варианта спокойны, доброжелательны и почти полностью совпадают по подаче.",
+            "practical_preference": "X",
+            "practical_reason": "X сохраняет исходную позицию автора, тогда как Y существенно меняет её отношение к вреду новостей."
+          },
+          {
+            "pair_id": "p12",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Он не заменяет настройку и не обещает избавить инструмент от всех возможных неполадок.",
+                  "source_id": "s12-interview",
+                  "reason": "Источник говорит, что разговор не гарантирует отсутствия всех неполадок. Формулировка «избавить инструмент» смещает смысл к устранению неисправностей, хотя речь идёт о пределах дополнительной проверки.",
+                  "minimal_fix": "Заменить вторую часть на: «Он не заменяет настройку и не гарантирует отсутствия всех неполадок»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Формулировка Y о пределах гарантии яснее и естественнее объясняет роль повторного фрагмента неспециалисту.",
+            "practical_preference": "Y",
+            "practical_reason": "Y точно передаёт ограничение из интервью; X слегка подменяет проверку устранением неполадок."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p07\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Прежняя работа пригодилась: она научила его замечать, где книга начинает расходиться.\",\n            \"source_id\": \"s07-notes\",\n            \"reason\": \"Исходник передаёт это как объяснение самого Льва: «Лев говорит, что библиотечная работа научила его…». Текст без атрибуции превращает его личную оценку причинной связи в установленный факт.\",\n            \"minimal_fix\": \"Добавить атрибуцию: «Прежняя работа пригодилась: по его словам, она научила его замечать, где книга начинает расходиться».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты практически одинаковы по структуре, ясности и ритму.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X сохраняет атрибуцию личного объяснения Льва; Y требует небольшой правки.\"\n    },\n    {\n      \"pair_id\": \"p08\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Последнее дежурство на метеопосту в Кедровом закончилось 15 апреля в девять вечера.\",\n            \"source_id\": \"station_last_log\",\n            \"reason\": \"Документ подтверждает лишь последнюю запись в 21:00. По воспоминаниям Лукина, после неё он ещё звонил в районную службу и проверял калитку, поэтому дежурство не могло закончиться ровно в девять.\",\n            \"minimal_fix\": \"Заменить на: «Последняя запись в журнале метеопоста в Кедровом сделана 15 апреля в девять вечера».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"brief\",\n            \"quote\": \"Лукин дежурил здесь восемь лет.\",\n            \"source_id\": \"lukin_single_witness\",\n            \"reason\": \"Эти восемь лет указаны только в рассказе единственного собеседника, тогда как задание требует ясно отличать документы от воспоминаний.\",\n            \"minimal_fix\": \"Написать: «По словам Лукина, он дежурил здесь восемь лет».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба рассказа живые, последовательно выстроены и используют конкретные детали без заметной разницы в качестве подачи.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X точнее сохраняет хронологию и последовательно обозначает, какие сведения принадлежат воспоминаниям Лукина.\"\n    },\n    {\n      \"pair_id\": \"p09\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты идентичны.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Тексты идентичны и соответствуют источнику, объёму и заданной позиции автора.\"\n    },\n    {\n      \"pair_id\": \"p10\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Продавать готовые вещи в интернете и наращивать число заказов Нина пока не собирается\",\n            \"source_id\": \"r03-fact-sheet\",\n            \"reason\": \"Источник сообщает как текущий факт, что Нина не продаёт готовые вещи через интернет и начинает заказ с личной встречи. Намерение «пока не собираться» подтверждено лишь применительно к увеличению числа заказов, поэтому фраза необоснованно распространяет это намерение и на интернет-продажи.\",\n            \"minimal_fix\": \"Разделить утверждения: «Готовые вещи Нина не продаёт через интернет: заказ начинается с личной встречи. Наращивать число заказов она пока не собирается».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X немного компактнее и завершается более цельной фразой; в Y отдельная строка с датой слегка прерывает журнальный ритм.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y точно разделяет текущий способ продаж и заявленное намерение не увеличивать число заказов.\"\n    },\n    {\n      \"pair_id\": \"p11\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"facts\",\n            \"quote\": \"Я не считаю новости вредными\",\n            \"source_id\": \"canteen_author_draft\",\n            \"reason\": \"В черновике автор говорит лишь, что не хочет доказывать вред новостей: «Не хочу доказывать, что новости вредны». Это не означает, что она считает их невредными. Y приписывает автору новую позицию вместо сохранения её отказа вступать в спор.\",\n            \"minimal_fix\": \"Заменить на: «Я не хочу доказывать, что новости вредны».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба варианта спокойны, доброжелательны и почти полностью совпадают по подаче.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X сохраняет исходную позицию автора, тогда как Y существенно меняет её отношение к вреду новостей.\"\n    },\n    {\n      \"pair_id\": \"p12\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Он не заменяет настройку и не обещает избавить инструмент от всех возможных неполадок.\",\n            \"source_id\": \"s12-interview\",\n            \"reason\": \"Источник говорит, что разговор не гарантирует отсутствия всех неполадок. Формулировка «избавить инструмент» смещает смысл к устранению неисправностей, хотя речь идёт о пределах дополнительной проверки.\",\n            \"minimal_fix\": \"Заменить вторую часть на: «Он не заменяет настройку и не гарантирует отсутствия всех неполадок».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Формулировка Y о пределах гарантии яснее и естественнее объясняет роль повторного фрагмента неспециалисту.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y точно передаёт ограничение из интервью; X слегка подменяет проверку устранением неполадок.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    },
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:40:23.352969Z",
+      "ended_at_utc": "2026-09-07T18:41:35.268763Z",
+      "wall_seconds": 71.920558,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 18580,
+        "cached_input_tokens": 3328,
+        "output_tokens": 2105,
+        "reasoning_output_tokens": 218
+      },
+      "prompt_sha256": "cc08acdb61acb8faed73aaabeeeab18b3b642865329515b66bd853e523fc485a",
+      "final_sha256": "9bcfb74a7f3b5d2a921b8e0290495667fb87761a8c6bb6465cb071483333f2db",
+      "raw_stdout_sha256": "1ad0ab298b7f3adf3f2ebb7d157edd8aa7902c33f5060bfb37665e39699f1627",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge2-batch1",
+      "swapped_xy": true,
+      "pair_ids": [
+        "p12",
+        "p11",
+        "p10",
+        "p09",
+        "p08",
+        "p07"
+      ],
+      "judge_id": "judge2",
+      "attempt": {
+        "job_id": "judge2-batch1",
+        "started_at_utc": "2026-09-07T18:40:23.352969Z",
+        "prompt_sha256": "cc08acdb61acb8faed73aaabeeeab18b3b642865329515b66bd853e523fc485a"
+      },
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p12",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба текста доступны неспециалисту и одинаково последовательно объясняют смысл знакомого фрагмента.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба сохраняют ограничения проверки, используют разрешённый пересказ и соблюдают объём. Формулировка об отсутствии обещания избавить инструмент от неполадок не создаёт существенной подмены."
+          },
+          {
+            "pair_id": "p11",
+            "X": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "facts",
+                  "quote": "Я не считаю новости вредными",
+                  "source_id": "canteen_author_draft",
+                  "reason": "В черновике сказано: «Не хочу доказывать, что новости вредны». Отказ доказывать тезис не означает несогласия с ним. Текст приписывает автору определённое убеждение, которого источник не устанавливает, хотя запрос требует сохранить её позицию.",
+                  "minimal_fix": "Заменить на: «Я не хочу доказывать, что новости вредны»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба варианта звучат спокойно и доброжелательно, сохраняют личный голос и выразительный образ супа, состязающегося с новостями.",
+            "practical_preference": "Y",
+            "practical_reason": "Y сохраняет авторское нежелание спорить, не превращая его в новое убеждение. Остальные требования выполнены обоими вариантами."
+          },
+          {
+            "pair_id": "p10",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "facts",
+                  "quote": "Продавать готовые вещи в интернете и наращивать число заказов Нина пока не собирается: ей важны личный разговор и время на поправки.",
+                  "source_id": "r03-interview-paraphrase",
+                  "reason": "В интервью нынешний отказ увеличивать число заказов объяснён желанием лично встречаться с покупателями и оставлять время на изменения. Факт-лист отдельно сообщает: «Готовые вещи не продаёт через интернет: заказ начинается с личной встречи». Y превращает существующий способ работы в заявленный план относительно интернет-продаж и распространяет на него объяснение другого решения.",
+                  "minimal_fix": "Заменить на: «Готовые вещи Нина не продаёт через интернет: заказ начинается с личной встречи. Наращивать число заказов она пока не собирается: ей важны личный разговор и время на поправки»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "От первой встречи до готовой шляпы проходит три–четыре недели.",
+                  "source_id": "r03-fact-sheet",
+                  "reason": "Факт-лист указывает: «Срок от первой встречи до готовой шляпы — обычно три-четыре недели». Убрана оговорка, допускающая другие сроки.",
+                  "minimal_fix": "Добавить «обычно» перед «проходит»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Нине 42 года.",
+                  "source_id": "r03-fact-sheet",
+                  "reason": "Источник прямо ограничивает актуальность: «Все сведения относятся к состоянию на 4 августа, а не к последующим месяцам». В Y отсутствует временная привязка сведений, изложенных в настоящем времени.",
+                  "minimal_fix": "Добавить перед текстом дату «4 августа 2026 года»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба профиля имеют ясную композицию, конкретные рабочие детали и естественный переход от ремесла к личному выбору героини.",
+            "practical_preference": "X",
+            "practical_reason": "X сохраняет дату актуальности, обычный характер сроков и различие между текущим способом продаж и планами относительно количества заказов."
+          },
+          {
+            "pair_id": "p09",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты одинаковы: личный тон и простые действия подходят для волонтёрского чата.",
+            "practical_preference": "tie",
+            "practical_reason": "Одинаковые тексты сохраняют удовольствие от понятной работы, благодарность Оле и отсутствие обещания регулярного участия; объём соблюдён."
+          },
+          {
+            "pair_id": "p08",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Последнее дежурство на метеопосту в Кедровом закончилось 15 апреля в девять вечера.",
+                  "source_id": "station_last_log",
+                  "reason": "Документ фиксирует время последней записи: «15 апреля 2026 года в 21:00», а не окончания дежурства. По воспоминаниям Лукина, после записи он ещё звонил в районную службу и перед уходом проверял калитку. Точное время завершения дежурства неизвестно.",
+                  "minimal_fix": "Заменить на: «Последняя запись в журнале метеопоста в Кедровом сделана 15 апреля 2026 года в девять вечера»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Лукин дежурил здесь восемь лет.",
+                  "source_id": "lukin_single_witness",
+                  "reason": "Источник сообщает: «Он говорит, что дежурил на посту последние восемь лет». После документального вступления эта фраза выглядит как установленный редакцией факт; последующее «Он вспоминает» относится уже к событиям вечера. Запрос специально требует различать документы и воспоминания единственного собеседника.",
+                  "minimal_fix": "Заменить на: «По словам Лукина, он дежурил здесь восемь лет»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба рассказа передают небольшое событие через действия и завершаются уместной метафорой. X компактнее, Y подробнее обозначает документальную основу; решающего преимущества в подаче нет.",
+            "practical_preference": "Y",
+            "practical_reason": "Y точно называет время записи и яснее отделяет свидетельство Лукина от документов. Оба оставляют место и срок возобновления наблюдений открытыми."
+          },
+          {
+            "pair_id": "p07",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба текста ясно связывают библиотечный опыт с подходом к ремонту и обходятся без выдуманной сцены посещения.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба соответствуют источникам и объёму. В данном профиле пересказ слов героя без вводной формулы не создаёт существенного искажения; формулировка о мастерской допустима в контексте его одиночной работы."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p12\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба текста доступны неспециалисту и одинаково последовательно объясняют смысл знакомого фрагмента.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба сохраняют ограничения проверки, используют разрешённый пересказ и соблюдают объём. Формулировка об отсутствии обещания избавить инструмент от неполадок не создаёт существенной подмены.\"\n    },\n    {\n      \"pair_id\": \"p11\",\n      \"X\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"facts\",\n            \"quote\": \"Я не считаю новости вредными\",\n            \"source_id\": \"canteen_author_draft\",\n            \"reason\": \"В черновике сказано: «Не хочу доказывать, что новости вредны». Отказ доказывать тезис не означает несогласия с ним. Текст приписывает автору определённое убеждение, которого источник не устанавливает, хотя запрос требует сохранить её позицию.\",\n            \"minimal_fix\": \"Заменить на: «Я не хочу доказывать, что новости вредны».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба варианта звучат спокойно и доброжелательно, сохраняют личный голос и выразительный образ супа, состязающегося с новостями.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y сохраняет авторское нежелание спорить, не превращая его в новое убеждение. Остальные требования выполнены обоими вариантами.\"\n    },\n    {\n      \"pair_id\": \"p10\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"facts\",\n            \"quote\": \"Продавать готовые вещи в интернете и наращивать число заказов Нина пока не собирается: ей важны личный разговор и время на поправки.\",\n            \"source_id\": \"r03-interview-paraphrase\",\n            \"reason\": \"В интервью нынешний отказ увеличивать число заказов объяснён желанием лично встречаться с покупателями и оставлять время на изменения. Факт-лист отдельно сообщает: «Готовые вещи не продаёт через интернет: заказ начинается с личной встречи». Y превращает существующий способ работы в заявленный план относительно интернет-продаж и распространяет на него объяснение другого решения.\",\n            \"minimal_fix\": \"Заменить на: «Готовые вещи Нина не продаёт через интернет: заказ начинается с личной встречи. Наращивать число заказов она пока не собирается: ей важны личный разговор и время на поправки».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"От первой встречи до готовой шляпы проходит три–четыре недели.\",\n            \"source_id\": \"r03-fact-sheet\",\n            \"reason\": \"Факт-лист указывает: «Срок от первой встречи до готовой шляпы — обычно три-четыре недели». Убрана оговорка, допускающая другие сроки.\",\n            \"minimal_fix\": \"Добавить «обычно» перед «проходит».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Нине 42 года.\",\n            \"source_id\": \"r03-fact-sheet\",\n            \"reason\": \"Источник прямо ограничивает актуальность: «Все сведения относятся к состоянию на 4 августа, а не к последующим месяцам». В Y отсутствует временная привязка сведений, изложенных в настоящем времени.\",\n            \"minimal_fix\": \"Добавить перед текстом дату «4 августа 2026 года».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба профиля имеют ясную композицию, конкретные рабочие детали и естественный переход от ремесла к личному выбору героини.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X сохраняет дату актуальности, обычный характер сроков и различие между текущим способом продаж и планами относительно количества заказов.\"\n    },\n    {\n      \"pair_id\": \"p09\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты одинаковы: личный тон и простые действия подходят для волонтёрского чата.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Одинаковые тексты сохраняют удовольствие от понятной работы, благодарность Оле и отсутствие обещания регулярного участия; объём соблюдён.\"\n    },\n    {\n      \"pair_id\": \"p08\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Последнее дежурство на метеопосту в Кедровом закончилось 15 апреля в девять вечера.\",\n            \"source_id\": \"station_last_log\",\n            \"reason\": \"Документ фиксирует время последней записи: «15 апреля 2026 года в 21:00», а не окончания дежурства. По воспоминаниям Лукина, после записи он ещё звонил в районную службу и перед уходом проверял калитку. Точное время завершения дежурства неизвестно.\",\n            \"minimal_fix\": \"Заменить на: «Последняя запись в журнале метеопоста в Кедровом сделана 15 апреля 2026 года в девять вечера».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Лукин дежурил здесь восемь лет.\",\n            \"source_id\": \"lukin_single_witness\",\n            \"reason\": \"Источник сообщает: «Он говорит, что дежурил на посту последние восемь лет». После документального вступления эта фраза выглядит как установленный редакцией факт; последующее «Он вспоминает» относится уже к событиям вечера. Запрос специально требует различать документы и воспоминания единственного собеседника.\",\n            \"minimal_fix\": \"Заменить на: «По словам Лукина, он дежурил здесь восемь лет».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба рассказа передают небольшое событие через действия и завершаются уместной метафорой. X компактнее, Y подробнее обозначает документальную основу; решающего преимущества в подаче нет.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y точно называет время записи и яснее отделяет свидетельство Лукина от документов. Оба оставляют место и срок возобновления наблюдений открытыми.\"\n    },\n    {\n      \"pair_id\": \"p07\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба текста ясно связывают библиотечный опыт с подходом к ремонту и обходятся без выдуманной сцены посещения.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба соответствуют источникам и объёму. В данном профиле пересказ слов героя без вводной формулы не создаёт существенного искажения; формулировка о мастерской допустима в контексте его одиночной работы.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    },
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:41:35.271324Z",
+      "ended_at_utc": "2026-09-07T18:42:32.534376Z",
+      "wall_seconds": 57.266894,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 18262,
+        "cached_input_tokens": 7424,
+        "output_tokens": 1729,
+        "reasoning_output_tokens": 102
+      },
+      "prompt_sha256": "3ab7185e406ba3a3f460037fe5eb8b9bfb4f737f1bcafd13830f9c3183a70101",
+      "final_sha256": "605949e6e2c1dcc72c6a0267faf4b4fd2d26497ea442850af0cdea2425c2ff2e",
+      "raw_stdout_sha256": "222070012e3ae7e8ed56dc17d3ea098c0405fe769a10a1fc2d698e823d5275e1",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge2-batch2",
+      "swapped_xy": true,
+      "pair_ids": [
+        "p06",
+        "p05",
+        "p04",
+        "p03",
+        "p02",
+        "p01"
+      ],
+      "judge_id": "judge2",
+      "attempt": {
+        "job_id": "judge2-batch2",
+        "started_at_utc": "2026-09-07T18:41:35.271324Z",
+        "prompt_sha256": "3ab7185e406ba3a3f460037fe5eb8b9bfb4f737f1bcafd13830f9c3183a70101"
+      },
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p06",
+            "X": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "permissions",
+                  "quote": "«Мне нравится возвращать к жизни любимые вещи», — говорит Артём.",
+                  "source_id": "s06-interview",
+                  "reason": "Источник разрешает «только пересказ» и уточняет: «дословные формулировки не согласованы». Текст приписывает Артёму конкретную прямую речь, которой в источнике нет и публикация которой не разрешена.",
+                  "minimal_fix": "Удалить эту прямую речь: её смысл уже передан в первом абзаце."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y не повторяет подряд мысль о сохранении привычных вещей, поэтому профиль читается собраннее.",
+            "practical_preference": "Y",
+            "practical_reason": "Y сохраняет содержание и выполняет запрос без нарушения условий цитирования."
+          },
+          {
+            "pair_id": "p05",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты одинаковы; числа объяснены последовательно и понятным языком.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста правильно передают числа, единицу учёта и отсутствие установленной причины изменения; объём соблюдён."
+          },
+          {
+            "pair_id": "p04",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Одинаковые тексты с ясным разделением информации об открытии и доступных услугах.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба сохраняют предварительность даты, условие приёмки и необходимые сведения об услугах. Формат и объём соблюдены."
+          },
+          {
+            "pair_id": "p03",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Заказчики нередко приходят с фотографией понравившейся модели",
+                  "source_id": "r03-interview-paraphrase",
+                  "reason": "Источник говорит: «Заказчик может принести фотографию понравившейся шляпы». Возможная ситуация превращена в утверждение о частоте, хотя частота не указана.",
+                  "minimal_fix": "Заменить на: «Заказчик может прийти с фотографией понравившейся модели»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "На каждую уходит три-четыре недели",
+                  "source_id": "r03-fact-sheet",
+                  "reason": "В источнике: «Срок от первой встречи до готовой шляпы — обычно три-четыре недели». Слово «каждую» делает обычный срок безусловным, а формулировка может восприниматься как длительность самого изготовления вместо полного срока заказа.",
+                  "minimal_fix": "Заменить на: «От первой встречи до готовой шляпы обычно проходит три-четыре недели»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "У текстов одинаковая композиция и близкий голос: конкретные детали работы сочетаются с личной историей. Разница в плотности заключительного абзаца не даёт явного преимущества.",
+            "practical_preference": "X",
+            "practical_reason": "X сохраняет исходные оговорки о возможной фотографии и обычном сроке заказа. Y требует двух локальных фактических правок."
+          },
+          {
+            "pair_id": "p02",
+            "X": {
+              "status": "critical",
+              "findings": [
+                {
+                  "severity": "critical",
+                  "category": "facts",
+                  "quote": "Маршрут № 6 начал останавливаться у площадки в тот же день",
+                  "source_id": "r04-municipal-notice",
+                  "reason": "Администрация сообщала, что маршрут «будет останавливаться» с 16:30, и источник прямо уточняет: «указан план, а не отчёт о выполнении работ». Текст утверждает фактическое начало обслуживания остановки, которого предоставленные материалы не подтверждают.",
+                  "minimal_fix": "Заменить на: «По сообщению администрации, маршрут № 6 должен был начать останавливаться у площадки с 16:30 того же дня»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Его автобус до Суровца уже стоял на площадке.",
+                  "source_id": "r04-witness",
+                  "reason": "После сообщения о приезде около 16:45 слово «уже» означает, что автобус стоял там к моменту прибытия Ильи. Свидетель лишь видел, как сотрудница показала на полосу, «где стоял его автобус», в течение своего пребывания с 16:45 до 17:08; время появления автобуса не установлено.",
+                  "minimal_fix": "Удалить это предложение и назвать направление автобуса в описании перехода Ильи к первой полосе."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба рассказа последовательно соединяют сцену с пассажиром и хронику первых суток. X немного компактнее, Y несколько подробнее обозначает источники; по удобству чтения они сопоставимы.",
+            "practical_preference": "Y",
+            "practical_reason": "Y отличает муниципальный план от подтверждённых событий и не добавляет неподтверждённое время присутствия автобуса."
+          },
+          {
+            "pair_id": "p01",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Тексты одинаковы; спокойная самоирония и образ археологии соответствуют личному посту.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба сохраняют незавершённость ремонта, маленькое решение и отсутствие обещания масштабного расхламления. Объём и формат соблюдены."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p06\",\n      \"X\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"permissions\",\n            \"quote\": \"«Мне нравится возвращать к жизни любимые вещи», — говорит Артём.\",\n            \"source_id\": \"s06-interview\",\n            \"reason\": \"Источник разрешает «только пересказ» и уточняет: «дословные формулировки не согласованы». Текст приписывает Артёму конкретную прямую речь, которой в источнике нет и публикация которой не разрешена.\",\n            \"minimal_fix\": \"Удалить эту прямую речь: её смысл уже передан в первом абзаце.\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y не повторяет подряд мысль о сохранении привычных вещей, поэтому профиль читается собраннее.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y сохраняет содержание и выполняет запрос без нарушения условий цитирования.\"\n    },\n    {\n      \"pair_id\": \"p05\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты одинаковы; числа объяснены последовательно и понятным языком.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста правильно передают числа, единицу учёта и отсутствие установленной причины изменения; объём соблюдён.\"\n    },\n    {\n      \"pair_id\": \"p04\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Одинаковые тексты с ясным разделением информации об открытии и доступных услугах.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба сохраняют предварительность даты, условие приёмки и необходимые сведения об услугах. Формат и объём соблюдены.\"\n    },\n    {\n      \"pair_id\": \"p03\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Заказчики нередко приходят с фотографией понравившейся модели\",\n            \"source_id\": \"r03-interview-paraphrase\",\n            \"reason\": \"Источник говорит: «Заказчик может принести фотографию понравившейся шляпы». Возможная ситуация превращена в утверждение о частоте, хотя частота не указана.\",\n            \"minimal_fix\": \"Заменить на: «Заказчик может прийти с фотографией понравившейся модели».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"На каждую уходит три-четыре недели\",\n            \"source_id\": \"r03-fact-sheet\",\n            \"reason\": \"В источнике: «Срок от первой встречи до готовой шляпы — обычно три-четыре недели». Слово «каждую» делает обычный срок безусловным, а формулировка может восприниматься как длительность самого изготовления вместо полного срока заказа.\",\n            \"minimal_fix\": \"Заменить на: «От первой встречи до готовой шляпы обычно проходит три-четыре недели».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"У текстов одинаковая композиция и близкий голос: конкретные детали работы сочетаются с личной историей. Разница в плотности заключительного абзаца не даёт явного преимущества.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X сохраняет исходные оговорки о возможной фотографии и обычном сроке заказа. Y требует двух локальных фактических правок.\"\n    },\n    {\n      \"pair_id\": \"p02\",\n      \"X\": {\n        \"status\": \"critical\",\n        \"findings\": [\n          {\n            \"severity\": \"critical\",\n            \"category\": \"facts\",\n            \"quote\": \"Маршрут № 6 начал останавливаться у площадки в тот же день\",\n            \"source_id\": \"r04-municipal-notice\",\n            \"reason\": \"Администрация сообщала, что маршрут «будет останавливаться» с 16:30, и источник прямо уточняет: «указан план, а не отчёт о выполнении работ». Текст утверждает фактическое начало обслуживания остановки, которого предоставленные материалы не подтверждают.\",\n            \"minimal_fix\": \"Заменить на: «По сообщению администрации, маршрут № 6 должен был начать останавливаться у площадки с 16:30 того же дня».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Его автобус до Суровца уже стоял на площадке.\",\n            \"source_id\": \"r04-witness\",\n            \"reason\": \"После сообщения о приезде около 16:45 слово «уже» означает, что автобус стоял там к моменту прибытия Ильи. Свидетель лишь видел, как сотрудница показала на полосу, «где стоял его автобус», в течение своего пребывания с 16:45 до 17:08; время появления автобуса не установлено.\",\n            \"minimal_fix\": \"Удалить это предложение и назвать направление автобуса в описании перехода Ильи к первой полосе.\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба рассказа последовательно соединяют сцену с пассажиром и хронику первых суток. X немного компактнее, Y несколько подробнее обозначает источники; по удобству чтения они сопоставимы.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y отличает муниципальный план от подтверждённых событий и не добавляет неподтверждённое время присутствия автобуса.\"\n    },\n    {\n      \"pair_id\": \"p01\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Тексты одинаковы; спокойная самоирония и образ археологии соответствуют личному посту.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба сохраняют незавершённость ремонта, маленькое решение и отсутствие обещания масштабного расхламления. Объём и формат соблюдены.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    }
+  ],
+  "mapping": [
+    {
+      "pair_id": "p01",
+      "case_id": "e01",
+      "X": {
+        "arm": "original",
+        "original_path": "originals/e01.txt",
+        "original_sha256": "c7eb03c8a57dbbfc7bbc1c4299ff98cba4c32115f02e0c7fef266b59681fac96"
+      },
+      "Y": {
+        "arm": "edited",
+        "output_id": "o_8133fb9dfa1486061c9c08d37bf71937"
+      }
+    },
+    {
+      "pair_id": "p02",
+      "case_id": "e02",
+      "X": {
+        "arm": "edited",
+        "output_id": "o_6f076ef969646e413625c3edfbf48200"
+      },
+      "Y": {
+        "arm": "original",
+        "original_path": "originals/e02.txt",
+        "original_sha256": "0e1064474592b780fd023da2f79e548c7dc82583cfcdd9421669d4ecd368c318"
+      }
+    },
+    {
+      "pair_id": "p03",
+      "case_id": "e03",
+      "X": {
+        "arm": "original",
+        "original_path": "originals/e03.txt",
+        "original_sha256": "e6e785352427def5b42a132fc54faa77e5de40800943c909be498afb7cba38d2"
+      },
+      "Y": {
+        "arm": "edited",
+        "output_id": "o_320bead6e0f443ae9a44c36ede487065"
+      }
+    },
+    {
+      "pair_id": "p04",
+      "case_id": "e04",
+      "X": {
+        "arm": "original",
+        "original_path": "originals/e04.txt",
+        "original_sha256": "b799182e382d73bb7ad810c9d507f809e9d001f53df0a67601780807a39a6fcc"
+      },
+      "Y": {
+        "arm": "edited",
+        "output_id": "o_68671530c13deb80f70cfeaa39121498"
+      }
+    },
+    {
+      "pair_id": "p05",
+      "case_id": "e05",
+      "X": {
+        "arm": "edited",
+        "output_id": "o_6528615a447eb9856ac2699bb4bb0e9f"
+      },
+      "Y": {
+        "arm": "original",
+        "original_path": "originals/e05.txt",
+        "original_sha256": "aadbfae3bd97058ee0dffd138969a98fde5113131c83aa37621b0b5ff64919be"
+      }
+    },
+    {
+      "pair_id": "p06",
+      "case_id": "e06",
+      "X": {
+        "arm": "edited",
+        "output_id": "o_6b06b5e1bb0699e60ae944d914f4ba3f"
+      },
+      "Y": {
+        "arm": "original",
+        "original_path": "originals/e06.txt",
+        "original_sha256": "25c08e5504183a36846484169f541ecd8439b308f94b10f2be9677e0d82cffd4"
+      }
+    },
+    {
+      "pair_id": "p07",
+      "case_id": "e07",
+      "X": {
+        "arm": "edited",
+        "output_id": "o_d5662b40134773debdbb5531e7131329"
+      },
+      "Y": {
+        "arm": "original",
+        "original_path": "originals/e07.txt",
+        "original_sha256": "3b81fd045d8919e75b9b8058e5db5d5f011fe5b6f49ea8d06d2db85044f392f6"
+      }
+    },
+    {
+      "pair_id": "p08",
+      "case_id": "e08",
+      "X": {
+        "arm": "edited",
+        "output_id": "o_d47a957c2c7e08de7ec0858b4685ddb4"
+      },
+      "Y": {
+        "arm": "original",
+        "original_path": "originals/e08.txt",
+        "original_sha256": "02d6edd13b4496ac6c22f6d831caffe3a85a4dc5ba2077be174435c7d1d4cc14"
+      }
+    },
+    {
+      "pair_id": "p09",
+      "case_id": "e09",
+      "X": {
+        "arm": "original",
+        "original_path": "originals/e09.txt",
+        "original_sha256": "d7472f32e859aa7f9b8c3810eed5bf08cb5e3bc101b6c7e95868028b8cb467dd"
+      },
+      "Y": {
+        "arm": "edited",
+        "output_id": "o_0d6aec4643caf87c80bfeda8d4d4ae87"
+      }
+    },
+    {
+      "pair_id": "p10",
+      "case_id": "e10",
+      "X": {
+        "arm": "original",
+        "original_path": "originals/e10.txt",
+        "original_sha256": "a37c8583ad09f13dbcfd6c490787b619d76a2a454651f64a3a44823836e2f1a8"
+      },
+      "Y": {
+        "arm": "edited",
+        "output_id": "o_e643db5b1e4d0d4814960633f8745c6e"
+      }
+    },
+    {
+      "pair_id": "p11",
+      "case_id": "e11",
+      "X": {
+        "arm": "edited",
+        "output_id": "o_5d675092d70fb33730ed5accdb39c3e1"
+      },
+      "Y": {
+        "arm": "original",
+        "original_path": "originals/e11.txt",
+        "original_sha256": "13393ae77c5cba01c92f492bc44decc19e533cc9cc41a85b2aefc0c1817707dc"
+      }
+    },
+    {
+      "pair_id": "p12",
+      "case_id": "e12",
+      "X": {
+        "arm": "original",
+        "original_path": "originals/e12.txt",
+        "original_sha256": "24bf50b40af6bc3c05149ca32294d561b497d163fd6820d561439ceaf5557d61"
+      },
+      "Y": {
+        "arm": "edited",
+        "output_id": "o_5d76dadfc32de594ca584e5d48db233e"
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "p01",
+      "case_id": "e01",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "original": "pass",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты полностью совпадают.",
+          "practical_preference": "tie",
+          "practical_reason": "Тексты идентичны, соответствуют источнику, жанру и заданному объёму."
+        },
+        "judge2": {
+          "statuses": {
+            "edited": "pass",
+            "original": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты одинаковы; спокойная самоирония и образ археологии соответствуют личному посту.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба сохраняют незавершённость ремонта, маленькое решение и отсутствие обещания масштабного расхламления. Объём и формат соблюдены."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p02",
+      "case_id": "e02",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "edited": "pass",
+            "original": "critical"
+          },
+          "editorial_preference": "edited",
+          "editorial_reason": "X яснее отделяет свидетельство очевидца, диспетчерские данные и муниципальный план; хронология читается последовательно.",
+          "practical_preference": "edited",
+          "practical_reason": "X сохраняет различие между планом и подтверждёнными событиями, тогда как Y выдаёт плановую остановку маршрута № 6 за состоявшийся факт."
+        },
+        "judge2": {
+          "statuses": {
+            "original": "critical",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба рассказа последовательно соединяют сцену с пассажиром и хронику первых суток. X немного компактнее, Y несколько подробнее обозначает источники; по удобству чтения они сопоставимы.",
+          "practical_preference": "edited",
+          "practical_reason": "Y отличает муниципальный план от подтверждённых событий и не добавляет неподтверждённое время присутствия автобуса."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "edited"
+      }
+    },
+    {
+      "pair_id": "p03",
+      "case_id": "e03",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "original": "revision",
+            "edited": "pass"
+          },
+          "editorial_preference": "original",
+          "editorial_reason": "X немного компактнее и заканчивается более естественной для журнального профиля фразой; служебная датировка в финале Y звучит формальнее.",
+          "practical_preference": "edited",
+          "practical_reason": "Y точнее передаёт процесс и не приписывает случаям с фотографиями неподтверждённую частоту."
+        },
+        "judge2": {
+          "statuses": {
+            "edited": "pass",
+            "original": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "У текстов одинаковая композиция и близкий голос: конкретные детали работы сочетаются с личной историей. Разница в плотности заключительного абзаца не даёт явного преимущества.",
+          "practical_preference": "edited",
+          "practical_reason": "X сохраняет исходные оговорки о возможной фотографии и обычном сроке заказа. Y требует двух локальных фактических правок."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "edited"
+      }
+    },
+    {
+      "pair_id": "p04",
+      "case_id": "e04",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "original": "pass",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты полностью совпадают.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба идентично и ясно сообщают предварительную дату открытия и доступные во время ремонта услуги."
+        },
+        "judge2": {
+          "statuses": {
+            "edited": "pass",
+            "original": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Одинаковые тексты с ясным разделением информации об открытии и доступных услугах.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба сохраняют предварительность даты, условие приёмки и необходимые сведения об услугах. Формат и объём соблюдены."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p05",
+      "case_id": "e05",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "edited": "pass",
+            "original": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты полностью совпадают.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста верно объясняют абсолютные числа и доли и не объявляют непроверенную причину изменения."
+        },
+        "judge2": {
+          "statuses": {
+            "original": "pass",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты одинаковы; числа объяснены последовательно и понятным языком.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста правильно передают числа, единицу учёта и отсутствие установленной причины изменения; объём соблюдён."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p06",
+      "case_id": "e06",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "edited": "pass",
+            "original": "critical"
+          },
+          "editorial_preference": "original",
+          "editorial_reason": "Прямая реплика делает Y чуть живее как профиль, хотя её использование и формулировка не разрешены источником.",
+          "practical_preference": "edited",
+          "practical_reason": "X корректно пересказывает интервью, а Y нарушает ограничение paraphrase_only и приписывает Артёму несогласованную прямую речь."
+        },
+        "judge2": {
+          "statuses": {
+            "original": "critical",
+            "edited": "pass"
+          },
+          "editorial_preference": "edited",
+          "editorial_reason": "Y не повторяет подряд мысль о сохранении привычных вещей, поэтому профиль читается собраннее.",
+          "practical_preference": "edited",
+          "practical_reason": "Y сохраняет содержание и выполняет запрос без нарушения условий цитирования."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "edited"
+      }
+    },
+    {
+      "pair_id": "p07",
+      "case_id": "e07",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "edited": "pass",
+            "original": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты практически одинаковы по структуре, ясности и ритму.",
+          "practical_preference": "edited",
+          "practical_reason": "X сохраняет атрибуцию личного объяснения Льва; Y требует небольшой правки."
+        },
+        "judge2": {
+          "statuses": {
+            "original": "pass",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба текста ясно связывают библиотечный опыт с подходом к ремонту и обходятся без выдуманной сцены посещения.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба соответствуют источникам и объёму. В данном профиле пересказ слов героя без вводной формулы не создаёт существенного искажения; формулировка о мастерской допустима в контексте его одиночной работы."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "disagreement"
+      }
+    },
+    {
+      "pair_id": "p08",
+      "case_id": "e08",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "edited": "pass",
+            "original": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба рассказа живые, последовательно выстроены и используют конкретные детали без заметной разницы в качестве подачи.",
+          "practical_preference": "edited",
+          "practical_reason": "X точнее сохраняет хронологию и последовательно обозначает, какие сведения принадлежат воспоминаниям Лукина."
+        },
+        "judge2": {
+          "statuses": {
+            "original": "revision",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба рассказа передают небольшое событие через действия и завершаются уместной метафорой. X компактнее, Y подробнее обозначает документальную основу; решающего преимущества в подаче нет.",
+          "practical_preference": "edited",
+          "practical_reason": "Y точно называет время записи и яснее отделяет свидетельство Лукина от документов. Оба оставляют место и срок возобновления наблюдений открытыми."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "edited"
+      }
+    },
+    {
+      "pair_id": "p09",
+      "case_id": "e09",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "original": "pass",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты идентичны.",
+          "practical_preference": "tie",
+          "practical_reason": "Тексты идентичны и соответствуют источнику, объёму и заданной позиции автора."
+        },
+        "judge2": {
+          "statuses": {
+            "edited": "pass",
+            "original": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Тексты одинаковы: личный тон и простые действия подходят для волонтёрского чата.",
+          "practical_preference": "tie",
+          "practical_reason": "Одинаковые тексты сохраняют удовольствие от понятной работы, благодарность Оле и отсутствие обещания регулярного участия; объём соблюдён."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p10",
+      "case_id": "e10",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "original": "revision",
+            "edited": "pass"
+          },
+          "editorial_preference": "original",
+          "editorial_reason": "X немного компактнее и завершается более цельной фразой; в Y отдельная строка с датой слегка прерывает журнальный ритм.",
+          "practical_preference": "edited",
+          "practical_reason": "Y точно разделяет текущий способ продаж и заявленное намерение не увеличивать число заказов."
+        },
+        "judge2": {
+          "statuses": {
+            "edited": "pass",
+            "original": "critical"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба профиля имеют ясную композицию, конкретные рабочие детали и естественный переход от ремесла к личному выбору героини.",
+          "practical_preference": "edited",
+          "practical_reason": "X сохраняет дату актуальности, обычный характер сроков и различие между текущим способом продаж и планами относительно количества заказов."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "edited"
+      }
+    },
+    {
+      "pair_id": "p11",
+      "case_id": "e11",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "edited": "pass",
+            "original": "critical"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба варианта спокойны, доброжелательны и почти полностью совпадают по подаче.",
+          "practical_preference": "edited",
+          "practical_reason": "X сохраняет исходную позицию автора, тогда как Y существенно меняет её отношение к вреду новостей."
+        },
+        "judge2": {
+          "statuses": {
+            "original": "critical",
+            "edited": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба варианта звучат спокойно и доброжелательно, сохраняют личный голос и выразительный образ супа, состязающегося с новостями.",
+          "practical_preference": "edited",
+          "practical_reason": "Y сохраняет авторское нежелание спорить, не превращая его в новое убеждение. Остальные требования выполнены обоими вариантами."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "edited"
+      }
+    },
+    {
+      "pair_id": "p12",
+      "case_id": "e12",
+      "comparable": true,
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "original": "revision",
+            "edited": "pass"
+          },
+          "editorial_preference": "edited",
+          "editorial_reason": "Формулировка Y о пределах гарантии яснее и естественнее объясняет роль повторного фрагмента неспециалисту.",
+          "practical_preference": "edited",
+          "practical_reason": "Y точно передаёт ограничение из интервью; X слегка подменяет проверку устранением неполадок."
+        },
+        "judge2": {
+          "statuses": {
+            "edited": "pass",
+            "original": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба текста доступны неспециалисту и одинаково последовательно объясняют смысл знакомого фрагмента.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба сохраняют ограничения проверки, используют разрешённый пересказ и соблюдают объём. Формулировка об отсутствии обещания избавить инструмент от неполадок не создаёт существенной подмены."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "disagreement"
+      }
+    }
+  ],
+  "not_comparable": [],
+  "statistics": {
+    "denominators": {
+      "originals": 12,
+      "editor_attempts": 12,
+      "pairs": 12,
+      "judges": 2
+    },
+    "editors": {
+      "statuses": {
+        "completed": 12,
+        "failed": 0
+      },
+      "measurements": {
+        "input_tokens": {
+          "observed_total": 134589,
+          "reported_records": 12,
+          "missing_records": 0
+        },
+        "cached_input_tokens": {
+          "observed_total": 74240,
+          "reported_records": 12,
+          "missing_records": 0
+        },
+        "output_tokens": {
+          "observed_total": 4618,
+          "reported_records": 12,
+          "missing_records": 0
+        },
+        "reasoning_output_tokens": {
+          "observed_total": 1206,
+          "reported_records": 12,
+          "missing_records": 0
+        },
+        "wall_seconds": {
+          "observed_total": 222.31912499999999,
+          "reported_records": 12,
+          "missing_records": 0
+        }
+      }
+    },
+    "total_measurements": {
+      "input_tokens": {
+        "observed_total": 205785,
+        "reported_records": 16,
+        "missing_records": 0
+      },
+      "cached_input_tokens": {
+        "observed_total": 98048,
+        "reported_records": 16,
+        "missing_records": 0
+      },
+      "output_tokens": {
+        "observed_total": 16012,
+        "reported_records": 16,
+        "missing_records": 0
+      },
+      "reasoning_output_tokens": {
+        "observed_total": 5948,
+        "reported_records": 16,
+        "missing_records": 0
+      },
+      "wall_seconds": {
+        "observed_total": 604.097094,
+        "reported_records": 16,
+        "missing_records": 0
+      }
+    },
+    "consensus": {
+      "editorial": {
+        "original": 0,
+        "edited": 0,
+        "tie": 7,
+        "disagreement": 5,
+        "missing_review": 0,
+        "non_comparable": 0
+      },
+      "practical": {
+        "original": 0,
+        "edited": 6,
+        "tie": 4,
+        "disagreement": 2,
+        "missing_review": 0,
+        "non_comparable": 0
+      }
+    },
+    "judges": {
+      "judge1": {
+        "measurements": {
+          "input_tokens": {
+            "observed_total": 34354,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "cached_input_tokens": {
+            "observed_total": 13056,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "output_tokens": {
+            "observed_total": 7560,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "reasoning_output_tokens": {
+            "observed_total": 4422,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "wall_seconds": {
+            "observed_total": 252.59051699999998,
+            "reported_records": 2,
+            "missing_records": 0
+          }
+        },
+        "statuses_by_arm": {
+          "original": {
+            "pass": 4,
+            "revision": 5,
+            "critical": 3,
+            "missing_review": 0,
+            "non_comparable": 0
+          },
+          "edited": {
+            "pass": 12,
+            "revision": 0,
+            "critical": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          }
+        }
+      },
+      "judge2": {
+        "measurements": {
+          "input_tokens": {
+            "observed_total": 36842,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "cached_input_tokens": {
+            "observed_total": 10752,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "output_tokens": {
+            "observed_total": 3834,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "reasoning_output_tokens": {
+            "observed_total": 320,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "wall_seconds": {
+            "observed_total": 129.187452,
+            "reported_records": 2,
+            "missing_records": 0
+          }
+        },
+        "statuses_by_arm": {
+          "original": {
+            "pass": 6,
+            "revision": 2,
+            "critical": 4,
+            "missing_review": 0,
+            "non_comparable": 0
+          },
+          "edited": {
+            "pass": 12,
+            "revision": 0,
+            "critical": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          }
+        }
+      }
+    }
+  }
+}

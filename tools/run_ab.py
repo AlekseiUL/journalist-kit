@@ -105,7 +105,7 @@ def prompt_for(case, documents=None):
     return prompt + "\n"
 
 
-def prepare(dest, dataset=None, root=ROOT):
+def prepare(dest, dataset=None, root=ROOT, *, protocol=None, rubric=None):
     dest = Path(dest)
     root = Path(root)
     dataset = Path(dataset) if dataset else root / "evals/ab-2026-09-07/cases.json"
@@ -115,9 +115,10 @@ def prepare(dest, dataset=None, root=ROOT):
                  for name in SKILL_FILES}
     decoded = {name: body.decode("utf-8") for name, body in documents.items()}
     review_documents = {}
-    for source, target in (("PROTOCOL.md", "protocol.txt"), ("JUDGE.md", "judge.txt")):
-        path = root / "evals/ab-2026-09-07" / source
-        if path.is_file():
+    for source, target, supplied in (("PROTOCOL.md", "protocol.txt", protocol),
+                                     ("JUDGE.md", "judge.txt", rubric)):
+        path = Path(supplied) if supplied is not None else root / "evals/ab-2026-09-07" / source
+        if supplied is not None or path.is_file():
             review_documents[target] = path.read_bytes()
     dest.mkdir(parents=True, exist_ok=False, mode=0o700)
     hashes = {}
@@ -371,6 +372,8 @@ def main(argv=None):
     prepare_parser = commands.add_parser("prepare", help="Freeze inputs and prompts without model calls")
     prepare_parser.add_argument("--dest", type=Path, required=True)
     prepare_parser.add_argument("--dataset", type=Path)
+    prepare_parser.add_argument("--protocol", type=Path)
+    prepare_parser.add_argument("--rubric", type=Path)
     run_parser = commands.add_parser("run", help="Execute 24 isolated calls, resuming terminal records")
     run_parser.add_argument("--run-dir", type=Path, required=True)
     run_parser.add_argument("--execute", action="store_true")
@@ -380,7 +383,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         if args.command == "prepare":
-            result = prepare(args.dest, args.dataset)
+            result = prepare(args.dest, args.dataset, protocol=args.protocol, rubric=args.rubric)
             summary = {"status": "prepared", "output_count": result["output_count"]}
         elif args.command == "run":
             summary = run(args.run_dir, args.execute)

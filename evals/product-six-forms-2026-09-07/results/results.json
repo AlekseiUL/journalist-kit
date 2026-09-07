@@ -1,0 +1,2535 @@
+{
+  "schema_version": 1,
+  "exported_at_utc": "2026-09-07T18:55:23.398314Z",
+  "caveats": [
+    "Requested model identifiers do not establish the resolved backend model or snapshot; unknown values remain unknown.",
+    "This is a descriptive comparison of fully injected instructions on six synthetic cases with two repeats, not a population estimate.",
+    "Twelve pairs are not twelve independent topics; the two model judges are not independent human reviewers.",
+    "No statistical significance, general accuracy, or causal population improvement is inferred.",
+    "Missing token measurements are unknown, not zero. Cached input tokens are reported separately and are part of input tokens, not added to them.",
+    "Failed writer attempts remain in all twelve pair denominators and are non-comparable. Missing judge reviews are not ties.",
+    "Frozen prompts are reproducible from snapshots and the common wrapper; provider temperature, generation seed, maximum token budget and hidden host instructions remain unknown."
+  ],
+  "writer_manifest_sha256": "b56c75ee1d1802c6b317007e345dd8b02a6ff949065ad94385b82b160489130e",
+  "judge_manifest_sha256": "558d3ac3560b0a8f94b677108b2b030152a201486a6896a396ba46cbf4049ab5",
+  "writer_records": [
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:36:05.530381Z",
+      "ended_at_utc": "2026-09-07T18:36:21.660982Z",
+      "wall_seconds": 16.130459,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9213,
+        "cached_input_tokens": 2944,
+        "output_tokens": 316,
+        "reasoning_output_tokens": 36
+      },
+      "prompt_sha256": "8e9ccc66370c2bae335effc04971f1c172e90e43376fee742a4f0184999687cf",
+      "final_sha256": "c3615ed4a5594a749190ae820b271d438b8b25d67f6db5feaa3a2f8b25ec974f",
+      "raw_stdout_sha256": "b7810f68c495ad361cc186adc299e151b1d6be461e8d898805acb37343a9d615",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_30692184e927139838f9a6e1eda1ea7b",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 1,
+      "arm": "baseline",
+      "text_path": "outputs/indoor_rink_conditional_reopening-r1-baseline.txt",
+      "word_count": 150,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:36:21.665909Z",
+      "ended_at_utc": "2026-09-07T18:36:51.544290Z",
+      "wall_seconds": 29.878202,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15559,
+        "cached_input_tokens": 6528,
+        "output_tokens": 779,
+        "reasoning_output_tokens": 516
+      },
+      "prompt_sha256": "d1f0e070c3c3d44f2c9f62da15eeff26b2562a39739eb85d8560781ac62987ad",
+      "final_sha256": "0c958867601e8c7542b023eaac30cbac81d1847792e2bec5910e956a6d60fb10",
+      "raw_stdout_sha256": "1ad5cda9830fd32c6c7d45ed141c7347be85c897e28edece9bee231269ae278e",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_ba492733ccc1dbe73542d01469285f71",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 1,
+      "arm": "treatment",
+      "text_path": "outputs/indoor_rink_conditional_reopening-r1-treatment.txt",
+      "word_count": 142,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:36:51.546837Z",
+      "ended_at_utc": "2026-09-07T18:37:06.225829Z",
+      "wall_seconds": 14.678912,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15561,
+        "cached_input_tokens": 1920,
+        "output_tokens": 313,
+        "reasoning_output_tokens": 78
+      },
+      "prompt_sha256": "d1f0e070c3c3d44f2c9f62da15eeff26b2562a39739eb85d8560781ac62987ad",
+      "final_sha256": "61c490e3a58c54e7d6e4ee4c9ced9e651e0d4f4055cd4289d0a99942ef90a210",
+      "raw_stdout_sha256": "98233319e97b3d85b7075f62682df2e5e4c327b006c1c1865f7dad171f8a07b7",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_3bca8944fc1b87b51ffb004881f829e0",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 2,
+      "arm": "treatment",
+      "text_path": "outputs/indoor_rink_conditional_reopening-r2-treatment.txt",
+      "word_count": 125,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:37:06.228439Z",
+      "ended_at_utc": "2026-09-07T18:37:22.319027Z",
+      "wall_seconds": 16.090498,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9213,
+        "cached_input_tokens": 6528,
+        "output_tokens": 323,
+        "reasoning_output_tokens": 66
+      },
+      "prompt_sha256": "8e9ccc66370c2bae335effc04971f1c172e90e43376fee742a4f0184999687cf",
+      "final_sha256": "5a7f08c6e2187ce98276d72f0ae0647631bf6f15f571c4186df113da60a05659",
+      "raw_stdout_sha256": "565568f586712c64567685ded5e4c9f1e02290431df60a4cf27cbc26c231f8d6",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_d44c6dd1da9c76e741e15f09707c4352",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 2,
+      "arm": "baseline",
+      "text_path": "outputs/indoor_rink_conditional_reopening-r2-baseline.txt",
+      "word_count": 133,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:37:22.321501Z",
+      "ended_at_utc": "2026-09-07T18:37:41.345878Z",
+      "wall_seconds": 19.024276,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9330,
+        "cached_input_tokens": 6528,
+        "output_tokens": 379,
+        "reasoning_output_tokens": 48
+      },
+      "prompt_sha256": "ff8e4ba508077c947d448c0f24f6a3700ce2a57dffd3a5a53b849e4619e86b1c",
+      "final_sha256": "c675acc58b49d993c133cd4f5cba29e2b8867488d7756794efa0cd682afd437a",
+      "raw_stdout_sha256": "03dfb08eed72aab1a670cfca90d2e3e0176fd4da379730d69184181469fcd2b4",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_cd9cf8b785463bdce751dc3159dabd68",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 1,
+      "arm": "baseline",
+      "text_path": "outputs/neighborhood_composter_practical_explainer-r1-baseline.txt",
+      "word_count": 171,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:37:41.348849Z",
+      "ended_at_utc": "2026-09-07T18:37:58.951376Z",
+      "wall_seconds": 17.602421,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15682,
+        "cached_input_tokens": 2944,
+        "output_tokens": 404,
+        "reasoning_output_tokens": 74
+      },
+      "prompt_sha256": "a3633ebdada19520ce19f0e78719a04cd7e58678c0bb5b9f17d43bfe3ae28f7c",
+      "final_sha256": "5e29511a48bbcdf1a5973b05eee146a5a56ac6c333665964f639d19ffb26b6e5",
+      "raw_stdout_sha256": "333cbe96604014eb0c102fe89e243b0454c7143d36871b04b41449891b60adaa",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_91693b90496bfbdecede66fee533c301",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 1,
+      "arm": "treatment",
+      "text_path": "outputs/neighborhood_composter_practical_explainer-r1-treatment.txt",
+      "word_count": 169,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:37:58.954056Z",
+      "ended_at_utc": "2026-09-07T18:38:39.852035Z",
+      "wall_seconds": 40.897743,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15680,
+        "cached_input_tokens": 2944,
+        "output_tokens": 1116,
+        "reasoning_output_tokens": 804
+      },
+      "prompt_sha256": "a3633ebdada19520ce19f0e78719a04cd7e58678c0bb5b9f17d43bfe3ae28f7c",
+      "final_sha256": "efe0ac00b3b7814fb5f61026981b6394e5a91164ebb33d7ead63b054157f2dc7",
+      "raw_stdout_sha256": "821c1bb7d4a5f44d50d31334177b940b1634261dec26687987bfbc38daf73bca",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_d59802e6f552c5fdd80b4653b5212547",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 2,
+      "arm": "treatment",
+      "text_path": "outputs/neighborhood_composter_practical_explainer-r2-treatment.txt",
+      "word_count": 153,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:38:39.855183Z",
+      "ended_at_utc": "2026-09-07T18:39:05.758682Z",
+      "wall_seconds": 25.903348,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9332,
+        "cached_input_tokens": 6528,
+        "output_tokens": 529,
+        "reasoning_output_tokens": 203
+      },
+      "prompt_sha256": "ff8e4ba508077c947d448c0f24f6a3700ce2a57dffd3a5a53b849e4619e86b1c",
+      "final_sha256": "86fc84131b8bdfaa0b754c8e26b85d15200acd4c350ca2990efb4fc240a85372",
+      "raw_stdout_sha256": "2fb6bce86f3f9c880c33c95c27a26212c1d5b6f20689a5722d16787925d9e919",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_ccf3a0945f40314f3d1e0db403b4f65f",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 2,
+      "arm": "baseline",
+      "text_path": "outputs/neighborhood_composter_practical_explainer-r2-baseline.txt",
+      "word_count": 167,
+      "min_words": 120,
+      "max_words": 200,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:39:05.760686Z",
+      "ended_at_utc": "2026-09-07T18:39:26.510217Z",
+      "wall_seconds": 20.749423,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9377,
+        "cached_input_tokens": 1920,
+        "output_tokens": 446,
+        "reasoning_output_tokens": 60
+      },
+      "prompt_sha256": "e8f4cbabf047a78ed7757740b038382d790757a6336a7bdac1b05e1a3796dee8",
+      "final_sha256": "15ff24bacb0e4eccda48c0d83f45247bad27e0603e4eae232590f51a8acfec8b",
+      "raw_stdout_sha256": "bc79676a27f031bf9ac77e1afe55a155e404ba9ca47f246051a80e6511d9d2de",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_9cded8090f4b15c508a9bd011ec40481",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 1,
+      "arm": "baseline",
+      "text_path": "outputs/umbrella_repairer_profile-r1-baseline.txt",
+      "word_count": 211,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:39:26.512647Z",
+      "ended_at_utc": "2026-09-07T18:39:47.175145Z",
+      "wall_seconds": 20.662388,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15725,
+        "cached_input_tokens": 2944,
+        "output_tokens": 459,
+        "reasoning_output_tokens": 52
+      },
+      "prompt_sha256": "05c05242d51568b0592fabf5e13cc3647c99a25ff082587dbe6944ffa5f86e90",
+      "final_sha256": "5807c639db68a899bf15892d77ba366ceb9698e63df9886b8c63d0ed81a54cc0",
+      "raw_stdout_sha256": "357f16a2c275c73205840734bf899a189746475b0d494a96636419db4df3b334",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_6564bba71b5954312d41377c019963c9",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 1,
+      "arm": "treatment",
+      "text_path": "outputs/umbrella_repairer_profile-r1-treatment.txt",
+      "word_count": 214,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:39:47.178225Z",
+      "ended_at_utc": "2026-09-07T18:40:06.882088Z",
+      "wall_seconds": 19.703754,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15725,
+        "cached_input_tokens": 0,
+        "output_tokens": 466,
+        "reasoning_output_tokens": 96
+      },
+      "prompt_sha256": "05c05242d51568b0592fabf5e13cc3647c99a25ff082587dbe6944ffa5f86e90",
+      "final_sha256": "b8f4a892d385ac4bbee230a372f3b9f6373c5e545e0e68f9859384d8372371ad",
+      "raw_stdout_sha256": "68d391b813f2e2375fb3f69e52587cd768d48ccf5208bcfe520d968e77bd2982",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_8ebf0cfb17e1811998a5c2efca5eb2d9",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 2,
+      "arm": "treatment",
+      "text_path": "outputs/umbrella_repairer_profile-r2-treatment.txt",
+      "word_count": 200,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:40:06.884874Z",
+      "ended_at_utc": "2026-09-07T18:40:25.972927Z",
+      "wall_seconds": 19.087947,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9375,
+        "cached_input_tokens": 0,
+        "output_tokens": 433,
+        "reasoning_output_tokens": 31
+      },
+      "prompt_sha256": "e8f4cbabf047a78ed7757740b038382d790757a6336a7bdac1b05e1a3796dee8",
+      "final_sha256": "5de031f6ed59a5e9fdecfd81af5bea0c8bb6d2e376cab25f6a10407029420df0",
+      "raw_stdout_sha256": "7a8c4fc1d56d781531190de59c85576b459d48176135a737fe09cb76b3977d67",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_42426950977c6c5207b1441e1d494089",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 2,
+      "arm": "baseline",
+      "text_path": "outputs/umbrella_repairer_profile-r2-baseline.txt",
+      "word_count": 218,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:40:25.975038Z",
+      "ended_at_utc": "2026-09-07T18:40:48.100124Z",
+      "wall_seconds": 22.124974,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9417,
+        "cached_input_tokens": 6528,
+        "output_tokens": 477,
+        "reasoning_output_tokens": 52
+      },
+      "prompt_sha256": "ef9ffa9c83da01197cf4eba05006fb6ee4fb712bee4abee1e5db8639b2ad5704",
+      "final_sha256": "7fd284e139ac4e113bf77a01d357a21833007b3ab6200d5c7941b9d07e2c858e",
+      "raw_stdout_sha256": "b591a0378dffc16434e5f45c1fce65f0872ffcb173a91ed7407f0ab1af68c076",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_bc19788056300960f981c3a436e409c6",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 1,
+      "arm": "baseline",
+      "text_path": "outputs/piano_return_documentary_narrative-r1-baseline.txt",
+      "word_count": 211,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:40:48.102934Z",
+      "ended_at_utc": "2026-09-07T18:41:15.779954Z",
+      "wall_seconds": 27.676865,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15767,
+        "cached_input_tokens": 6528,
+        "output_tokens": 686,
+        "reasoning_output_tokens": 270
+      },
+      "prompt_sha256": "11946e32307695a77f9206dcc26bef46a68f7a4c6427222639cba9c371708530",
+      "final_sha256": "14ded377fe408b43e270fbc9a2af7a52b786db510b41aa2fadfd36acbb1f1cca",
+      "raw_stdout_sha256": "be78291f45e27e8fdad4a689b0b2ac60a44f5c5a397ddd681e1a419a670c77e9",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_5284a72d384ddb6e2912a4b2fb1ddefa",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 1,
+      "arm": "treatment",
+      "text_path": "outputs/piano_return_documentary_narrative-r1-treatment.txt",
+      "word_count": 203,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:41:15.782949Z",
+      "ended_at_utc": "2026-09-07T18:41:37.628859Z",
+      "wall_seconds": 21.851581,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15765,
+        "cached_input_tokens": 0,
+        "output_tokens": 534,
+        "reasoning_output_tokens": 124
+      },
+      "prompt_sha256": "11946e32307695a77f9206dcc26bef46a68f7a4c6427222639cba9c371708530",
+      "final_sha256": "32a3a9344fc2752980ad0137b1e892dd718605114253d7815121639efe2037ce",
+      "raw_stdout_sha256": "1e573866b80e81c7c977d12703932ec20404b90da787e960e47d6e97a9beedce",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_c3ff4a6bc4b47d5d707c33e94a09a5b8",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 2,
+      "arm": "treatment",
+      "text_path": "outputs/piano_return_documentary_narrative-r2-treatment.txt",
+      "word_count": 204,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:41:37.631499Z",
+      "ended_at_utc": "2026-09-07T18:41:58.767500Z",
+      "wall_seconds": 21.138624,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9415,
+        "cached_input_tokens": 6528,
+        "output_tokens": 478,
+        "reasoning_output_tokens": 66
+      },
+      "prompt_sha256": "ef9ffa9c83da01197cf4eba05006fb6ee4fb712bee4abee1e5db8639b2ad5704",
+      "final_sha256": "7158ad3f93725417c4042810e373f2c5c665c4ab42a308aac231ecb7398147d0",
+      "raw_stdout_sha256": "34bff4d1c4276555fed1637ab46ed6194d269d4478dc0f6f3905f8f5ccae4a9a",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_18f9a907474d657d7daa63f38892f4d8",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 2,
+      "arm": "baseline",
+      "text_path": "outputs/piano_return_documentary_narrative-r2-baseline.txt",
+      "word_count": 203,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:41:58.769706Z",
+      "ended_at_utc": "2026-09-07T18:42:18.679092Z",
+      "wall_seconds": 19.909959,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9327,
+        "cached_input_tokens": 0,
+        "output_tokens": 453,
+        "reasoning_output_tokens": 54
+      },
+      "prompt_sha256": "96edfd86f56ce3756c991fdaf866b5ff81994ddd27a29e934faf1517bc389a8e",
+      "final_sha256": "687356434cabafe8b2720967416543da2dd21e5995da9246ca7ae74046d39747",
+      "raw_stdout_sha256": "435d1240bf7bcd764a30c9dcaa03513b093de96ac764aca46247d71dea9242c3",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_39942b66bc52faec2d53561ef7b8a2e1",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 1,
+      "arm": "baseline",
+      "text_path": "outputs/drawing_without_streak_author_column-r1-baseline.txt",
+      "word_count": 227,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:42:18.681792Z",
+      "ended_at_utc": "2026-09-07T18:42:41.220954Z",
+      "wall_seconds": 22.539276,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15673,
+        "cached_input_tokens": 6528,
+        "output_tokens": 521,
+        "reasoning_output_tokens": 149
+      },
+      "prompt_sha256": "012f1a8de721868c90e9b247367b8abff97cd068088747f90ce149cf3874e036",
+      "final_sha256": "201b033e31180518722ea4a14b59ab63c9b91c721c8000d30d35421344ddc0c1",
+      "raw_stdout_sha256": "7057528c2fc690cde88290c047f14c2f8bd125345eae8035bad4cdb2e594fceb",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_8941d4bc011d43a6508d264737c607fb",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 1,
+      "arm": "treatment",
+      "text_path": "outputs/drawing_without_streak_author_column-r1-treatment.txt",
+      "word_count": 212,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:42:41.223843Z",
+      "ended_at_utc": "2026-09-07T18:43:01.140790Z",
+      "wall_seconds": 19.916905,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15671,
+        "cached_input_tokens": 6528,
+        "output_tokens": 458,
+        "reasoning_output_tokens": 57
+      },
+      "prompt_sha256": "012f1a8de721868c90e9b247367b8abff97cd068088747f90ce149cf3874e036",
+      "final_sha256": "5f487f5832726ef94cf142653b4f0724ca33e742cea44ce542a63c96a7256b0f",
+      "raw_stdout_sha256": "47d6d7fbaa68ca19833cbe503955dd39e7debb603b96f3455b0154ca12d824b5",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_5bf5f72afbdc17e25eaeb9f41cdbe1ab",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 2,
+      "arm": "treatment",
+      "text_path": "outputs/drawing_without_streak_author_column-r2-treatment.txt",
+      "word_count": 226,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:43:01.143400Z",
+      "ended_at_utc": "2026-09-07T18:43:23.424555Z",
+      "wall_seconds": 22.281092,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9323,
+        "cached_input_tokens": 0,
+        "output_tokens": 444,
+        "reasoning_output_tokens": 59
+      },
+      "prompt_sha256": "96edfd86f56ce3756c991fdaf866b5ff81994ddd27a29e934faf1517bc389a8e",
+      "final_sha256": "70cb4b11f4e38ff39b4dcb63990e9a3606fb32fe1492ae659ae87cac88b16419",
+      "raw_stdout_sha256": "dca50f6b0925bfad39c22e6b2f5ad36e1228e8ed08778fc45a02c4c78257e65a",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_8403556aa495c1a15912deca871769e9",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 2,
+      "arm": "baseline",
+      "text_path": "outputs/drawing_without_streak_author_column-r2-baseline.txt",
+      "word_count": 220,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:43:23.426730Z",
+      "ended_at_utc": "2026-09-07T18:43:46.228953Z",
+      "wall_seconds": 22.802147,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9530,
+        "cached_input_tokens": 6528,
+        "output_tokens": 553,
+        "reasoning_output_tokens": 90
+      },
+      "prompt_sha256": "dd2448c91cb8a326013db68575d41fc4f26f04678207085f6faae1c97df50033",
+      "final_sha256": "1465d020ad35b9e39213eef48dc61d5da3d3c1569da2248d7ff82115ad29a77e",
+      "raw_stdout_sha256": "ebb5a1091815425a97f8e62fbbd15a1804291f0520c3630112c33c37617999e7",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_01d754c5ff3122b916d8a388aa51fa22",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 1,
+      "arm": "baseline",
+      "text_path": "outputs/returnable_lunch_container_solutions-r1-baseline.txt",
+      "word_count": 250,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:43:46.232133Z",
+      "ended_at_utc": "2026-09-07T18:44:08.467656Z",
+      "wall_seconds": 22.235438,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15876,
+        "cached_input_tokens": 6528,
+        "output_tokens": 517,
+        "reasoning_output_tokens": 50
+      },
+      "prompt_sha256": "767cd0066f64e7472aef3c7e1251150a6083cc4120adbeda596274ad7d79edd4",
+      "final_sha256": "75334c57ccc2da4ed86c8111f81d10e3c048368eea2df0898e74ff92aca3e781",
+      "raw_stdout_sha256": "98028248256e837a4e7b44e4274d177ff9260951c25782a115e1bd5bf1f02bb8",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_f1b44d7210914380f7ac3cc271e0089f",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 1,
+      "arm": "treatment",
+      "text_path": "outputs/returnable_lunch_container_solutions-r1-treatment.txt",
+      "word_count": 256,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:44:08.470183Z",
+      "ended_at_utc": "2026-09-07T18:44:32.138792Z",
+      "wall_seconds": 23.668526,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 15880,
+        "cached_input_tokens": 0,
+        "output_tokens": 553,
+        "reasoning_output_tokens": 114
+      },
+      "prompt_sha256": "767cd0066f64e7472aef3c7e1251150a6083cc4120adbeda596274ad7d79edd4",
+      "final_sha256": "aefae2ef2efb9f663ea27119d1e10d10625c90aa79a249d2dfece6e5b5c03e81",
+      "raw_stdout_sha256": "e04538dde7c20e925732898b549bbcf7b308bb6135473864b598ead546d5d944",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_284edebc1e4ab33028430749bc8aff90",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 2,
+      "arm": "treatment",
+      "text_path": "outputs/returnable_lunch_container_solutions-r2-treatment.txt",
+      "word_count": 236,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    },
+    {
+      "schema_version": 1,
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:44:32.141419Z",
+      "ended_at_utc": "2026-09-07T18:44:54.849043Z",
+      "wall_seconds": 22.70753,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 9532,
+        "cached_input_tokens": 6528,
+        "output_tokens": 535,
+        "reasoning_output_tokens": 65
+      },
+      "prompt_sha256": "dd2448c91cb8a326013db68575d41fc4f26f04678207085f6faae1c97df50033",
+      "final_sha256": "474c639d8865b1e9b34132dd101ac47df865aa4886dcb6961fcde7b24187bfc4",
+      "raw_stdout_sha256": "06b07e99b17beed5ace88c80942e56b34e168ec03703371d8653bbf37038589f",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dataset_sha256": "93b48246aa04d51e80ca03a6b534042bafaa2d27fffbd0e34a1c6e35ea0e3800",
+      "temperature": null,
+      "provider_seed": null,
+      "final_selection": "last_completed_agent_message",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "output_id": "o_2ec4cc81941f1622a62a0d064ce6e7db",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 2,
+      "arm": "baseline",
+      "text_path": "outputs/returnable_lunch_container_solutions-r2-baseline.txt",
+      "word_count": 252,
+      "min_words": 180,
+      "max_words": 280,
+      "within_word_range": true
+    }
+  ],
+  "judge_records": [
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:46:17.415690Z",
+      "ended_at_utc": "2026-09-07T18:47:59.041144Z",
+      "wall_seconds": 101.624944,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 19322,
+        "cached_input_tokens": 0,
+        "output_tokens": 3023,
+        "reasoning_output_tokens": 1848
+      },
+      "prompt_sha256": "5f13f1947d2cb31ca12e3c1596c7537b89a606a93a35815404fb54eb3ab09b30",
+      "final_sha256": "fab5a1b0564d7ceb4ed1553594273e057f902e12433c05b9045fcdc71e9218c8",
+      "raw_stdout_sha256": "3b65e457762620f53e09f2c2a410bb9920a2ab457108f3a216156a6bb2d1dcd4",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge1-batch1",
+      "judge_id": "judge1",
+      "swapped_xy": false,
+      "pair_ids": [
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06"
+      ],
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p01",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y чуть лучше организован: условие открытия изложено без повторов, а разрешённая прямая цитата естественно оживляет новость.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста точно сохраняют условность даты открытия, сообщают срок публикации расписания и корректно передают изменения после ремонта."
+          },
+          {
+            "pair_id": "p02",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y звучит немного живее благодаря уместной цитате директора, сохраняя ясную новостную структуру.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба варианта укладываются в объём и верно передают условие открытия, дату объявления расписания, проведённые работы и пока неизвестные цены."
+          },
+          {
+            "pair_id": "p03",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y сразу начинает с ближайшего действующего окна приёма, поэтому практическая информация считывается быстрее.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста дают корректные правила первого визита, учитывают отмену 9 сентября и не нарушают ограничение на прямое цитирование координатора."
+          },
+          {
+            "pair_id": "p04",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Дату объявят после проверки первой партии.",
+                  "source_id": "composter_coordinator_explanation",
+                  "reason": "Источник говорит лишь, что проект сначала дождётся результатов первой партии и проверки готового материала, а даты раздачи пока нет. Текст превращает это в определённое обещание объявить дату после проверки.",
+                  "minimal_fix": "Заменить на: «Даты раздачи пока нет: сначала проект дождётся результатов первой партии и проверки готового материала»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "Формат X с единым списком «Для первого раза» немного удобнее для быстрого просмотра конкретных действий.",
+            "practical_preference": "Y",
+            "practical_reason": "Y столь же полно выполняет практическую задачу и не превращает отсутствие даты раздачи в обещание объявить её после определённого этапа."
+          },
+          {
+            "pair_id": "p05",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "style",
+                  "quote": "Последняя, вопреки названию, не залежи случайного железа.",
+                  "source_id": null,
+                  "reason": "Фраза синтаксически неестественна: единственное число «последняя» плохо соединено с именной частью «не залежи». Это заметно затрудняет чтение вводного абзаца.",
+                  "minimal_fix": "Заменить на: «Вопреки названию, в последней лежит не случайное железо»."
+                }
+              ]
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X написан ровнее и естественнее; образ коробки последовательно связывает подтверждённые детали с характером героини.",
+            "practical_preference": "X",
+            "practical_reason": "Оба текста соблюдают права источников и передают факты, но X не содержит заметной синтаксической шероховатости Y."
+          },
+          {
+            "pair_id": "p06",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба профиля связные, естественные и выразительно показывают героиню через детали мастерской и разрешённые цитаты.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба варианта точно используют публичные сведения, пересказывают фоновые заметки без прямых цитат и не раскрывают содержание частной записки."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p01\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y чуть лучше организован: условие открытия изложено без повторов, а разрешённая прямая цитата естественно оживляет новость.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста точно сохраняют условность даты открытия, сообщают срок публикации расписания и корректно передают изменения после ремонта.\"\n    },\n    {\n      \"pair_id\": \"p02\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y звучит немного живее благодаря уместной цитате директора, сохраняя ясную новостную структуру.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба варианта укладываются в объём и верно передают условие открытия, дату объявления расписания, проведённые работы и пока неизвестные цены.\"\n    },\n    {\n      \"pair_id\": \"p03\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y сразу начинает с ближайшего действующего окна приёма, поэтому практическая информация считывается быстрее.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста дают корректные правила первого визита, учитывают отмену 9 сентября и не нарушают ограничение на прямое цитирование координатора.\"\n    },\n    {\n      \"pair_id\": \"p04\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Дату объявят после проверки первой партии.\",\n            \"source_id\": \"composter_coordinator_explanation\",\n            \"reason\": \"Источник говорит лишь, что проект сначала дождётся результатов первой партии и проверки готового материала, а даты раздачи пока нет. Текст превращает это в определённое обещание объявить дату после проверки.\",\n            \"minimal_fix\": \"Заменить на: «Даты раздачи пока нет: сначала проект дождётся результатов первой партии и проверки готового материала».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"Формат X с единым списком «Для первого раза» немного удобнее для быстрого просмотра конкретных действий.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Y столь же полно выполняет практическую задачу и не превращает отсутствие даты раздачи в обещание объявить её после определённого этапа.\"\n    },\n    {\n      \"pair_id\": \"p05\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"style\",\n            \"quote\": \"Последняя, вопреки названию, не залежи случайного железа.\",\n            \"source_id\": null,\n            \"reason\": \"Фраза синтаксически неестественна: единственное число «последняя» плохо соединено с именной частью «не залежи». Это заметно затрудняет чтение вводного абзаца.\",\n            \"minimal_fix\": \"Заменить на: «Вопреки названию, в последней лежит не случайное железо».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X написан ровнее и естественнее; образ коробки последовательно связывает подтверждённые детали с характером героини.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"Оба текста соблюдают права источников и передают факты, но X не содержит заметной синтаксической шероховатости Y.\"\n    },\n    {\n      \"pair_id\": \"p06\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба профиля связные, естественные и выразительно показывают героиню через детали мастерской и разрешённые цитаты.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба варианта точно используют публичные сведения, пересказывают фоновые заметки без прямых цитат и не раскрывают содержание частной записки.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    },
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-5.6-sol",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:47:59.044445Z",
+      "ended_at_utc": "2026-09-07T18:50:06.600570Z",
+      "wall_seconds": 127.555574,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 21558,
+        "cached_input_tokens": 6528,
+        "output_tokens": 3822,
+        "reasoning_output_tokens": 1768
+      },
+      "prompt_sha256": "7ab865b77f22554f2eb42a3507af2ee0f4087c48b571a46c48f322d44c53308b",
+      "final_sha256": "dfe9473fe1d69b4ec6294c5f4da9fff651d150c338c4ef499fbfd531c8112292",
+      "raw_stdout_sha256": "721cc75e5a7ada643eab4f27b58a4c53f72e043cc97766a695d21048dc8e3667",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge1-batch2",
+      "judge_id": "judge1",
+      "swapped_xy": false,
+      "pair_ids": [
+        "p07",
+        "p08",
+        "p09",
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p07",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Концерта или публичной встречи в тот день не было.",
+                  "source_id": "piano_repair_timeline",
+                  "reason": "Хронология подтверждает только отсутствие публичного концерта 2 сентября. Сведений об отсутствии любой «публичной встречи» в материалах нет.",
+                  "minimal_fix": "Заменить на: «Публичного концерта в тот день не было»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба текста ясно выстраивают хронологию, включают конкретную сцену и завершаются спокойно; различия композиции не дают заметного редакционного преимущества.",
+            "practical_preference": "X",
+            "practical_reason": "X точно следует документам, тогда как Y добавляет неподтверждённое утверждение об отсутствии публичной встречи."
+          },
+          {
+            "pair_id": "p08",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Концерта в этот день не было: после дороги инструменту требовалось двое суток, чтобы адаптироваться к помещению.",
+                  "source_id": "piano_repair_timeline",
+                  "reason": "Источники отдельно сообщают об отсутствии концерта и двух сутках адаптации, но не называют адаптацию причиной того, что концерт не проводили. Двоеточие создаёт неподтверждённую причинную связь.",
+                  "minimal_fix": "Разделить утверждения: «Концерта в этот день не было. После дороги инструменту дали двое суток на адаптацию к помещению»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Концерта в тот день не было: инструменту дали двое суток, чтобы адаптироваться к помещению, и только потом настроили.",
+                  "source_id": "piano_repair_timeline",
+                  "reason": "Материалы не устанавливают, что концерт не состоялся именно из-за адаптации инструмента; подтверждены лишь эти два отдельных обстоятельства.",
+                  "minimal_fix": "Заменить двоеточие точкой: «Концерта в тот день не было. Инструменту дали двое суток, чтобы адаптироваться к помещению, и только потом настроили»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Два дня спустя, 8 сентября, уроки должны вернуться в малый зал",
+                  "source_id": "piano_class_schedule",
+                  "reason": "От описываемого 4 сентября до 8 сентября проходят четыре дня, а не два.",
+                  "minimal_fix": "Заменить на: «8 сентября уроки должны вернуться в малый зал»."
+                }
+              ]
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y выразительнее замыкает рассказ возвращением к сцене с тетрадью и сохраняет спокойный документальный тон.",
+            "practical_preference": "X",
+            "practical_reason": "В обоих текстах есть неподтверждённая причинная связка, но Y дополнительно ошибается в календарном интервале."
+          },
+          {
+            "pair_id": "p09",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Обе колонки связны, естественны и сохраняют спокойную самоиронию и личный, не универсальный характер позиции.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста точно передают факты, ограничения самооценки и позицию автора, соблюдая объём и разрешения."
+          },
+          {
+            "pair_id": "p10",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y немного компактнее и ровнее держит авторский голос; самоиронические детали встроены в повествование особенно естественно.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба варианта сохраняют личную позицию, не превращают её в общий рецепт и корректно передают календарные данные и ограничения."
+          },
+          {
+            "pair_id": "p11",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "36 контейнеров, или 10%, не возвратились в срок.",
+                  "source_id": "container_pilot_records",
+                  "reason": "Сводка говорит о 36 просроченных операциях выдачи, а не о 36 уникальных контейнерах. Одна и та же тара могла выдаваться повторно.",
+                  "minimal_fix": "Заменить на: «36 выдач, или 10% операций, остались без возврата в срок»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Остались не возвращены в срок 36 контейнеров.",
+                  "source_id": "container_pilot_records",
+                  "reason": "Источник фиксирует 36 просроченных выдач, но не позволяет определить число уникальных невозвращённых контейнеров.",
+                  "minimal_fix": "Заменить на: «Без возврата в срок остались 36 выдач»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "пользоваться системой постоянно пока не готов",
+                  "source_id": "container_participant_critique",
+                  "reason": "Степан Вязов лишь не решил, пользовался бы системой постоянно. Формулировка «не готов» превращает неопределённость в более определённый отказ.",
+                  "minimal_fix": "Заменить на: «но пока не решил, пользовался бы системой постоянно»."
+                }
+              ]
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X лучше завершает solutions-материал ясным сопоставлением работоспособности механизма и пока не доказанных преимуществ.",
+            "practical_preference": "X",
+            "practical_reason": "Оба текста неверно называют 36 просроченных выдач контейнерами, но Y дополнительно усиливает неопределённую позицию участника до неготовности пользоваться системой."
+          },
+          {
+            "pair_id": "p12",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "62 участника получили контейнеры 360 раз",
+                  "source_id": "container_pilot_records",
+                  "reason": "Источник отдельно сообщает, что 62 человека записались в пилот, и что было 360 операций выдачи. Он не подтверждает, что каждый из 62 записавшихся действительно получил контейнер.",
+                  "minimal_fix": "Заменить на: «В пилот записались 62 человека; за две недели зарегистрировали 360 выдач»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "За время пилота 62 участника получили контейнеры 360 раз.",
+                  "source_id": "container_pilot_records",
+                  "reason": "Сводка подтверждает 62 записавшихся и 360 выдач, но не устанавливает, что контейнер получал каждый записавшийся участник.",
+                  "minimal_fix": "Заменить на: «В пилот записались 62 человека, а за время пилота зарегистрировали 360 выдач»."
+                }
+              ]
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X яснее формулирует исходную проблему и заканчивает содержательным выводом о границах применимости пилота.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба варианта одинаково смешивают число записавшихся с получателями контейнеров; в остальном они корректно описывают механизм, данные, ограничения и возражение участника."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p07\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Концерта или публичной встречи в тот день не было.\",\n            \"source_id\": \"piano_repair_timeline\",\n            \"reason\": \"Хронология подтверждает только отсутствие публичного концерта 2 сентября. Сведений об отсутствии любой «публичной встречи» в материалах нет.\",\n            \"minimal_fix\": \"Заменить на: «Публичного концерта в тот день не было».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба текста ясно выстраивают хронологию, включают конкретную сцену и завершаются спокойно; различия композиции не дают заметного редакционного преимущества.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X точно следует документам, тогда как Y добавляет неподтверждённое утверждение об отсутствии публичной встречи.\"\n    },\n    {\n      \"pair_id\": \"p08\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Концерта в этот день не было: после дороги инструменту требовалось двое суток, чтобы адаптироваться к помещению.\",\n            \"source_id\": \"piano_repair_timeline\",\n            \"reason\": \"Источники отдельно сообщают об отсутствии концерта и двух сутках адаптации, но не называют адаптацию причиной того, что концерт не проводили. Двоеточие создаёт неподтверждённую причинную связь.\",\n            \"minimal_fix\": \"Разделить утверждения: «Концерта в этот день не было. После дороги инструменту дали двое суток на адаптацию к помещению».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Концерта в тот день не было: инструменту дали двое суток, чтобы адаптироваться к помещению, и только потом настроили.\",\n            \"source_id\": \"piano_repair_timeline\",\n            \"reason\": \"Материалы не устанавливают, что концерт не состоялся именно из-за адаптации инструмента; подтверждены лишь эти два отдельных обстоятельства.\",\n            \"minimal_fix\": \"Заменить двоеточие точкой: «Концерта в тот день не было. Инструменту дали двое суток, чтобы адаптироваться к помещению, и только потом настроили».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Два дня спустя, 8 сентября, уроки должны вернуться в малый зал\",\n            \"source_id\": \"piano_class_schedule\",\n            \"reason\": \"От описываемого 4 сентября до 8 сентября проходят четыре дня, а не два.\",\n            \"minimal_fix\": \"Заменить на: «8 сентября уроки должны вернуться в малый зал».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y выразительнее замыкает рассказ возвращением к сцене с тетрадью и сохраняет спокойный документальный тон.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"В обоих текстах есть неподтверждённая причинная связка, но Y дополнительно ошибается в календарном интервале.\"\n    },\n    {\n      \"pair_id\": \"p09\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Обе колонки связны, естественны и сохраняют спокойную самоиронию и личный, не универсальный характер позиции.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста точно передают факты, ограничения самооценки и позицию автора, соблюдая объём и разрешения.\"\n    },\n    {\n      \"pair_id\": \"p10\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y немного компактнее и ровнее держит авторский голос; самоиронические детали встроены в повествование особенно естественно.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба варианта сохраняют личную позицию, не превращают её в общий рецепт и корректно передают календарные данные и ограничения.\"\n    },\n    {\n      \"pair_id\": \"p11\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"36 контейнеров, или 10%, не возвратились в срок.\",\n            \"source_id\": \"container_pilot_records\",\n            \"reason\": \"Сводка говорит о 36 просроченных операциях выдачи, а не о 36 уникальных контейнерах. Одна и та же тара могла выдаваться повторно.\",\n            \"minimal_fix\": \"Заменить на: «36 выдач, или 10% операций, остались без возврата в срок».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Остались не возвращены в срок 36 контейнеров.\",\n            \"source_id\": \"container_pilot_records\",\n            \"reason\": \"Источник фиксирует 36 просроченных выдач, но не позволяет определить число уникальных невозвращённых контейнеров.\",\n            \"minimal_fix\": \"Заменить на: «Без возврата в срок остались 36 выдач».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"пользоваться системой постоянно пока не готов\",\n            \"source_id\": \"container_participant_critique\",\n            \"reason\": \"Степан Вязов лишь не решил, пользовался бы системой постоянно. Формулировка «не готов» превращает неопределённость в более определённый отказ.\",\n            \"minimal_fix\": \"Заменить на: «но пока не решил, пользовался бы системой постоянно».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X лучше завершает solutions-материал ясным сопоставлением работоспособности механизма и пока не доказанных преимуществ.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"Оба текста неверно называют 36 просроченных выдач контейнерами, но Y дополнительно усиливает неопределённую позицию участника до неготовности пользоваться системой.\"\n    },\n    {\n      \"pair_id\": \"p12\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"62 участника получили контейнеры 360 раз\",\n            \"source_id\": \"container_pilot_records\",\n            \"reason\": \"Источник отдельно сообщает, что 62 человека записались в пилот, и что было 360 операций выдачи. Он не подтверждает, что каждый из 62 записавшихся действительно получил контейнер.\",\n            \"minimal_fix\": \"Заменить на: «В пилот записались 62 человека; за две недели зарегистрировали 360 выдач».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"За время пилота 62 участника получили контейнеры 360 раз.\",\n            \"source_id\": \"container_pilot_records\",\n            \"reason\": \"Сводка подтверждает 62 записавшихся и 360 выдач, но не устанавливает, что контейнер получал каждый записавшийся участник.\",\n            \"minimal_fix\": \"Заменить на: «В пилот записались 62 человека, а за время пилота зарегистрировали 360 выдач».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X яснее формулирует исходную проблему и заканчивает содержательным выводом о границах применимости пилота.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба варианта одинаково смешивают число записавшихся с получателями контейнеров; в остальном они корректно описывают механизм, данные, ограничения и возражение участника.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    },
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:50:06.603407Z",
+      "ended_at_utc": "2026-09-07T18:51:41.339495Z",
+      "wall_seconds": 94.735668,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 22802,
+        "cached_input_tokens": 7424,
+        "output_tokens": 2695,
+        "reasoning_output_tokens": 507
+      },
+      "prompt_sha256": "a12f8dee97fc83c062580bfa813a22947faf505d301f4507cfc13e9e07bb1b81",
+      "final_sha256": "b3bfc3f741b4515c88c9e9a4196efb7f7c5d2d9efac29fc8623aa3a2595f1bf6",
+      "raw_stdout_sha256": "1d9fe60f676fa1b9817929d2f13117385ff7374364a837167c66f01687e5428e",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge2-batch1",
+      "judge_id": "judge2",
+      "swapped_xy": true,
+      "pair_ids": [
+        "p12",
+        "p11",
+        "p10",
+        "p09",
+        "p08",
+        "p07"
+      ],
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p12",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба текста ясно соединяют устройство пилота, результаты и ограничения с бытовым возражением участника. Подача спокойная и журналистская.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба соблюдают объём, корректно различают выдачи и участников, сохраняют ограничения доказательств и разрешённую цитату."
+          },
+          {
+            "pair_id": "p11",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Все три контейнера он вернул, но пользоваться системой постоянно пока не готов.",
+                  "source_id": "container_participant_critique",
+                  "reason": "Источник говорит, что Степан «пока не решил, пользовался бы системой постоянно». Неопределённость решения заменена утверждением о нынешней неготовности. Это несколько усиливает отрицательную сторону его позиции.",
+                  "minimal_fix": "Заменить «пользоваться системой постоянно пока не готов» на «пока не решил, пользовался бы системой постоянно»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "менялись меню, число и состав покупателей",
+                  "source_id": "container_pilot_records",
+                  "reason": "В сводке указано: «Состав покупателей, меню и число обедов в эти периоды различались». Число покупателей отдельно не установлено: изменение количества обедов не обязательно означает изменение количества людей.",
+                  "minimal_fix": "Заменить на «менялись меню, состав покупателей и число обедов»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба текста читаются связно и выдерживают аналитический тон; Y завершает материал общим выводом, X — положением участника и перспективой программы.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба сохраняют механизм, данные и основные ограничения пилота, укладываются в объём и требуют локальной фактической правки."
+          },
+          {
+            "pair_id": "p10",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба сохраняют спокойную самоиронию и личный голос. X заканчивается предметной сценой с ложкой, Y — ясной формулировкой позиции; обе композиции уместны.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба корректно передают календарные данные, не заявляют роста мастерства и не превращают личный выбор в универсальный рецепт. Литературная редактура соответствует разрешению автора."
+          },
+          {
+            "pair_id": "p09",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба текста естественно сочетают бытовые детали, самоиронию и размышление. Образы отчёта перед календарём и воображаемой комиссии соответствуют голосу колонки.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба соблюдают объём и сохраняют главную мысль, различие дней и страниц, отсутствие доказанного улучшения техники и пользу ежедневного ритма для других."
+          },
+          {
+            "pair_id": "p08",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Причину преждевременного износа установить не удалось.",
+                  "source_id": "piano_repairer_report",
+                  "reason": "Источник сообщает: «Причину преждевременного износа отчёт не устанавливает». Текст дополнительно предполагает, что причину пытались выяснить, но попытка оказалась безуспешной; об этом сведений нет.",
+                  "minimal_fix": "Заменить на «Причина преждевременного износа в отчёте не установлена»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Два дня спустя, 8 сентября, уроки должны вернуться в малый зал по прежнему расписанию.",
+                  "source_id": "piano_class_schedule",
+                  "reason": "Возобновление занятий действительно объявлено на 8 сентября. Однако предыдущее предложение датировано 4 сентября, от которого до 8 сентября четыре дня, а не два.",
+                  "minimal_fix": "Удалить «Два дня спустя,»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Причину преждевременного износа установить не удалось.",
+                  "source_id": "piano_repairer_report",
+                  "reason": "Источник сообщает: «Причину преждевременного износа отчёт не устанавливает». Текст дополнительно предполагает, что причину пытались выяснить, но попытка оказалась безуспешной; об этом сведений нет.",
+                  "minimal_fix": "Заменить на «Причина преждевременного износа в отчёте не установлена»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "X начинает с конкретной сцены и возвращается к ней в финале; Y последовательно ведёт хронологию. Оба варианта понятны и обходятся без торжественной риторики.",
+            "practical_preference": "Y",
+            "practical_reason": "Оба требуют уточнения формулировки о причине износа, но X дополнительно содержит прямую ошибку в интервале между настройкой и возобновлением уроков."
+          },
+          {
+            "pair_id": "p07",
+            "X": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Концерта или публичной встречи в тот день не было.",
+                  "source_id": "piano_repair_timeline",
+                  "reason": "Хронология подтверждает только: «публичного концерта в этот день не было». Отсутствие любой публичной встречи отдельно не установлено.",
+                  "minimal_fix": "Заменить на «Публичного концерта в тот день не было»."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Дата открытого концерта пока не назначена.",
+                  "source_id": "piano_class_schedule",
+                  "reason": "В объявлении сказано, что дата «пока не объявлена». Это не подтверждает, что её ещё не назначили внутри организации.",
+                  "minimal_fix": "Заменить «не назначена» на «не объявлена»."
+                }
+              ]
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "brief",
+                  "quote": "У двери стояла администратор Лидия Берестова.",
+                  "source_id": "piano_observer_note",
+                  "reason": "По заданию происхождение сцены должно быть понятно. Источник — «Запись администратора зала Лидии Берестовой», но текст представляет Лидию только как персонажа и не сообщает, что сцена восстановлена по её записи.",
+                  "minimal_fix": "Добавить перед сценой: «По записи администратора Лидии Берестовой,» — и согласовать начало предложения."
+                },
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "До возвращения учеников в зале остаются рояль у окон и зелёная тетрадь на скамье.",
+                  "source_id": "piano_observer_note",
+                  "reason": "Запись подтверждает лишь, что 4 сентября после проверки преподаватель «оставил её на скамье». Финал продлевает это состояние до возвращения учеников 8 сентября, хотя дальнейшее местонахождение тетради не документировано.",
+                  "minimal_fix": "Заменить на «В конце записи от 4 сентября зелёная тетрадь остаётся на скамье, а возвращение учеников ещё впереди»."
+                }
+              ]
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Начальная сцена с зелёной тетрадью сразу задаёт предметный центр рассказа, а возвращение к этому образу делает композицию более цельной.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба сохраняют основную хронологию, документированные действия и спокойную форму. X требует уточнить два неподдержанных отрицания, Y — обозначить источник сцены и ограничить финальный образ временем наблюдения; пригодность после локальных правок сопоставима."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p12\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба текста ясно соединяют устройство пилота, результаты и ограничения с бытовым возражением участника. Подача спокойная и журналистская.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба соблюдают объём, корректно различают выдачи и участников, сохраняют ограничения доказательств и разрешённую цитату.\"\n    },\n    {\n      \"pair_id\": \"p11\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Все три контейнера он вернул, но пользоваться системой постоянно пока не готов.\",\n            \"source_id\": \"container_participant_critique\",\n            \"reason\": \"Источник говорит, что Степан «пока не решил, пользовался бы системой постоянно». Неопределённость решения заменена утверждением о нынешней неготовности. Это несколько усиливает отрицательную сторону его позиции.\",\n            \"minimal_fix\": \"Заменить «пользоваться системой постоянно пока не готов» на «пока не решил, пользовался бы системой постоянно».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"менялись меню, число и состав покупателей\",\n            \"source_id\": \"container_pilot_records\",\n            \"reason\": \"В сводке указано: «Состав покупателей, меню и число обедов в эти периоды различались». Число покупателей отдельно не установлено: изменение количества обедов не обязательно означает изменение количества людей.\",\n            \"minimal_fix\": \"Заменить на «менялись меню, состав покупателей и число обедов».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба текста читаются связно и выдерживают аналитический тон; Y завершает материал общим выводом, X — положением участника и перспективой программы.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба сохраняют механизм, данные и основные ограничения пилота, укладываются в объём и требуют локальной фактической правки.\"\n    },\n    {\n      \"pair_id\": \"p10\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба сохраняют спокойную самоиронию и личный голос. X заканчивается предметной сценой с ложкой, Y — ясной формулировкой позиции; обе композиции уместны.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба корректно передают календарные данные, не заявляют роста мастерства и не превращают личный выбор в универсальный рецепт. Литературная редактура соответствует разрешению автора.\"\n    },\n    {\n      \"pair_id\": \"p09\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба текста естественно сочетают бытовые детали, самоиронию и размышление. Образы отчёта перед календарём и воображаемой комиссии соответствуют голосу колонки.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба соблюдают объём и сохраняют главную мысль, различие дней и страниц, отсутствие доказанного улучшения техники и пользу ежедневного ритма для других.\"\n    },\n    {\n      \"pair_id\": \"p08\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Причину преждевременного износа установить не удалось.\",\n            \"source_id\": \"piano_repairer_report\",\n            \"reason\": \"Источник сообщает: «Причину преждевременного износа отчёт не устанавливает». Текст дополнительно предполагает, что причину пытались выяснить, но попытка оказалась безуспешной; об этом сведений нет.\",\n            \"minimal_fix\": \"Заменить на «Причина преждевременного износа в отчёте не установлена».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Два дня спустя, 8 сентября, уроки должны вернуться в малый зал по прежнему расписанию.\",\n            \"source_id\": \"piano_class_schedule\",\n            \"reason\": \"Возобновление занятий действительно объявлено на 8 сентября. Однако предыдущее предложение датировано 4 сентября, от которого до 8 сентября четыре дня, а не два.\",\n            \"minimal_fix\": \"Удалить «Два дня спустя,».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Причину преждевременного износа установить не удалось.\",\n            \"source_id\": \"piano_repairer_report\",\n            \"reason\": \"Источник сообщает: «Причину преждевременного износа отчёт не устанавливает». Текст дополнительно предполагает, что причину пытались выяснить, но попытка оказалась безуспешной; об этом сведений нет.\",\n            \"minimal_fix\": \"Заменить на «Причина преждевременного износа в отчёте не установлена».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"X начинает с конкретной сцены и возвращается к ней в финале; Y последовательно ведёт хронологию. Оба варианта понятны и обходятся без торжественной риторики.\",\n      \"practical_preference\": \"Y\",\n      \"practical_reason\": \"Оба требуют уточнения формулировки о причине износа, но X дополнительно содержит прямую ошибку в интервале между настройкой и возобновлением уроков.\"\n    },\n    {\n      \"pair_id\": \"p07\",\n      \"X\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Концерта или публичной встречи в тот день не было.\",\n            \"source_id\": \"piano_repair_timeline\",\n            \"reason\": \"Хронология подтверждает только: «публичного концерта в этот день не было». Отсутствие любой публичной встречи отдельно не установлено.\",\n            \"minimal_fix\": \"Заменить на «Публичного концерта в тот день не было».\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Дата открытого концерта пока не назначена.\",\n            \"source_id\": \"piano_class_schedule\",\n            \"reason\": \"В объявлении сказано, что дата «пока не объявлена». Это не подтверждает, что её ещё не назначили внутри организации.\",\n            \"minimal_fix\": \"Заменить «не назначена» на «не объявлена».\"\n          }\n        ]\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"brief\",\n            \"quote\": \"У двери стояла администратор Лидия Берестова.\",\n            \"source_id\": \"piano_observer_note\",\n            \"reason\": \"По заданию происхождение сцены должно быть понятно. Источник — «Запись администратора зала Лидии Берестовой», но текст представляет Лидию только как персонажа и не сообщает, что сцена восстановлена по её записи.\",\n            \"minimal_fix\": \"Добавить перед сценой: «По записи администратора Лидии Берестовой,» — и согласовать начало предложения.\"\n          },\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"До возвращения учеников в зале остаются рояль у окон и зелёная тетрадь на скамье.\",\n            \"source_id\": \"piano_observer_note\",\n            \"reason\": \"Запись подтверждает лишь, что 4 сентября после проверки преподаватель «оставил её на скамье». Финал продлевает это состояние до возвращения учеников 8 сентября, хотя дальнейшее местонахождение тетради не документировано.\",\n            \"minimal_fix\": \"Заменить на «В конце записи от 4 сентября зелёная тетрадь остаётся на скамье, а возвращение учеников ещё впереди».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Начальная сцена с зелёной тетрадью сразу задаёт предметный центр рассказа, а возвращение к этому образу делает композицию более цельной.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба сохраняют основную хронологию, документированные действия и спокойную форму. X требует уточнить два неподдержанных отрицания, Y — обозначить источник сцены и ограничить финальный образ временем наблюдения; пригодность после локальных правок сопоставима.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    },
+    {
+      "status": "completed",
+      "flags": [],
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "medium",
+      "started_at_utc": "2026-09-07T18:51:41.342289Z",
+      "ended_at_utc": "2026-09-07T18:52:43.697243Z",
+      "wall_seconds": 62.354689,
+      "returncode": 0,
+      "usage": {
+        "input_tokens": 20568,
+        "cached_input_tokens": 7424,
+        "output_tokens": 1653,
+        "reasoning_output_tokens": 434
+      },
+      "prompt_sha256": "6ae0e98db63f1fc1121c28b2c72389f00528875cc2dfaa051f675b5daefaf0a9",
+      "final_sha256": "1f7751ed2c94438b2a3f7149169a216e3c58ffb5a274ddbcea10a0b4b346633c",
+      "raw_stdout_sha256": "d8eab59bb280814c746a70a47b514d691ef8db96eda4b4bdb4c82320fbfd2a3a",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli_warning_count": 1,
+      "thread_count": 1,
+      "turn_started_count": 1,
+      "turn_completed_count": 1,
+      "resolved_model": "unknown",
+      "backend_model_snapshot": "unknown",
+      "cli_version": "unknown",
+      "job_id": "judge2-batch2",
+      "judge_id": "judge2",
+      "swapped_xy": true,
+      "pair_ids": [
+        "p06",
+        "p05",
+        "p04",
+        "p03",
+        "p02",
+        "p01"
+      ],
+      "review": {
+        "reviews": [
+          {
+            "pair_id": "p06",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y заканчивается выразительной деталью об узнавании своей вещи; финальное обобщение X о характере героини несколько избыточно.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста сохраняют существенные факты, ограничения ремонта и разрешённые слова героини, соблюдают объём и не используют закрытые сведения."
+          },
+          {
+            "pair_id": "p05",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "подходящей замены не существует",
+                  "source_id": "umbrella_background_conversation",
+                  "reason": "В источнике сказано: «иногда совместимой детали нет». Текст усиливает отсутствие доступной детали до утверждения, что подходящей замены вообще не существует. Источник такой уверенности не даёт.",
+                  "minimal_fix": "Заменить на «подходящей детали не находится»."
+                }
+              ]
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "Оба профиля естественно соединяют предметные детали, биографию и реплики героини; различия в композиции не дают явного преимущества.",
+            "practical_preference": "X",
+            "practical_reason": "X пригоден без существенных замечаний; Y требует локально ослабить утверждение о невозможности найти замену. Объём и разрешения соблюдены в обоих вариантах."
+          },
+          {
+            "pair_id": "p04",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "revision",
+              "findings": [
+                {
+                  "severity": "revision",
+                  "category": "facts",
+                  "quote": "Дату объявят после проверки первой партии.",
+                  "source_id": "composter_coordinator_explanation",
+                  "reason": "Координатор сообщил, что «сначала проект дождётся результатов первой партии и проверки готового материала; даты раздачи пока нет». Это условие дальнейшего решения, а не обещание объявить дату после проверки. Текст добавляет неподтверждённое обязательство проекта.",
+                  "minimal_fix": "Заменить на «Даты раздачи пока нет: сначала проект дождётся результатов первой партии и проверки готового материала»."
+                }
+              ]
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y сразу сообщает ближайшее действующее окно, затем даёт последовательный список действий для первого визита.",
+            "practical_preference": "X",
+            "practical_reason": "Оба текста позволяют правильно подготовиться и прийти на приём, но X не добавляет обещания о будущем объявлении даты раздачи."
+          },
+          {
+            "pair_id": "p03",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "X",
+            "editorial_reason": "X выносит ближайший приём и актуальную отмену в начало, поэтому время визита легче найти при быстром чтении.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба варианта верно передают действующее окно, правила участия, допустимые остатки, лимит и обращение с тарой. Неопределённость раздачи сохранена, объём соблюдён."
+          },
+          {
+            "pair_id": "p02",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "Y",
+            "editorial_reason": "Y раньше сообщает, когда и где появится расписание; компактная композиция хорошо подходит короткой районной новости.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста сохраняют условность открытия, различают пробный пуск и предстоящую проверку, правильно сообщают изменения и дату публикации расписания."
+          },
+          {
+            "pair_id": "p01",
+            "X": {
+              "status": "pass",
+              "findings": []
+            },
+            "Y": {
+              "status": "pass",
+              "findings": []
+            },
+            "editorial_preference": "tie",
+            "editorial_reason": "X добавляет голос директора через уместную цитату, Y компактнее группирует сведения для посетителей. Оба варианта понятны и соответствуют новостной форме.",
+            "practical_preference": "tie",
+            "practical_reason": "Оба текста передают плановую дату и зависимость открытия от проверки, сроки объявления расписания и подтверждённые изменения. Цитирование и пересказ допустимы, объём соблюдён."
+          }
+        ],
+        "limits": "Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания."
+      },
+      "final_text": "{\n  \"reviews\": [\n    {\n      \"pair_id\": \"p06\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y заканчивается выразительной деталью об узнавании своей вещи; финальное обобщение X о характере героини несколько избыточно.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста сохраняют существенные факты, ограничения ремонта и разрешённые слова героини, соблюдают объём и не используют закрытые сведения.\"\n    },\n    {\n      \"pair_id\": \"p05\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"подходящей замены не существует\",\n            \"source_id\": \"umbrella_background_conversation\",\n            \"reason\": \"В источнике сказано: «иногда совместимой детали нет». Текст усиливает отсутствие доступной детали до утверждения, что подходящей замены вообще не существует. Источник такой уверенности не даёт.\",\n            \"minimal_fix\": \"Заменить на «подходящей детали не находится».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"Оба профиля естественно соединяют предметные детали, биографию и реплики героини; различия в композиции не дают явного преимущества.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"X пригоден без существенных замечаний; Y требует локально ослабить утверждение о невозможности найти замену. Объём и разрешения соблюдены в обоих вариантах.\"\n    },\n    {\n      \"pair_id\": \"p04\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"revision\",\n        \"findings\": [\n          {\n            \"severity\": \"revision\",\n            \"category\": \"facts\",\n            \"quote\": \"Дату объявят после проверки первой партии.\",\n            \"source_id\": \"composter_coordinator_explanation\",\n            \"reason\": \"Координатор сообщил, что «сначала проект дождётся результатов первой партии и проверки готового материала; даты раздачи пока нет». Это условие дальнейшего решения, а не обещание объявить дату после проверки. Текст добавляет неподтверждённое обязательство проекта.\",\n            \"minimal_fix\": \"Заменить на «Даты раздачи пока нет: сначала проект дождётся результатов первой партии и проверки готового материала».\"\n          }\n        ]\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y сразу сообщает ближайшее действующее окно, затем даёт последовательный список действий для первого визита.\",\n      \"practical_preference\": \"X\",\n      \"practical_reason\": \"Оба текста позволяют правильно подготовиться и прийти на приём, но X не добавляет обещания о будущем объявлении даты раздачи.\"\n    },\n    {\n      \"pair_id\": \"p03\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"X\",\n      \"editorial_reason\": \"X выносит ближайший приём и актуальную отмену в начало, поэтому время визита легче найти при быстром чтении.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба варианта верно передают действующее окно, правила участия, допустимые остатки, лимит и обращение с тарой. Неопределённость раздачи сохранена, объём соблюдён.\"\n    },\n    {\n      \"pair_id\": \"p02\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"Y\",\n      \"editorial_reason\": \"Y раньше сообщает, когда и где появится расписание; компактная композиция хорошо подходит короткой районной новости.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста сохраняют условность открытия, различают пробный пуск и предстоящую проверку, правильно сообщают изменения и дату публикации расписания.\"\n    },\n    {\n      \"pair_id\": \"p01\",\n      \"X\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"Y\": {\n        \"status\": \"pass\",\n        \"findings\": []\n      },\n      \"editorial_preference\": \"tie\",\n      \"editorial_reason\": \"X добавляет голос директора через уместную цитату, Y компактнее группирует сведения для посетителей. Оба варианта понятны и соответствуют новостной форме.\",\n      \"practical_preference\": \"tie\",\n      \"practical_reason\": \"Оба текста передают плановую дату и зависимость открытия от проверки, сроки объявления расписания и подтверждённые изменения. Цитирование и пересказ допустимы, объём соблюдён.\"\n    }\n  ],\n  \"limits\": \"Модельная оценка по предоставленным источникам; возможны пропуски и ложные замечания.\"\n}"
+    }
+  ],
+  "mapping": [
+    {
+      "pair_id": "p01",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 1,
+      "X": {
+        "output_id": "o_ba492733ccc1dbe73542d01469285f71",
+        "arm": "treatment"
+      },
+      "Y": {
+        "output_id": "o_30692184e927139838f9a6e1eda1ea7b",
+        "arm": "baseline"
+      }
+    },
+    {
+      "pair_id": "p02",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 2,
+      "X": {
+        "output_id": "o_3bca8944fc1b87b51ffb004881f829e0",
+        "arm": "treatment"
+      },
+      "Y": {
+        "output_id": "o_d44c6dd1da9c76e741e15f09707c4352",
+        "arm": "baseline"
+      }
+    },
+    {
+      "pair_id": "p03",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 1,
+      "X": {
+        "output_id": "o_cd9cf8b785463bdce751dc3159dabd68",
+        "arm": "baseline"
+      },
+      "Y": {
+        "output_id": "o_91693b90496bfbdecede66fee533c301",
+        "arm": "treatment"
+      }
+    },
+    {
+      "pair_id": "p04",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 2,
+      "X": {
+        "output_id": "o_d59802e6f552c5fdd80b4653b5212547",
+        "arm": "treatment"
+      },
+      "Y": {
+        "output_id": "o_ccf3a0945f40314f3d1e0db403b4f65f",
+        "arm": "baseline"
+      }
+    },
+    {
+      "pair_id": "p05",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 1,
+      "X": {
+        "output_id": "o_9cded8090f4b15c508a9bd011ec40481",
+        "arm": "baseline"
+      },
+      "Y": {
+        "output_id": "o_6564bba71b5954312d41377c019963c9",
+        "arm": "treatment"
+      }
+    },
+    {
+      "pair_id": "p06",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 2,
+      "X": {
+        "output_id": "o_8ebf0cfb17e1811998a5c2efca5eb2d9",
+        "arm": "treatment"
+      },
+      "Y": {
+        "output_id": "o_42426950977c6c5207b1441e1d494089",
+        "arm": "baseline"
+      }
+    },
+    {
+      "pair_id": "p07",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 1,
+      "X": {
+        "output_id": "o_5284a72d384ddb6e2912a4b2fb1ddefa",
+        "arm": "treatment"
+      },
+      "Y": {
+        "output_id": "o_bc19788056300960f981c3a436e409c6",
+        "arm": "baseline"
+      }
+    },
+    {
+      "pair_id": "p08",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 2,
+      "X": {
+        "output_id": "o_18f9a907474d657d7daa63f38892f4d8",
+        "arm": "baseline"
+      },
+      "Y": {
+        "output_id": "o_c3ff4a6bc4b47d5d707c33e94a09a5b8",
+        "arm": "treatment"
+      }
+    },
+    {
+      "pair_id": "p09",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 1,
+      "X": {
+        "output_id": "o_39942b66bc52faec2d53561ef7b8a2e1",
+        "arm": "baseline"
+      },
+      "Y": {
+        "output_id": "o_8941d4bc011d43a6508d264737c607fb",
+        "arm": "treatment"
+      }
+    },
+    {
+      "pair_id": "p10",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 2,
+      "X": {
+        "output_id": "o_5bf5f72afbdc17e25eaeb9f41cdbe1ab",
+        "arm": "treatment"
+      },
+      "Y": {
+        "output_id": "o_8403556aa495c1a15912deca871769e9",
+        "arm": "baseline"
+      }
+    },
+    {
+      "pair_id": "p11",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 1,
+      "X": {
+        "output_id": "o_01d754c5ff3122b916d8a388aa51fa22",
+        "arm": "baseline"
+      },
+      "Y": {
+        "output_id": "o_f1b44d7210914380f7ac3cc271e0089f",
+        "arm": "treatment"
+      }
+    },
+    {
+      "pair_id": "p12",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 2,
+      "X": {
+        "output_id": "o_2ec4cc81941f1622a62a0d064ce6e7db",
+        "arm": "baseline"
+      },
+      "Y": {
+        "output_id": "o_284edebc1e4ab33028430749bc8aff90",
+        "arm": "treatment"
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "p01",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 1,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "baseline",
+          "editorial_reason": "Y чуть лучше организован: условие открытия изложено без повторов, а разрешённая прямая цитата естественно оживляет новость.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста точно сохраняют условность даты открытия, сообщают срок публикации расписания и корректно передают изменения после ремонта."
+        },
+        "judge2": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "X добавляет голос директора через уместную цитату, Y компактнее группирует сведения для посетителей. Оба варианта понятны и соответствуют новостной форме.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста передают плановую дату и зависимость открытия от проверки, сроки объявления расписания и подтверждённые изменения. Цитирование и пересказ допустимы, объём соблюдён."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p02",
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 2,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "baseline",
+          "editorial_reason": "Y звучит немного живее благодаря уместной цитате директора, сохраняя ясную новостную структуру.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба варианта укладываются в объём и верно передают условие открытия, дату объявления расписания, проведённые работы и пока неизвестные цены."
+        },
+        "judge2": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "pass"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Y раньше сообщает, когда и где появится расписание; компактная композиция хорошо подходит короткой районной новости.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста сохраняют условность открытия, различают пробный пуск и предстоящую проверку, правильно сообщают изменения и дату публикации расписания."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p03",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 1,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "pass"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Y сразу начинает с ближайшего действующего окна приёма, поэтому практическая информация считывается быстрее.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста дают корректные правила первого визита, учитывают отмену 9 сентября и не нарушают ограничение на прямое цитирование координатора."
+        },
+        "judge2": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "X выносит ближайший приём и актуальную отмену в начало, поэтому время визита легче найти при быстром чтении.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба варианта верно передают действующее окно, правила участия, допустимые остатки, лимит и обращение с тарой. Неопределённость раздачи сохранена, объём соблюдён."
+        }
+      },
+      "consensus": {
+        "editorial": "treatment",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p04",
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 2,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "treatment": "revision",
+            "baseline": "pass"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Формат X с единым списком «Для первого раза» немного удобнее для быстрого просмотра конкретных действий.",
+          "practical_preference": "baseline",
+          "practical_reason": "Y столь же полно выполняет практическую задачу и не превращает отсутствие даты раздачи в обещание объявить её после определённого этапа."
+        },
+        "judge2": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "revision"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Y сразу сообщает ближайшее действующее окно, затем даёт последовательный список действий для первого визита.",
+          "practical_preference": "baseline",
+          "practical_reason": "Оба текста позволяют правильно подготовиться и прийти на приём, но X не добавляет обещания о будущем объявлении даты раздачи."
+        }
+      },
+      "consensus": {
+        "editorial": "treatment",
+        "practical": "baseline"
+      }
+    },
+    {
+      "pair_id": "p05",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 1,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "revision"
+          },
+          "editorial_preference": "baseline",
+          "editorial_reason": "X написан ровнее и естественнее; образ коробки последовательно связывает подтверждённые детали с характером героини.",
+          "practical_preference": "baseline",
+          "practical_reason": "Оба текста соблюдают права источников и передают факты, но X не содержит заметной синтаксической шероховатости Y."
+        },
+        "judge2": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба профиля естественно соединяют предметные детали, биографию и реплики героини; различия в композиции не дают явного преимущества.",
+          "practical_preference": "treatment",
+          "practical_reason": "X пригоден без существенных замечаний; Y требует локально ослабить утверждение о невозможности найти замену. Объём и разрешения соблюдены в обоих вариантах."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "disagreement"
+      }
+    },
+    {
+      "pair_id": "p06",
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 2,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба профиля связные, естественные и выразительно показывают героиню через детали мастерской и разрешённые цитаты.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба варианта точно используют публичные сведения, пересказывают фоновые заметки без прямых цитат и не раскрывают содержание частной записки."
+        },
+        "judge2": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "pass"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Y заканчивается выразительной деталью об узнавании своей вещи; финальное обобщение X о характере героини несколько избыточно.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста сохраняют существенные факты, ограничения ремонта и разрешённые слова героини, соблюдают объём и не используют закрытые сведения."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p07",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 1,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба текста ясно выстраивают хронологию, включают конкретную сцену и завершаются спокойно; различия композиции не дают заметного редакционного преимущества.",
+          "practical_preference": "treatment",
+          "practical_reason": "X точно следует документам, тогда как Y добавляет неподтверждённое утверждение об отсутствии публичной встречи."
+        },
+        "judge2": {
+          "statuses": {
+            "baseline": "revision",
+            "treatment": "revision"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Начальная сцена с зелёной тетрадью сразу задаёт предметный центр рассказа, а возвращение к этому образу делает композицию более цельной.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба сохраняют основную хронологию, документированные действия и спокойную форму. X требует уточнить два неподдержанных отрицания, Y — обозначить источник сцены и ограничить финальный образ временем наблюдения; пригодность после локальных правок сопоставима."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "disagreement"
+      }
+    },
+    {
+      "pair_id": "p08",
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 2,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "baseline": "revision",
+            "treatment": "revision"
+          },
+          "editorial_preference": "treatment",
+          "editorial_reason": "Y выразительнее замыкает рассказ возвращением к сцене с тетрадью и сохраняет спокойный документальный тон.",
+          "practical_preference": "baseline",
+          "practical_reason": "В обоих текстах есть неподтверждённая причинная связка, но Y дополнительно ошибается в календарном интервале."
+        },
+        "judge2": {
+          "statuses": {
+            "treatment": "revision",
+            "baseline": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "X начинает с конкретной сцены и возвращается к ней в финале; Y последовательно ведёт хронологию. Оба варианта понятны и обходятся без торжественной риторики.",
+          "practical_preference": "baseline",
+          "practical_reason": "Оба требуют уточнения формулировки о причине износа, но X дополнительно содержит прямую ошибку в интервале между настройкой и возобновлением уроков."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "baseline"
+      }
+    },
+    {
+      "pair_id": "p09",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 1,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Обе колонки связны, естественны и сохраняют спокойную самоиронию и личный, не универсальный характер позиции.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба текста точно передают факты, ограничения самооценки и позицию автора, соблюдая объём и разрешения."
+        },
+        "judge2": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба текста естественно сочетают бытовые детали, самоиронию и размышление. Образы отчёта перед календарём и воображаемой комиссии соответствуют голосу колонки.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба соблюдают объём и сохраняют главную мысль, различие дней и страниц, отсутствие доказанного улучшения техники и пользу ежедневного ритма для других."
+        }
+      },
+      "consensus": {
+        "editorial": "tie",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p10",
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 2,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "baseline",
+          "editorial_reason": "Y немного компактнее и ровнее держит авторский голос; самоиронические детали встроены в повествование особенно естественно.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба варианта сохраняют личную позицию, не превращают её в общий рецепт и корректно передают календарные данные и ограничения."
+        },
+        "judge2": {
+          "statuses": {
+            "baseline": "pass",
+            "treatment": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба сохраняют спокойную самоиронию и личный голос. X заканчивается предметной сценой с ложкой, Y — ясной формулировкой позиции; обе композиции уместны.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба корректно передают календарные данные, не заявляют роста мастерства и не превращают личный выбор в универсальный рецепт. Литературная редактура соответствует разрешению автора."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "tie"
+      }
+    },
+    {
+      "pair_id": "p11",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 1,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "baseline": "revision",
+            "treatment": "revision"
+          },
+          "editorial_preference": "baseline",
+          "editorial_reason": "X лучше завершает solutions-материал ясным сопоставлением работоспособности механизма и пока не доказанных преимуществ.",
+          "practical_preference": "baseline",
+          "practical_reason": "Оба текста неверно называют 36 просроченных выдач контейнерами, но Y дополнительно усиливает неопределённую позицию участника до неготовности пользоваться системой."
+        },
+        "judge2": {
+          "statuses": {
+            "treatment": "revision",
+            "baseline": "revision"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба текста читаются связно и выдерживают аналитический тон; Y завершает материал общим выводом, X — положением участника и перспективой программы.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба сохраняют механизм, данные и основные ограничения пилота, укладываются в объём и требуют локальной фактической правки."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "disagreement"
+      }
+    },
+    {
+      "pair_id": "p12",
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 2,
+      "comparable": true,
+      "non_comparable_reasons": [],
+      "judges": {
+        "judge1": {
+          "statuses": {
+            "baseline": "revision",
+            "treatment": "revision"
+          },
+          "editorial_preference": "baseline",
+          "editorial_reason": "X яснее формулирует исходную проблему и заканчивает содержательным выводом о границах применимости пилота.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба варианта одинаково смешивают число записавшихся с получателями контейнеров; в остальном они корректно описывают механизм, данные, ограничения и возражение участника."
+        },
+        "judge2": {
+          "statuses": {
+            "treatment": "pass",
+            "baseline": "pass"
+          },
+          "editorial_preference": "tie",
+          "editorial_reason": "Оба текста ясно соединяют устройство пилота, результаты и ограничения с бытовым возражением участника. Подача спокойная и журналистская.",
+          "practical_preference": "tie",
+          "practical_reason": "Оба соблюдают объём, корректно различают выдачи и участников, сохраняют ограничения доказательств и разрешённую цитату."
+        }
+      },
+      "consensus": {
+        "editorial": "disagreement",
+        "practical": "tie"
+      }
+    }
+  ],
+  "statistics": {
+    "denominators": {
+      "writer_attempts": 24,
+      "pairs": 12,
+      "cases": 6,
+      "repeats_per_case": 2,
+      "judges": 2
+    },
+    "writers": {
+      "baseline": {
+        "attempts": 12,
+        "statuses": {
+          "completed": 12,
+          "failed": 0
+        },
+        "length_range": {
+          "within": 12,
+          "outside": 0,
+          "missing_text": 0,
+          "denominator": 12
+        },
+        "measurements": {
+          "input_tokens": {
+            "observed_total": 112384,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "cached_input_tokens": {
+            "observed_total": 50560,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "output_tokens": {
+            "observed_total": 5366,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "reasoning_output_tokens": {
+            "observed_total": 830,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "wall_seconds": {
+            "observed_total": 247.950277,
+            "reported_records": 12,
+            "missing_records": 0
+          }
+        }
+      },
+      "treatment": {
+        "attempts": 12,
+        "statuses": {
+          "completed": 12,
+          "failed": 0
+        },
+        "length_range": {
+          "within": 12,
+          "outside": 0,
+          "missing_text": 0,
+          "denominator": 12
+        },
+        "measurements": {
+          "input_tokens": {
+            "observed_total": 188564,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "cached_input_tokens": {
+            "observed_total": 43392,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "output_tokens": {
+            "observed_total": 6806,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "reasoning_output_tokens": {
+            "observed_total": 2384,
+            "reported_records": 12,
+            "missing_records": 0
+          },
+          "wall_seconds": {
+            "observed_total": 281.312011,
+            "reported_records": 12,
+            "missing_records": 0
+          }
+        }
+      }
+    },
+    "judges": {
+      "judge1": {
+        "record_statuses": {
+          "completed": 2,
+          "failed": 0
+        },
+        "statuses_by_arm": {
+          "baseline": {
+            "pass": 8,
+            "revision": 4,
+            "critical": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          },
+          "treatment": {
+            "pass": 7,
+            "revision": 5,
+            "critical": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          }
+        },
+        "preferences": {
+          "editorial": {
+            "baseline": 6,
+            "treatment": 3,
+            "tie": 3,
+            "disagreement": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          },
+          "practical": {
+            "baseline": 4,
+            "treatment": 1,
+            "tie": 7,
+            "disagreement": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          }
+        },
+        "pair_denominator": 12,
+        "measurements": {
+          "input_tokens": {
+            "observed_total": 40880,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "cached_input_tokens": {
+            "observed_total": 6528,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "output_tokens": {
+            "observed_total": 6845,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "reasoning_output_tokens": {
+            "observed_total": 3616,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "wall_seconds": {
+            "observed_total": 229.180518,
+            "reported_records": 2,
+            "missing_records": 0
+          }
+        }
+      },
+      "judge2": {
+        "record_statuses": {
+          "completed": 2,
+          "failed": 0
+        },
+        "statuses_by_arm": {
+          "baseline": {
+            "pass": 8,
+            "revision": 4,
+            "critical": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          },
+          "treatment": {
+            "pass": 8,
+            "revision": 4,
+            "critical": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          }
+        },
+        "preferences": {
+          "editorial": {
+            "baseline": 0,
+            "treatment": 5,
+            "tie": 7,
+            "disagreement": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          },
+          "practical": {
+            "baseline": 2,
+            "treatment": 1,
+            "tie": 9,
+            "disagreement": 0,
+            "missing_review": 0,
+            "non_comparable": 0
+          }
+        },
+        "pair_denominator": 12,
+        "measurements": {
+          "input_tokens": {
+            "observed_total": 43370,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "cached_input_tokens": {
+            "observed_total": 14848,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "output_tokens": {
+            "observed_total": 4348,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "reasoning_output_tokens": {
+            "observed_total": 941,
+            "reported_records": 2,
+            "missing_records": 0
+          },
+          "wall_seconds": {
+            "observed_total": 157.090357,
+            "reported_records": 2,
+            "missing_records": 0
+          }
+        }
+      }
+    },
+    "consensus": {
+      "editorial": {
+        "baseline": 0,
+        "treatment": 2,
+        "tie": 1,
+        "disagreement": 9,
+        "missing_review": 0,
+        "non_comparable": 0
+      },
+      "practical": {
+        "baseline": 2,
+        "treatment": 0,
+        "tie": 7,
+        "disagreement": 3,
+        "missing_review": 0,
+        "non_comparable": 0
+      }
+    }
+  }
+}

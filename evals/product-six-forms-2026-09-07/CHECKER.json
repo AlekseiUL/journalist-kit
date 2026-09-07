@@ -1,0 +1,1118 @@
+{
+  "version": 1,
+  "checked_at_utc": "2026-09-07T18:54:38.732992Z",
+  "post_hoc": true,
+  "checker_sha256": "5763b056bb0d411c01caaa0eba08b7a2e3c6f669b6a36283389c6d61e87dcbc3",
+  "source_hash_basis": "canonical_json",
+  "kind_mapping": {
+    "official_notice": "record",
+    "technical_record": "record",
+    "interview": "statement",
+    "project_instructions": "record",
+    "schedule": "record",
+    "interview_notes": "statement",
+    "verified_profile_facts": "record",
+    "interview_transcript": "statement",
+    "private_background": "author_note",
+    "documentary_timeline": "record",
+    "repair_report": "record",
+    "eyewitness_record": "statement",
+    "schedule_notice": "record",
+    "author_draft": "author_note",
+    "author_fact_check": "author_note",
+    "program_design": "record",
+    "pilot_data": "record",
+    "participant_interview": "statement"
+  },
+  "adapted_source_packets": {
+    "indoor_rink_conditional_reopening": {
+      "version": 1,
+      "sources": [
+        {
+          "id": "rink_announcement",
+          "content": "Объявление администрации крытого катка «Круг», город Вереск, 7 сентября 2026 года. Открытие после летнего ремонта запланировано на 14 сентября. Дата зависит от результатов проверки холодильной установки 11 сентября. Подтверждённые дату и расписание администрация разместит 12 сентября на доске у входа и на странице катка. Во время ремонта заменены борта у южного края площадки, добавлены четыре скамьи в зоне переобувания. Прокат коньков продолжит работать. Цены на первый месяц ещё не утверждены.",
+          "origin": "Синтетическое публичное объявление администрации катка от 7 сентября 2026 года",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "rink_maintenance_note",
+          "content": "Справка инженера катка Ильи Туманова, 6 сентября 2026 года. Монтаж новых бортов завершён. Холодильная установка прошла пробный пуск без посетителей; обязательная проверка под рабочей нагрузкой назначена на 11 сентября. Старые указатели размеров у полок проката заменили крупными цифрами. Лёд залит, публичных сеансов в сентябре пока не было.",
+          "origin": "Синтетическая техническая справка, предоставленная редакции для публикации",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "rink_director_quote",
+          "content": "Директор катка Вера Лунина, письменный ответ редакции 7 сентября 2026 года: «Скамейки мы проверяли самым простым способом: попросили пятерых сотрудников одновременно переобуться. Теперь локтями друг другу не мешаем». На вопрос о количестве доступных билетов она сообщила, что лимит на сеанс объявят вместе с расписанием 12 сентября.",
+          "origin": "Синтетический письменный комментарий директора с разрешением на цитирование",
+          "kind": "statement",
+          "use": "public"
+        }
+      ]
+    },
+    "neighborhood_composter_practical_explainer": {
+      "version": 1,
+      "sources": [
+        {
+          "id": "composter_current_rules",
+          "content": "Памятка пилотного дворового проекта «Сосновая, 8», редакция от 5 сентября 2026 года. Компостер принимает сырые овощные и фруктовые очистки, кофейную гущу и чайные листья без пакетиков. Мясо, рыба, молочные продукты, готовая еда с соусом и любые пакеты, в том числе с надписью «биоразлагаемый», не принимаются. За один визит один участник приносит не более двух литров остатков. Остатки высыпают в приёмный контейнер, свою ёмкость уносят. Проект пока открыт только жителям дома № 8; участия достаточно подтвердить у дежурного номером квартиры, копии документов не собирают. Готовый компост жителям в сентябре не раздают.",
+          "origin": "Синтетическая публичная памятка проекта от 5 сентября 2026 года",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "composter_september_roster",
+          "content": "Сентябрьский график дежурств: приём по средам с 18:00 до 19:00 и по субботам с 11:00 до 12:00. В среду 9 сентября приёма не будет: подрядчик меняет петлю крышки. Следующее окно — суббота 12 сентября, 11:00–12:00. Вне часов приёма контейнер заперт. Открытые вёдра рядом с ним дежурные не оставляют.",
+          "origin": "Синтетический публичный график дежурств на сентябрь 2026 года",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "composter_coordinator_explanation",
+          "content": "Координатор Олег Речной объяснил редакции, что небольшое ведёрко с крышкой удобно для дороги от квартиры до площадки; покупать фирменную ёмкость не требуется. Лимит в два литра нужен для нагрузки на маленькую установку, а не для оценки экологичности семьи. При первом визите дежурный показывает, куда высыпать содержимое. На вопрос о будущей раздаче компоста координатор ответил, что сначала проект дождётся результатов первой партии и проверки готового материала; даты раздачи пока нет.",
+          "origin": "Синтетическая запись разговора с координатором, разрешён пересказ без прямых цитат",
+          "kind": "statement",
+          "use": "paraphrase_only"
+        }
+      ]
+    },
+    "umbrella_repairer_profile": {
+      "version": 1,
+      "sources": [
+        {
+          "id": "umbrella_workshop_facts",
+          "content": "Ася Лебедева открыла мастерскую «Спица» в городе Липовске в 2021 году. До этого четыре года работала в театральном гардеробе. В мастерской она ремонтирует зонты, но не принимает электрические сушилки и чемоданы. Время ремонта зависит от наличия деталей; постоянного обещания «за один день» нет. На столе стоят три жестяные коробки с надписями «спицы», «ползунки» и «непонятное». Детали со старых зонтов она сортирует для последующего использования, но ставит их только при подходящих размере и конструкции.",
+          "origin": "Синтетическая фактическая анкета мастерской, подтверждённая героиней 3 сентября 2026 года",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "umbrella_recorded_interview",
+          "content": "Запись интервью 3 сентября 2026 года. Ася Лебедева: «Коробка с надписью „непонятное“ у меня самая полезная. Но полезной она становится не сразу». На вопрос о ярких расцветках: «Я не выбираю за человека, каким должен быть его зонт. У меня свой полосатый, а кому-то нужен чёрный без разговоров». Героиня разрешила использовать эти две реплики дословно в профиле.",
+          "origin": "Синтетическая расшифровка согласованного интервью",
+          "kind": "statement",
+          "use": "public"
+        },
+        {
+          "id": "umbrella_background_conversation",
+          "content": "В беседе после записи Ася объяснила, что работа в гардеробе приучила её не путать внешне похожие вещи. Она прикрепляет к каждому принятому зонту бумажный номер. Больше всего ей нравится момент, когда владелец узнаёт свою вещь после ремонта. Она не считает ремонт подходящим для каждого зонта: иногда совместимой детали нет, а иногда работа обходится дороже замены. По её словам, такие случаи она обсуждает с владельцем до начала работы.",
+          "origin": "Синтетические заметки дополнительной беседы; разрешён пересказ, не прямая речь",
+          "kind": "statement",
+          "use": "paraphrase_only"
+        },
+        {
+          "id": "umbrella_private_business_note",
+          "content": "Внутренняя записка Аси партнёру от 2 сентября 2026 года: в августе после оплаты аренды в резерве осталось 18 400 рублей. Обсуждается отсрочка закупки новой вывески.",
+          "origin": "Синтетическая непубличная хозяйственная записка, предоставленная только как закрытый фон",
+          "kind": "author_note",
+          "use": "private"
+        }
+      ]
+    },
+    "piano_return_documentary_narrative": {
+      "version": 1,
+      "sources": [
+        {
+          "id": "piano_repair_timeline",
+          "content": "Хронология дома музыки «Переулок», город Ольхов: 18 мая 2026 года рояль из малого зала передали в мастерскую после появления стука у нескольких клавиш. На время ремонта занятия перенесли в класс с цифровым инструментом. 25 августа мастерская сообщила о завершении замены изношенных деталей механики. 2 сентября рояль привезли обратно и поставили на прежнее место у стены с двумя высокими окнами. Перевозку оформили отдельным актом приёмки; публичного концерта в этот день не было.",
+          "origin": "Синтетическая сводка журнала работ дома музыки",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "piano_repairer_report",
+          "content": "Отчёт мастера Павла Осокина от 4 сентября 2026 года. Заменены восемь изношенных элементов механики, отрегулированы клавиши. Причину преждевременного износа отчёт не устанавливает. После перевозки инструменту дали двое суток на адаптацию к помещению, затем провели настройку. По итогам настройки 4 сентября рояль пригоден для занятий. Мастер рекомендует повторную проверку через месяц; отчёт не содержит гарантии отсутствия будущих неисправностей.",
+          "origin": "Синтетический технический отчёт мастера, открытый для публикации",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "piano_observer_note",
+          "content": "Запись администратора зала Лидии Берестовой, 4 сентября 2026 года, 17:20. После настройки преподаватель Артём Рудин поставил на пюпитр тонкую зелёную тетрадь, нажал несколько клавиш по отдельности и сыграл начало упражнения. Учеников в зале в это время не было. Лидия стояла у двери; она записала слова преподавателя: «Тетрадь ждала здесь всё лето, а рояль путешествовал». После проверки он закрыл тетрадь и оставил её на скамье. Лидия и Артём разрешили опубликовать запись и реплику.",
+          "origin": "Синтетическая датированная запись очевидца с разрешением на публикацию",
+          "kind": "statement",
+          "use": "public"
+        },
+        {
+          "id": "piano_class_schedule",
+          "content": "Объявление дома музыки от 5 сентября 2026 года: занятия в малом зале возобновятся 8 сентября. Расписание учеников не меняется, возвращается только место проведения уроков. Дата открытого концерта на отремонтированном рояле пока не объявлена.",
+          "origin": "Синтетическое публичное объявление дома музыки",
+          "kind": "record",
+          "use": "public"
+        }
+      ]
+    },
+    "drawing_without_streak_author_column": {
+      "version": 1,
+      "sources": [
+        {
+          "id": "drawing_author_draft",
+          "content": "Меня зовут Нина Зорина. В июле я решила каждый день делать маленький рисунок. На шестой день рисовала одну и ту же сахарницу и больше смотрела на номер дня, чем на неё. Дважды дорисовывала страницу перед сном только ради галочки. С 1 августа я перестала вести ежедневную серию. Рисовать не бросила: теперь открываю блокнот, когда есть интерес к конкретной вещи. Мне подходят нерегулярные занятия, но я не считаю ежедневные серии бессмысленными: подруге Лене такой ритм помогает. Я хочу вернуть внимание рисунку, а не доказать, что дисциплина мешает творчеству. Мой блокнот — мастерская, а не табель посещаемости. Этот образ мой, его можно оставить. На свободном развороте у меня теперь три рисунка чайной ложки; ложка не стала интереснее, зато я перестала торопиться с ней расстаться.",
+          "origin": "Синтетический авторский черновик Нины Зориной с разрешением на переработку от первого лица",
+          "kind": "author_note",
+          "use": "public"
+        },
+        {
+          "id": "drawing_author_calendar",
+          "content": "Авторская сверка от 5 сентября 2026 года. В июле рисунки сделаны в 24 календарных дня; непрерывная серия прерывалась, поэтому это не 24 дня подряд. В августе рисунки сделаны в девять календарных дней, за эти дни заполнено 14 страниц. Время работы по минутам автор не фиксировала. Она не оценивала технику по единой шкале и не утверждает, что после смены режима стала рисовать лучше.",
+          "origin": "Синтетическая проверка автором собственного календаря и блокнота",
+          "kind": "author_note",
+          "use": "public"
+        },
+        {
+          "id": "drawing_group_coordinator",
+          "content": "Координатор открытой рисовальной группы Мирон Таль сообщил, что в группе задания публикуют ежедневно, но допускают любое количество пропусков. Итогового рейтинга по непрерывности нет. В августе в группе участвовали 17 человек; координатор не собирал данных о том, какой режим улучшает навыки. По его наблюдению, участники сами выбирают разный темп, однако это не исследование эффективности ежедневной практики.",
+          "origin": "Синтетические заметки беседы с координатором; разрешён содержательный пересказ",
+          "kind": "statement",
+          "use": "paraphrase_only"
+        }
+      ]
+    },
+    "returnable_lunch_container_solutions": {
+      "version": 1,
+      "sources": [
+        {
+          "id": "container_pilot_mechanism",
+          "content": "Описание синтетического пилота «Обед по кругу» в городе Ясенице. С 1 по 14 августа 2026 года кафе «Угол» и «Клён» предлагали обед навынос в оборотном контейнере под возвращаемый залог 200 рублей. Участник мог вернуть контейнер в любое из двух кафе в течение 14 дней; залог возвращали при сдаче. Приложение и телефон не требовались, выдачу отмечали на бумажной карточке участника. Кафе мыли возвращённую тару в своей посудомоечной машине перед следующей выдачей. После 14 августа новые выдачи для пилота завершили, приём возвратов продолжился. Программа не охватывала напитки и доставку курьерами.",
+          "origin": "Синтетическое публичное описание устройства пилота",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "container_pilot_records",
+          "content": "Сводка организаторов на 31 августа 2026 года. В пилот записались 62 человека. С 1 по 14 августа зарегистрировано 360 выдач оборотных контейнеров, включая повторные выдачи одной и той же тары. К 31 августа зарегистрировано 324 возврата; 36 выдач остаются без возврата, срок по ним уже истёк. Это 360 операций выдачи, не 360 уникальных контейнеров и не 360 человек. За две недели до пилота кафе выдали 900 одноразовых контейнеров на 1 200 обедов навынос; во время пилота — 600 одноразовых контейнеров на 1 080 обедов навынос. Часть посетителей использует свою тару. Состав покупателей, меню и число обедов в эти периоды различались; контрольной группы не было.",
+          "origin": "Синтетическая агрегированная операционная сводка двух кафе",
+          "kind": "record",
+          "use": "public"
+        },
+        {
+          "id": "container_cafe_manager_interview",
+          "content": "Управляющая кафе «Клён» Римма Островская рассказала, что для возвратов отвели отдельный лоток у кассы и назначили сотрудника проверять записи в конце смены. Первые три дня несколько возвратов приходилось сверять по карточкам после закрытия. По её словам, людям удобно сдавать тару в любом из двух кафе, но для команды это дополнительная работа. В рамках пилота не измеряли воду, энергию мойки и полный экологический след производства и перевозки контейнеров. Вопрос о постоянной работе программы ещё не решён.",
+          "origin": "Синтетические заметки интервью управляющей; разрешён пересказ без прямой речи",
+          "kind": "statement",
+          "use": "paraphrase_only"
+        },
+        {
+          "id": "container_participant_critique",
+          "content": "Участник пилота Степан Вязов, согласованный комментарий: «Когда обедаю рядом с работой, вернуть коробку легко. Если взял еду в выходной, приходится отдельно планировать дорогу обратно». Он вернул все три контейнера, которые брал за время пилота, но пока не решил, пользовался бы системой постоянно. Его опыт не измеряет удобство для всех 62 участников.",
+          "origin": "Синтетический согласованный комментарий участника пилота",
+          "kind": "statement",
+          "use": "public"
+        }
+      ]
+    }
+  },
+  "limits": "Offline post-hoc API diagnostics, not author tool execution, semantic fact-checking or a human review.",
+  "records": [
+    {
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "c3615ed4a5594a749190ae820b271d438b8b25d67f6db5feaa3a2f8b25ec974f",
+        "measurements": {
+          "words": 150,
+          "chars": 1101,
+          "utf8_bytes": 2024
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 3,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "677511aa7a42044f656c9b9f5ad4f33b086102dfc5ad087b21e9a6645558ff0b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 1,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "0c958867601e8c7542b023eaac30cbac81d1847792e2bec5910e956a6d60fb10",
+        "measurements": {
+          "words": 142,
+          "chars": 1030,
+          "utf8_bytes": 1889
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 2,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "677511aa7a42044f656c9b9f5ad4f33b086102dfc5ad087b21e9a6645558ff0b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 2,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "61c490e3a58c54e7d6e4ee4c9ced9e651e0d4f4055cd4289d0a99942ef90a210",
+        "measurements": {
+          "words": 125,
+          "chars": 899,
+          "utf8_bytes": 1648
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 2,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "677511aa7a42044f656c9b9f5ad4f33b086102dfc5ad087b21e9a6645558ff0b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "indoor_rink_conditional_reopening",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "5a7f08c6e2187ce98276d72f0ae0647631bf6f15f571c4186df113da60a05659",
+        "measurements": {
+          "words": 133,
+          "chars": 991,
+          "utf8_bytes": 1824
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 3,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "677511aa7a42044f656c9b9f5ad4f33b086102dfc5ad087b21e9a6645558ff0b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "c675acc58b49d993c133cd4f5cba29e2b8867488d7756794efa0cd682afd437a",
+        "measurements": {
+          "words": 171,
+          "chars": 1096,
+          "utf8_bytes": 1948
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "2ea47a6bd265deba9455994249f7a0e089a553a380426c00d79261abcfb784bb",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 1,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "5e29511a48bbcdf1a5973b05eee146a5a56ac6c333665964f639d19ffb26b6e5",
+        "measurements": {
+          "words": 169,
+          "chars": 1052,
+          "utf8_bytes": 1864
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "2ea47a6bd265deba9455994249f7a0e089a553a380426c00d79261abcfb784bb",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 2,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "efe0ac00b3b7814fb5f61026981b6394e5a91164ebb33d7ead63b054157f2dc7",
+        "measurements": {
+          "words": 153,
+          "chars": 962,
+          "utf8_bytes": 1698
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "2ea47a6bd265deba9455994249f7a0e089a553a380426c00d79261abcfb784bb",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "neighborhood_composter_practical_explainer",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "86fc84131b8bdfaa0b754c8e26b85d15200acd4c350ca2990efb4fc240a85372",
+        "measurements": {
+          "words": 167,
+          "chars": 1054,
+          "utf8_bytes": 1867
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "2ea47a6bd265deba9455994249f7a0e089a553a380426c00d79261abcfb784bb",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "15ff24bacb0e4eccda48c0d83f45247bad27e0603e4eae232590f51a8acfec8b",
+        "measurements": {
+          "words": 211,
+          "chars": 1412,
+          "utf8_bytes": 2575
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 7,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "3abeb060e8c0d405b51c5f5229a85b1afbd36e83c87193826e84d396b33b7179",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 1,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "5807c639db68a899bf15892d77ba366ceb9698e63df9886b8c63d0ed81a54cc0",
+        "measurements": {
+          "words": 214,
+          "chars": 1428,
+          "utf8_bytes": 2598
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 8,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "3abeb060e8c0d405b51c5f5229a85b1afbd36e83c87193826e84d396b33b7179",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 2,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "b8f4a892d385ac4bbee230a372f3b9f6373c5e545e0e68f9859384d8372371ad",
+        "measurements": {
+          "words": 200,
+          "chars": 1326,
+          "utf8_bytes": 2417
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 8,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "3abeb060e8c0d405b51c5f5229a85b1afbd36e83c87193826e84d396b33b7179",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "umbrella_repairer_profile",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "5de031f6ed59a5e9fdecfd81af5bea0c8bb6d2e376cab25f6a10407029420df0",
+        "measurements": {
+          "words": 218,
+          "chars": 1475,
+          "utf8_bytes": 2694
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 8,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "3abeb060e8c0d405b51c5f5229a85b1afbd36e83c87193826e84d396b33b7179",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "7fd284e139ac4e113bf77a01d357a21833007b3ab6200d5c7941b9d07e2c858e",
+        "measurements": {
+          "words": 211,
+          "chars": 1489,
+          "utf8_bytes": 2723
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 2,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "7c1ae7a094ea44a7dd74213933275f1fda36ef6025dd83d82c107582616a6478",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 1,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "14ded377fe408b43e270fbc9a2af7a52b786db510b41aa2fadfd36acbb1f1cca",
+        "measurements": {
+          "words": 203,
+          "chars": 1357,
+          "utf8_bytes": 2467
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 2,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "7c1ae7a094ea44a7dd74213933275f1fda36ef6025dd83d82c107582616a6478",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 2,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "32a3a9344fc2752980ad0137b1e892dd718605114253d7815121639efe2037ce",
+        "measurements": {
+          "words": 204,
+          "chars": 1400,
+          "utf8_bytes": 2553
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 2,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "7c1ae7a094ea44a7dd74213933275f1fda36ef6025dd83d82c107582616a6478",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "piano_return_documentary_narrative",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "7158ad3f93725417c4042810e373f2c5c665c4ab42a308aac231ecb7398147d0",
+        "measurements": {
+          "words": 203,
+          "chars": 1432,
+          "utf8_bytes": 2614
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 2,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "7c1ae7a094ea44a7dd74213933275f1fda36ef6025dd83d82c107582616a6478",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "687356434cabafe8b2720967416543da2dd21e5995da9246ca7ae74046d39747",
+        "measurements": {
+          "words": 227,
+          "chars": 1498,
+          "utf8_bytes": 2723
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "CLAIM_STRENGTH_REVIEW",
+              "quote": "всегда",
+              "start": 423,
+              "end": 429,
+              "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim."
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "CLAIM_STRENGTH_REVIEW",
+            "quote": "всегда",
+            "start": 423,
+            "end": 429,
+            "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim.",
+            "severity": "warning"
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "c6d2c11c825eea9df5640782ca92408101ac9c2c8181bbf77c2719716daa6018",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 1,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "201b033e31180518722ea4a14b59ab63c9b91c721c8000d30d35421344ddc0c1",
+        "measurements": {
+          "words": 212,
+          "chars": 1378,
+          "utf8_bytes": 2507
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "c6d2c11c825eea9df5640782ca92408101ac9c2c8181bbf77c2719716daa6018",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 2,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "5f487f5832726ef94cf142653b4f0724ca33e742cea44ce542a63c96a7256b0f",
+        "measurements": {
+          "words": 226,
+          "chars": 1457,
+          "utf8_bytes": 2639
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "c6d2c11c825eea9df5640782ca92408101ac9c2c8181bbf77c2719716daa6018",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "drawing_without_streak_author_column",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "70cb4b11f4e38ff39b4dcb63990e9a3606fb32fe1492ae659ae87cac88b16419",
+        "measurements": {
+          "words": 220,
+          "chars": 1411,
+          "utf8_bytes": 2558
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "c6d2c11c825eea9df5640782ca92408101ac9c2c8181bbf77c2719716daa6018",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "1465d020ad35b9e39213eef48dc61d5da3d3c1569da2248d7ff82115ad29a77e",
+        "measurements": {
+          "words": 250,
+          "chars": 1701,
+          "utf8_bytes": 3073
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "MIXED_QUOTE_PERMISSIONS",
+              "quote": "«Клён»",
+              "start": 263,
+              "end": 269,
+              "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+              "source_ids": [
+                "container_pilot_mechanism",
+                "container_cafe_manager_interview"
+              ]
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "MIXED_QUOTE_PERMISSIONS",
+            "quote": "«Клён»",
+            "start": 263,
+            "end": 269,
+            "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+            "severity": "warning",
+            "source_ids": [
+              "container_pilot_mechanism",
+              "container_cafe_manager_interview"
+            ]
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 5,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "42ec5cca74903bc11373139555dbc6792643ed1d1b2403893ee30be69ebf2a62",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 1,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "75334c57ccc2da4ed86c8111f81d10e3c048368eea2df0898e74ff92aca3e781",
+        "measurements": {
+          "words": 256,
+          "chars": 1748,
+          "utf8_bytes": 3163
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "MIXED_QUOTE_PERMISSIONS",
+              "quote": "«Клён»",
+              "start": 226,
+              "end": 232,
+              "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+              "source_ids": [
+                "container_pilot_mechanism",
+                "container_cafe_manager_interview"
+              ]
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "MIXED_QUOTE_PERMISSIONS",
+            "quote": "«Клён»",
+            "start": 226,
+            "end": 232,
+            "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+            "severity": "warning",
+            "source_ids": [
+              "container_pilot_mechanism",
+              "container_cafe_manager_interview"
+            ]
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 4,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "42ec5cca74903bc11373139555dbc6792643ed1d1b2403893ee30be69ebf2a62",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 2,
+      "arm": "treatment",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "aefae2ef2efb9f663ea27119d1e10d10625c90aa79a249d2dfece6e5b5c03e81",
+        "measurements": {
+          "words": 236,
+          "chars": 1631,
+          "utf8_bytes": 2947
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "MIXED_QUOTE_PERMISSIONS",
+              "quote": "«Клён»",
+              "start": 205,
+              "end": 211,
+              "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+              "source_ids": [
+                "container_pilot_mechanism",
+                "container_cafe_manager_interview"
+              ]
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "MIXED_QUOTE_PERMISSIONS",
+            "quote": "«Клён»",
+            "start": 205,
+            "end": 211,
+            "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+            "severity": "warning",
+            "source_ids": [
+              "container_pilot_mechanism",
+              "container_cafe_manager_interview"
+            ]
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 4,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "42ec5cca74903bc11373139555dbc6792643ed1d1b2403893ee30be69ebf2a62",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "returnable_lunch_container_solutions",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "474c639d8865b1e9b34132dd101ac47df865aa4886dcb6961fcde7b24187bfc4",
+        "measurements": {
+          "words": 252,
+          "chars": 1701,
+          "utf8_bytes": 3068
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "MIXED_QUOTE_PERMISSIONS",
+              "quote": "«Клён»",
+              "start": 77,
+              "end": 83,
+              "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+              "source_ids": [
+                "container_pilot_mechanism",
+                "container_cafe_manager_interview"
+              ]
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "MIXED_QUOTE_PERMISSIONS",
+            "quote": "«Клён»",
+            "start": 77,
+            "end": 83,
+            "message": "This excerpt occurs in both public and restricted records; check its attribution and permission.",
+            "severity": "warning",
+            "source_ids": [
+              "container_pilot_mechanism",
+              "container_cafe_manager_interview"
+            ]
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 4,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "42ec5cca74903bc11373139555dbc6792643ed1d1b2403893ee30be69ebf2a62",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    }
+  ]
+}

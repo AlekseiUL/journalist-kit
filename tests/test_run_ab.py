@@ -93,6 +93,24 @@ class RunnerTests(unittest.TestCase):
             ab.run(self.run_dir, execute=True)
         call.assert_not_called()
 
+    def test_explicit_protocol_and_rubric_are_frozen_without_author_leakage(self):
+        protocol, rubric = self.root / "new-protocol.md", self.root / "new-judge.md"
+        protocol.write_bytes(b"NEW PROTOCOL\r\n")
+        rubric.write_bytes(b"NEW JUDGE\n")
+        manifest = ab.prepare(self.run_dir, self.dataset, self.root, protocol=protocol, rubric=rubric)
+        self.assertEqual((self.run_dir / "snapshots/protocol.txt").read_bytes(), protocol.read_bytes())
+        self.assertEqual((self.run_dir / "snapshots/judge.txt").read_bytes(), rubric.read_bytes())
+        for job in manifest["jobs"]:
+            prompt = (self.run_dir / job["prompt_path"]).read_text(encoding="utf-8")
+            self.assertNotIn("NEW PROTOCOL", prompt)
+            self.assertNotIn("NEW JUDGE", prompt)
+        ab.load_run(self.run_dir)
+
+    def test_missing_explicit_protocol_fails_without_creating_run(self):
+        with self.assertRaises(FileNotFoundError):
+            ab.prepare(self.run_dir, self.dataset, self.root, protocol=self.root / "missing.md")
+        self.assertFalse(self.run_dir.exists())
+
     def test_execute_gate_prevents_model_calls(self):
         with patch.object(ab.subprocess, "run") as call, self.assertRaises(ValueError):
             ab.run(self.run_dir)
