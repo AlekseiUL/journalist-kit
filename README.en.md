@@ -1,4 +1,4 @@
-# Source & Voice
+# Journalist Kit
 
 A Russian-first editorial skill for the writing agent you already use.
 
@@ -13,18 +13,25 @@ not a claim of equivalent editorial quality in every language.
 **Beta:** no guaranteed factual accuracy, human authorship, detector evasion,
 automatic publication, or superiority over other writing skills.
 
+**First paired pilot:** 24 outputs on six new synthetic briefs, reviewed by two
+blinded model judges. Both preferred Kit more often for practical suitability,
+but livelier writing was not established; both variants still made errors.
+[Full results, every output, costs and limitations](evals/ab-2026-09-07/README.md).
+
 This is currently an unpublished local release candidate. The owner has not yet
 confirmed the proposed public repository and license. The clone command below
 is for the eventual publication; local checkout users can test the installer now.
 
 ## Install
 
+Journalist Kit ships one skill with the stable installation ID `source-and-voice`.
+
 Requires Python 3.10+ and your existing agent. No runtime dependencies, network
 requests, telemetry, or model credentials are embedded in the package.
 
 ```bash
-git clone https://github.com/AlekseiUL/source-and-voice.git
-cd source-and-voice
+git clone https://github.com/AlekseiUL/journalist-kit.git
+cd journalist-kit
 python3 tools/install.py --dest "$HOME/.hermes/skills"
 python3 tools/install.py --dest "$HOME/.hermes/skills" --apply
 ```

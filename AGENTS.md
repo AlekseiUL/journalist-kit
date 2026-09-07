@@ -1,4 +1,4 @@
-# Source & Voice
+# Journalist Kit
 
 A portable, Russian-first editorial skill. One writer, source-bound claims,
 an optional user-owned voice profile, and one coordinated editorial pass.
