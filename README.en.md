@@ -13,13 +13,14 @@ not a claim of equivalent editorial quality in every language.
 **Beta:** no guaranteed factual accuracy, human authorship, detector evasion,
 automatic publication, or superiority over other writing skills.
 
-**Beta.2 revision pilot:** 36 outputs: plain writer, previous Kit and candidate.
-Both blinded model judges preferred the candidate to the previous version more
-often for reading quality, but preferred the previous version more often for
-practical suitability. More expressive writing did not eliminate semantic errors.
-Beta.2 is an **experimental revision**, not an unconditionally recommended upgrade.
-[Every output, results, costs and limitations](evals/revision-2026-09-07/README.md).
-The [first beta.1 pilot](evals/ab-2026-09-07/README.md) remains unchanged.
+**Beta.3 reliability pilot:** instructions shortened by about a quarter; 36 new
+outputs compared with a plain writer and beta.1. Both blinded model judges more
+often preferred beta.3 to the plain writer. However, improved reliability over
+beta.1 was not established: both flagged more critical outputs in beta.3.
+This is an **experimental beta**, not an unconditionally recommended upgrade.
+[Every output, results, costs and limitations](evals/reliability-2026-09-07/README.md).
+The [first beta.1 pilot](evals/ab-2026-09-07/README.md) and
+[beta.2 experiment](evals/revision-2026-09-07/README.md) remain unchanged.
 
 This is currently an unpublished local release candidate. The owner has not yet
 confirmed the proposed public repository and license. The clone command below
@@ -49,6 +50,8 @@ all-clients compatibility claim.
 - Six journalism modes and six forms, with a lighter route for ordinary posts.
 - A single coordinated composition, voice, and language edit followed by a
   source-fidelity reread.
+- Source meaning takes priority over a smoother phrase: when a flourish requires
+  an assumption, keep the supported wording and improve selection, order and rhythm.
 - Optional user-owned voice preferences; no private example corpus included.
 - The requested tone works without a separate voice profile; supported author
   intent is preserved alongside factual constraints, not replaced with neutral prose.
@@ -57,8 +60,8 @@ all-clients compatibility claim.
 - Synthetic examples and evaluation cases with explicit failure criteria.
 
 The checker always reports semantic source review as `NOT_REVIEWED`. In the
-36-output pilot it raised no style signals and missed semantic errors; a clean
-lint is not a fact-check. See [the checker audit](evals/revision-2026-09-07/AUDIT.md),
+earlier 36-output beta.2 pilot it raised no style signals and missed semantic errors;
+a clean lint is not a fact-check. See [the checker audit](evals/revision-2026-09-07/AUDIT.md),
 [the checker contract](docs/checker.md) and
 [the release evidence](docs/release-check.md).
 
