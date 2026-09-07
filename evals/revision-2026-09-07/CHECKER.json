@@ -1,0 +1,1246 @@
+{
+  "method": "Post-hoc local analyze API, not part of the blinded writer comparison; no text changed.",
+  "checker_sha256": "5763b056bb0d411c01caaa0eba08b7a2e3c6f669b6a36283389c6d61e87dcbc3",
+  "source_hash_basis": "canonical_json",
+  "records": [
+    {
+      "case_id": "windowsill_basil_personal_post",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "51c8265b38c1cef07f0701dbf6738fa308ae9e4c46c8226849ed7c5d509c649d",
+        "measurements": {
+          "words": 130,
+          "chars": 843,
+          "utf8_bytes": 1528
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "813de678ca8d3bc763c8a41685c28123f3c9829eb0f3fd0a42edba6f987c6c18",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "windowsill_basil_personal_post",
+      "repeat": 1,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "878e9d2940ecb41986aa1ce8eafa83b0bbf083ea6843f13274c1c31888dedee7",
+        "measurements": {
+          "words": 117,
+          "chars": 756,
+          "utf8_bytes": 1372
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "813de678ca8d3bc763c8a41685c28123f3c9829eb0f3fd0a42edba6f987c6c18",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "windowsill_basil_personal_post",
+      "repeat": 1,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "617816ce5778c543164781684ddea58a63d0ce4d38cc41f601eead1aab6e24fe",
+        "measurements": {
+          "words": 132,
+          "chars": 870,
+          "utf8_bytes": 1583
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "813de678ca8d3bc763c8a41685c28123f3c9829eb0f3fd0a42edba6f987c6c18",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "windowsill_basil_personal_post",
+      "repeat": 2,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "58a1fd574ec815f0e02bab706e5b8272913fde92e843d5dd40978eff4891ff7b",
+        "measurements": {
+          "words": 126,
+          "chars": 844,
+          "utf8_bytes": 1538
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "813de678ca8d3bc763c8a41685c28123f3c9829eb0f3fd0a42edba6f987c6c18",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "windowsill_basil_personal_post",
+      "repeat": 2,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "b440639ec47be3c8667fe6e229c2ef2d4bb8a00b856068c3f308781236f4cc9f",
+        "measurements": {
+          "words": 124,
+          "chars": 819,
+          "utf8_bytes": 1491
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "813de678ca8d3bc763c8a41685c28123f3c9829eb0f3fd0a42edba6f987c6c18",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "windowsill_basil_personal_post",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "1a89961593f078c63daf5b433dc567dacba5fceee8f10205bb117b1dfcf7ae76",
+        "measurements": {
+          "words": 144,
+          "chars": 937,
+          "utf8_bytes": 1705
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "813de678ca8d3bc763c8a41685c28123f3c9829eb0f3fd0a42edba6f987c6c18",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "pool_morning_schedule_announcement",
+      "repeat": 1,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "f7ee7b928d10d91d84523aa461e1a9d1fa0c76dabbfb8553c955e7400adf7206",
+        "measurements": {
+          "words": 123,
+          "chars": 904,
+          "utf8_bytes": 1604
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "8ee68343e67f8b4074c7042e429ec2fdcd6f5a5f4907e92c37f8c920ed3b16d1",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "pool_morning_schedule_announcement",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "310b4a4e800010864068f76eccfb540bad29bc006583905b703d4162f02aee89",
+        "measurements": {
+          "words": 123,
+          "chars": 887,
+          "utf8_bytes": 1582
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "8ee68343e67f8b4074c7042e429ec2fdcd6f5a5f4907e92c37f8c920ed3b16d1",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "pool_morning_schedule_announcement",
+      "repeat": 1,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "1427a40494edd78110bc36fdb4feacbe401884080c9c780496390a5317c79013",
+        "measurements": {
+          "words": 127,
+          "chars": 906,
+          "utf8_bytes": 1604
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "8ee68343e67f8b4074c7042e429ec2fdcd6f5a5f4907e92c37f8c920ed3b16d1",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "pool_morning_schedule_announcement",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "289268fdaea5f2b436eafd8185706a7cbeb386da661f341f696c6d08dd523517",
+        "measurements": {
+          "words": 126,
+          "chars": 906,
+          "utf8_bytes": 1605
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "8ee68343e67f8b4074c7042e429ec2fdcd6f5a5f4907e92c37f8c920ed3b16d1",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "pool_morning_schedule_announcement",
+      "repeat": 2,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "043f54f8dcaf724f6d0d60322847366aee099e9352235b532337e9e0b05386a9",
+        "measurements": {
+          "words": 130,
+          "chars": 949,
+          "utf8_bytes": 1685
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "8ee68343e67f8b4074c7042e429ec2fdcd6f5a5f4907e92c37f8c920ed3b16d1",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "pool_morning_schedule_announcement",
+      "repeat": 2,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "005644e9853c4bde4d7f28b972d565d09b64077628000acbb18f1b78a87ac312",
+        "measurements": {
+          "words": 122,
+          "chars": 873,
+          "utf8_bytes": 1544
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "8ee68343e67f8b4074c7042e429ec2fdcd6f5a5f4907e92c37f8c920ed3b16d1",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "willow_basket_maker_profile",
+      "repeat": 1,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "f93791f88b73d81319e2fcd8320e69bd667f3fb246c097fecf6059229963b836",
+        "measurements": {
+          "words": 202,
+          "chars": 1317,
+          "utf8_bytes": 2394
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "670906042bb77a0396f585265be6890920070e5db27615412ab0125604f0e12b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "willow_basket_maker_profile",
+      "repeat": 1,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "fd961a66c33bace84b49a0fd30b62fed9c013c218f98baa9b1bfb3a689dc4c17",
+        "measurements": {
+          "words": 218,
+          "chars": 1449,
+          "utf8_bytes": 2638
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "670906042bb77a0396f585265be6890920070e5db27615412ab0125604f0e12b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "willow_basket_maker_profile",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "819ca2321a7e6f85f956507ce62f1a398ad28a63b22e8f6c2866227cee507182",
+        "measurements": {
+          "words": 230,
+          "chars": 1557,
+          "utf8_bytes": 2833
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "670906042bb77a0396f585265be6890920070e5db27615412ab0125604f0e12b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "willow_basket_maker_profile",
+      "repeat": 2,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "8a7b3cfa95745daa1ed0b779ecc397aa9b4fe99ef60e010b6054ab5494284929",
+        "measurements": {
+          "words": 218,
+          "chars": 1406,
+          "utf8_bytes": 2547
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "670906042bb77a0396f585265be6890920070e5db27615412ab0125604f0e12b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "willow_basket_maker_profile",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "2af81ec12e8ffa8490908323319d215c54116ae75d2aa8b451864cb8ea02c3e6",
+        "measurements": {
+          "words": 208,
+          "chars": 1455,
+          "utf8_bytes": 2658
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "CLAIM_STRENGTH_REVIEW",
+              "quote": "сразу",
+              "start": 842,
+              "end": 847,
+              "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim."
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "CLAIM_STRENGTH_REVIEW",
+            "quote": "сразу",
+            "start": 842,
+            "end": 847,
+            "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim.",
+            "severity": "warning"
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "670906042bb77a0396f585265be6890920070e5db27615412ab0125604f0e12b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "willow_basket_maker_profile",
+      "repeat": 2,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "bfbe764ce1ca2adf03f9430a46ee8d3888a28ce1b7942ba86fa22baeeac0f4cc",
+        "measurements": {
+          "words": 232,
+          "chars": 1509,
+          "utf8_bytes": 2740
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "670906042bb77a0396f585265be6890920070e5db27615412ab0125604f0e12b",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "weather_station_last_observation",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "fb8bdb8a9989d919cf87f6e3d23cfd779b2a633fae7ae8072f41ba59a8900e8d",
+        "measurements": {
+          "words": 199,
+          "chars": 1368,
+          "utf8_bytes": 2481
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "CLAIM_STRENGTH_REVIEW",
+              "quote": "всегда",
+              "start": 542,
+              "end": 548,
+              "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim."
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "CLAIM_STRENGTH_REVIEW",
+            "quote": "всегда",
+            "start": 542,
+            "end": 548,
+            "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim.",
+            "severity": "warning"
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "95007ae5793263bcd55cceada75169aaa508bcf7ce82e6c988a75f2c88689a89",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "weather_station_last_observation",
+      "repeat": 1,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "4cab5afc1089855830dfc7b42d72acceb37e850a741f08dc157c16a552ac5f4b",
+        "measurements": {
+          "words": 219,
+          "chars": 1448,
+          "utf8_bytes": 2619
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "95007ae5793263bcd55cceada75169aaa508bcf7ce82e6c988a75f2c88689a89",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "weather_station_last_observation",
+      "repeat": 1,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "0a54854401adff42fc696e12af301f5b0346bd3368ddd2c97e05a0578e1edad8",
+        "measurements": {
+          "words": 214,
+          "chars": 1426,
+          "utf8_bytes": 2582
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "95007ae5793263bcd55cceada75169aaa508bcf7ce82e6c988a75f2c88689a89",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "weather_station_last_observation",
+      "repeat": 2,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "b2fad818fa6019f8ad64a4f870aecb13c538049e678fa11d9cd0fdcf1cd534a7",
+        "measurements": {
+          "words": 206,
+          "chars": 1371,
+          "utf8_bytes": 2478
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "95007ae5793263bcd55cceada75169aaa508bcf7ce82e6c988a75f2c88689a89",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "weather_station_last_observation",
+      "repeat": 2,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "02d6edd13b4496ac6c22f6d831caffe3a85a4dc5ba2077be174435c7d1d4cc14",
+        "measurements": {
+          "words": 203,
+          "chars": 1343,
+          "utf8_bytes": 2427
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "95007ae5793263bcd55cceada75169aaa508bcf7ce82e6c988a75f2c88689a89",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "weather_station_last_observation",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "fcfa145764edf5cd17a90d5783b7046ec261dbd3479abd159a0a668fe621572f",
+        "measurements": {
+          "words": 210,
+          "chars": 1431,
+          "utf8_bytes": 2591
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": [
+            {
+              "rule": "CLAIM_STRENGTH_REVIEW",
+              "quote": "всегда",
+              "start": 561,
+              "end": 567,
+              "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim."
+            }
+          ]
+        },
+        "issues": [
+          {
+            "rule": "CLAIM_STRENGTH_REVIEW",
+            "quote": "всегда",
+            "start": 561,
+            "end": 567,
+            "message": "This strength marker is absent from the supplied excerpts. Semantically assess scope and certainty; absence of a word does not prove a distorted claim.",
+            "severity": "warning"
+          }
+        ],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 1,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "95007ae5793263bcd55cceada75169aaa508bcf7ce82e6c988a75f2c88689a89",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "choir_signup_data_explainer",
+      "repeat": 1,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "77a5916863043c1200c2e28725bc58643c39abf697e33c2032cf7d302a9d57f6",
+        "measurements": {
+          "words": 129,
+          "chars": 776,
+          "utf8_bytes": 1380
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "67213222bc882d68549334412b63f023b257ccaff825dbfe70355298060a373e",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "choir_signup_data_explainer",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "c149920707ce581a105539afac668ad20273a803587a666999aec76ec96a3dab",
+        "measurements": {
+          "words": 138,
+          "chars": 875,
+          "utf8_bytes": 1570
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "67213222bc882d68549334412b63f023b257ccaff825dbfe70355298060a373e",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "choir_signup_data_explainer",
+      "repeat": 1,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "3a2901a76983813652e3d48ad7cc2380a9fe286b6f1b1e63de035c635d58e611",
+        "measurements": {
+          "words": 125,
+          "chars": 786,
+          "utf8_bytes": 1401
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "67213222bc882d68549334412b63f023b257ccaff825dbfe70355298060a373e",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "choir_signup_data_explainer",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "397ac8d624662e5f24c260979cae1647cfe5a0dcba0e503ac688547be1896f45",
+        "measurements": {
+          "words": 128,
+          "chars": 813,
+          "utf8_bytes": 1447
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "67213222bc882d68549334412b63f023b257ccaff825dbfe70355298060a373e",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "choir_signup_data_explainer",
+      "repeat": 2,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "00bd6a4d6100c720f77885d8bb599ffd86ec7b59e41f7acede9843b9be7f5483",
+        "measurements": {
+          "words": 130,
+          "chars": 826,
+          "utf8_bytes": 1475
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "67213222bc882d68549334412b63f023b257ccaff825dbfe70355298060a373e",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "choir_signup_data_explainer",
+      "repeat": 2,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "0137353856ccdacba9acf529053043fdc0e457fedc3cdef5ebdfd07b1026647e",
+        "measurements": {
+          "words": 134,
+          "chars": 860,
+          "utf8_bytes": 1543
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "67213222bc882d68549334412b63f023b257ccaff825dbfe70355298060a373e",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "canteen_quiet_author_rewrite",
+      "repeat": 1,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "e75916b92e27d1e840c0bf12d3754ac64cf426aaa1385990df973972a63e0055",
+        "measurements": {
+          "words": 144,
+          "chars": 891,
+          "utf8_bytes": 1602
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "272f0a9f06a45bcf81f4b8e8a20c5560aaf7728b9362a52c6bedda368ae35756",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "canteen_quiet_author_rewrite",
+      "repeat": 1,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "3d26b1447b40c729940bcb985129ccdd0258fae279e82c24b05524e3f7b430cd",
+        "measurements": {
+          "words": 147,
+          "chars": 905,
+          "utf8_bytes": 1634
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "272f0a9f06a45bcf81f4b8e8a20c5560aaf7728b9362a52c6bedda368ae35756",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "canteen_quiet_author_rewrite",
+      "repeat": 1,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "d747b5dfdf2bf351b218fe4d14a51eb0fd059dddcd85b56ac7bb6ac0a90a24ce",
+        "measurements": {
+          "words": 137,
+          "chars": 867,
+          "utf8_bytes": 1566
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "272f0a9f06a45bcf81f4b8e8a20c5560aaf7728b9362a52c6bedda368ae35756",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "canteen_quiet_author_rewrite",
+      "repeat": 2,
+      "arm": "candidate",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "13393ae77c5cba01c92f492bc44decc19e533cc9cc41a85b2aefc0c1817707dc",
+        "measurements": {
+          "words": 140,
+          "chars": 871,
+          "utf8_bytes": 1572
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "272f0a9f06a45bcf81f4b8e8a20c5560aaf7728b9362a52c6bedda368ae35756",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "canteen_quiet_author_rewrite",
+      "repeat": 2,
+      "arm": "baseline",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "582bde63422057dcd0fe57c0d8b200549c9af51bb40b81c9932563890ed91656",
+        "measurements": {
+          "words": 132,
+          "chars": 870,
+          "utf8_bytes": 1580
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "272f0a9f06a45bcf81f4b8e8a20c5560aaf7728b9362a52c6bedda368ae35756",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    },
+    {
+      "case_id": "canteen_quiet_author_rewrite",
+      "repeat": 2,
+      "arm": "previous",
+      "diagnostic": {
+        "version": 1,
+        "body_sha256": "c47fa5ecabb12e5d6ae7c3eeb5236bd8d69074624a98ba1c8ee483dee56faf5e",
+        "measurements": {
+          "words": 132,
+          "chars": 829,
+          "utf8_bytes": 1496
+        },
+        "style": {
+          "status": "NO_SIGNALS",
+          "findings": []
+        },
+        "source_review": {
+          "status": "NOT_REVIEWED",
+          "findings": []
+        },
+        "issues": [],
+        "limits": {
+          "max_findings_per_category": 40,
+          "style_findings_truncated": false,
+          "source_findings_truncated": false,
+          "quote_candidates_examined": 0,
+          "quote_scan_truncated": false
+        },
+        "exit_code": 0,
+        "source_packet_sha256": "272f0a9f06a45bcf81f4b8e8a20c5560aaf7728b9362a52c6bedda368ae35756",
+        "source_packet_hash_basis": "canonical_json"
+      }
+    }
+  ]
+}

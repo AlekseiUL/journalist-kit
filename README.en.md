@@ -13,10 +13,13 @@ not a claim of equivalent editorial quality in every language.
 **Beta:** no guaranteed factual accuracy, human authorship, detector evasion,
 automatic publication, or superiority over other writing skills.
 
-**First paired pilot:** 24 outputs on six new synthetic briefs, reviewed by two
-blinded model judges. Both preferred Kit more often for practical suitability,
-but livelier writing was not established; both variants still made errors.
-[Full results, every output, costs and limitations](evals/ab-2026-09-07/README.md).
+**Beta.2 revision pilot:** 36 outputs: plain writer, previous Kit and candidate.
+Both blinded model judges preferred the candidate to the previous version more
+often for reading quality, but preferred the previous version more often for
+practical suitability. More expressive writing did not eliminate semantic errors.
+Beta.2 is an **experimental revision**, not an unconditionally recommended upgrade.
+[Every output, results, costs and limitations](evals/revision-2026-09-07/README.md).
+The [first beta.1 pilot](evals/ab-2026-09-07/README.md) remains unchanged.
 
 This is currently an unpublished local release candidate. The owner has not yet
 confirmed the proposed public repository and license. The clone command below
@@ -47,12 +50,16 @@ all-clients compatibility claim.
 - A single coordinated composition, voice, and language edit followed by a
   source-fidelity reread.
 - Optional user-owned voice preferences; no private example corpus included.
+- The requested tone works without a separate voice profile; supported author
+  intent is preserved alongside factual constraints, not replaced with neutral prose.
 - A standalone standard-library Python checker: exact UTF-8 hashing, measured
   length, bounded style findings, and limited source-use diagnostics.
 - Synthetic examples and evaluation cases with explicit failure criteria.
 
-The checker always reports semantic source review as `NOT_REVIEWED`. A clean
-lint is not a fact-check. See [the checker contract](docs/checker.md) and
+The checker always reports semantic source review as `NOT_REVIEWED`. In the
+36-output pilot it raised no style signals and missed semantic errors; a clean
+lint is not a fact-check. See [the checker audit](evals/revision-2026-09-07/AUDIT.md),
+[the checker contract](docs/checker.md) and
 [the release evidence](docs/release-check.md).
 
 An optional [reference author configuration](docs/author-agent.md) uses the same

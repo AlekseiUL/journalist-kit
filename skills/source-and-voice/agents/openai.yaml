@@ -1,4 +1,4 @@
 interface:
-  display_name: "Source & Voice"
+  display_name: "Journalist Kit"
   short_description: "Тексты по источникам в личном голосе"
   default_prompt: "Используй $source-and-voice, чтобы написать текст по моим материалам и сохранить мой голос без выдуманных деталей."
