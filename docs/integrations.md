@@ -31,7 +31,8 @@ python3 tools/install.py --dest "$HOME/.hermes/profiles/writer/skills" --apply
 
 Начните новую сессию у выбранного агента. Попросите показать доступные навыки и
 использовать `source-and-voice` для [короткого задания](../examples/post-request.md).
-Через интерфейс Hermes навык можно явно вызвать как `/source-and-voice`.
+В интерактивной сессии Hermes навык можно загрузить командой
+`/skill source-and-voice`; из CLI — флагом `hermes -s source-and-voice`.
 Перезапуск сервиса, очистка истории и правка `SOUL.md` для копирования пакета не нужны.
 
 Для проверки именно файлов, а не качества генерации:

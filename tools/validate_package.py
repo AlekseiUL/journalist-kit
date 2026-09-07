@@ -18,6 +18,7 @@ MODES = {"angle_only", "interview_plan", "fact_gap_map", "sourced_explainer",
          "full_article", "investigation_brief"}
 FORMS = {"straight_news", "explainer_service", "interview_profile",
          "reported_narrative", "analysis", "solutions"}
+MAX_ENTRYPOINT_BYTES = 6_500
 SENSITIVE = (
     ("personal absolute path", re.compile(r"[/]Users[/][\w.-]+[/]|[/]home[/][\w.-]+[/]")),
     ("private production identifier", re.compile(r"MIKE[_]CENTER|mike[-](?:smm|hank|tuco)|alexey[-]voice[-]pack")),
@@ -42,8 +43,10 @@ def validate(root=ROOT, *, release=False):
     root = Path(root).resolve()
     failures = []
     skill = root / "skills" / NAME
-    required = ["README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "docs/integrations.md",
-                "docs/evaluation.md", "evals/cases.json", ".github/workflows/check.yml"]
+    required = ["README.md", "LICENSE", "SECURITY.md", "THIRD_PARTY_NOTICES.md",
+                "docs/integrations.md", "docs/evaluation.md", "docs/golden-path.md",
+                "evals/cases.json", "evals/next-source-first-holdout/PROTOCOL.md",
+                ".github/workflows/check.yml"]
     required.extend("skills/" + NAME + "/" + relative for relative in FILES)
     for relative in required:
         if not (root / relative).is_file():
@@ -97,9 +100,13 @@ def validate(root=ROOT, *, release=False):
                 failures.append("missing discovery description")
             if len(body.splitlines()) > 220:
                 failures.append("entrypoint exceeds the package's 220-line context budget")
+            if len(body.encode("utf-8")) > MAX_ENTRYPOINT_BYTES:
+                failures.append(f"entrypoint exceeds the package's {MAX_ENTRYPOINT_BYTES}-byte context budget")
         for reference in ("journalism.md", "editing.md", "voice.md", "review.md"):
             if "references/" + reference not in body:
                 failures.append("undiscoverable reference: " + reference)
+        if "templates/source-fidelity-review.md" not in body:
+            failures.append("undiscoverable template: source-fidelity-review.md")
 
     cases_path = root / "evals" / "cases.json"
     if cases_path.is_file():

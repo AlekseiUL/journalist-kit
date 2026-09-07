@@ -40,6 +40,7 @@ class InstallTests(unittest.TestCase):
         actual = {str(p.relative_to(target)) for p in target.rglob("*") if p.is_file()}
         self.assertEqual(actual, set(installer.FILES))
         self.assertEqual((target / "SKILL.md").read_bytes(), (self.source / "SKILL.md").read_bytes())
+        self.assertTrue((target / "templates/source-fidelity-review.md").is_file())
 
     def test_existing_skill_is_never_overwritten(self):
         installer.install(self.destination, source=self.source, apply=True)

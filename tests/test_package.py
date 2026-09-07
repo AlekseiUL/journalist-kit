@@ -31,6 +31,32 @@ class PackageTests(unittest.TestCase):
     def test_real_package_is_complete(self):
         self.assertEqual(validator.validate(self.root), [])
 
+    def test_source_first_candidate_contract_is_discoverable(self):
+        skill = (self.root / "skills/source-and-voice/SKILL.md").read_text(encoding="utf-8")
+        self.assertIn('version: "0.2.0-alpha.1"', skill)
+        self.assertIn("templates/source-fidelity-review.md", skill)
+        self.assertIn("Не загружай все справочники автоматически", skill)
+        self.assertIn("редактируй его, а не переписывай заново", skill)
+        self.assertLessEqual(len(skill.encode("utf-8")), validator.MAX_ENTRYPOINT_BYTES)
+
+    def test_oversized_entrypoint_is_rejected(self):
+        path = self.root / "skills/source-and-voice/SKILL.md"
+        with path.open("a", encoding="utf-8") as stream:
+            stream.write("x" * validator.MAX_ENTRYPOINT_BYTES)
+        self.assertTrue(any("byte context budget" in error for error in validator.validate(self.root)))
+
+    def test_next_holdout_has_locked_value_and_cost_gates(self):
+        protocol = (self.root / "evals/next-source-first-holdout/PROTOCOL.md").read_text(encoding="utf-8")
+        self.assertIn("0 confirmed substantive meaning distortions", protocol)
+        self.assertIn("at least 10 of all 12 pairs", protocol)
+        self.assertIn("exactly 28 model calls with no retry", protocol)
+        self.assertIn("no more than 15%", protocol)
+        self.assertIn("Do not inject all references by default", protocol)
+
+    def test_release_surfaces_are_required(self):
+        (self.root / "SECURITY.md").unlink()
+        self.assertIn("missing: SECURITY.md", validator.validate(self.root))
+
     def test_broken_relative_link_is_detected(self):
         with (self.root / "README.md").open("a", encoding="utf-8") as handle:
             handle.write("\n[missing](docs/missing.md)\n")

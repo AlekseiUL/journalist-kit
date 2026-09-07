@@ -17,6 +17,7 @@ FILES = (
     "references/editing.md",
     "references/voice.md",
     "references/review.md",
+    "templates/source-fidelity-review.md",
     "scripts/editorial_check.py",
     "assets/voice.example.json",
     "agents/openai.yaml",

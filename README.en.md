@@ -1,8 +1,8 @@
 # Journalist Kit
 
-A Russian-first editorial skill for the writing agent you already use.
+A Russian-first source-fidelity editor for the writing agent you already use.
 
-[Русский README](README.md) · [Installation](docs/integrations.md) · [Evaluation](docs/evaluation.md)
+[Русский README](README.md) · [Golden path](docs/golden-path.md) · [Installation](docs/integrations.md) · [Evaluation](docs/evaluation.md)
 
 **New six-form pilot:** 24 fresh outputs did not establish a consistent beta.3
 advantage over a plain writer; source-based auditing found meaning distortions.
@@ -20,6 +20,13 @@ not a claim of equivalent editorial quality in every language.
 
 **Beta:** no guaranteed factual accuracy, human authorship, detector evasion,
 automatic publication, or superiority over other writing skills.
+
+**Next candidate: editor-first.** Given a draft, it locks subject, action, time,
+conditions, confidence and author position before making the smallest useful
+edit, then reviews changed claims. Journalism references are selected by task,
+not injected by default. This candidate has not passed a new behavioral holdout
+and does not change the beta.3 findings below. See the
+[precommitted next gate](evals/next-source-first-holdout/PROTOCOL.md).
 
 **Beta.3 reliability pilot:** instructions shortened by about a quarter; 36 new
 outputs compared with a plain writer and beta.1. Both blinded model judges more

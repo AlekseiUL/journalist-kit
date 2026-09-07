@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — 0.2.0-alpha.1 source-first candidate
+
+- Reframed the default path around minimal source-fidelity editing rather than
+  loading all journalism forms for every task.
+- Added an explicit source lock for subject, action, time, units, conditions,
+  confidence, author position and source-use boundaries.
+- Added a compact independent-review template and a user-facing golden path.
+- Precommitted the next native-Hermes holdout gates: zero substantive drift,
+  no regression against baseline, joint practical preference in at least 10/12
+  fixed pairs, and no more than 15% mean input growth.
+- Added a security reporting and public-release boundary.
+- No behavioral improvement is claimed until the new holdout is executed.
+
 ## 0.1.0-beta.1 — 2026-09-07 — local candidate
 
 - Named the product Journalist Kit; retained `source-and-voice` as the skill's
