@@ -86,7 +86,7 @@ def prepare(dest, dataset, protocol, rubric, previous_snapshots=PREVIOUS, root=a
             order = ARMS[index % 3:] + ARMS[:index % 3]
             for arm in order:
                 relative = "prompts/" + ids[arm] + ".txt"
-                prompt = ab.prompt_for(case, documents.get(arm)).encode("utf-8")
+                prompt = ab.prompt_for(case, documents.get(arm), ab.SKILL_FILES).encode("utf-8")
                 freeze(relative, prompt)
                 jobs.append({"output_id": ids[arm], "case_id": case["id"], "repeat": repeat,
                              "arm": arm, "requested_model": ab.MODEL, "prompt_path": relative,
@@ -438,7 +438,7 @@ def export(run_dir, judges_dir, dest):
     writers, outputs = [], {}
     for key, job in jobs.items():
         record, case = records[key], cases[job["case_id"]]
-        if record["prompt"] != ab.prompt_for(case, documents.get(job["arm"])):
+        if record["prompt"] != ab.prompt_for(case, documents.get(job["arm"]), ab.SKILL_FILES):
             raise ValueError("writer prompt cannot be reconstructed from frozen inputs")
         final = record["final_text"]
         count = len(final.split()) if final is not None else None

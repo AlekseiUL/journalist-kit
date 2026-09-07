@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "frozen_before_first_call": true,
+  "prepared_at_utc": "2026-09-07T21:14:48.024136Z",
+  "branch": "improve/source-first-v0.2-candidate",
+  "local_sha": "f8a7f552f3bcc669695cc0554ae5b6f2166b98df",
+  "github_readback_sha": "f8a7f552f3bcc669695cc0554ae5b6f2166b98df",
+  "rollback_tag": "nacho-audit-96658be",
+  "rollback_sha": "96658be7eb9e2aeb2a3bfc494377ea1c5debcbf1",
+  "author_manifest_sha256": "9da745eea56b782ead0d4ad84c3112ddad9e38f7d77726689b9bfa0168a4cad5",
+  "working_diff_sha256": "03d23910db8d084aa8c1d883620d943dccf5a5721bc92f375d8cd71958a692d0",
+  "frozen_files": {
+    "cases.json": "c2213f9e580118f60945a20001d15b17adc692eafc4867a4bdebc12bad0facb4",
+    "PROTOCOL.md": "18bde8d3b4e9378b15f30458823f8e3ad86e9ccdbed48cb7316c894a842e882a",
+    "JUDGE.md": "a1588ea82738289385a81042a1f84ccb39d350a72c9c58a10dab6ba83c92b820",
+    "FRESHNESS.md": "02bb221c18a618e7502cf6b2aecafa146e4090cc781e097798b7fe08dbdac716",
+    "tools/run_ab.py": "930402b60aa7250bcd7ba10eace1d292a30427f893ad3365932edf0b35a98791",
+    "tools/review_ab.py": "ffab58f2541d9659be0b554e6998309fa2f18c92db33b369c3400a9bab079cf1",
+    "tools/summarize_ab.py": "a89320d11f0e829cd6fc1b578b68f7a38babb744e145c08fc64e76ddb28eb344",
+    "skills/source-and-voice/SKILL.md": "70f0f3555df817e328eb567c74bf5ff9e14ba8ff3a724f87debac3802cea75f4",
+    "skills/source-and-voice/references/editing.md": "792d44da847b37645f904eb7612b08380d35318081ee838f870378de24069c13",
+    "skills/source-and-voice/references/voice.md": "16b5df7069132cc81e8582abb50962a018b8c715980aee58eaa3cec9b69254cb",
+    "skills/source-and-voice/references/journalism.md": "b3727dbdb30fb01d76df8157e84aa7b784039d35daf3d23ed337b81f71e9aba5"
+  },
+  "job_plan": {
+    "author_calls": 24,
+    "author_job_ids_unique": 24,
+    "review_calls": 4,
+    "review_job_ids": ["judge1-batch1", "judge1-batch2", "judge2-batch1", "judge2-batch2"],
+    "total_calls": 28,
+    "retry": false,
+    "resume_unfinished": false
+  },
+  "freshness": {"prior_case_entries": 55, "prior_dataset_files": 8, "exact_id_overlaps": 0, "exact_request_overlaps": 0},
+  "author_settings": {"model": "gpt-5.6-sol", "reasoning": "medium", "tools": "disabled", "timeout_seconds": 180, "backend": "codex-cli 0.153.4"},
+  "review_settings": {"models": ["gpt-5.6-sol", "gpt-5.6-sol"], "reasoning": "medium", "tools": "disabled", "timeout_seconds": 300, "backend": "codex-cli 0.153.4"}
+}

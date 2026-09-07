@@ -31,7 +31,8 @@ class RunnerTests(unittest.TestCase):
         self.dataset = self.root / "cases.json"
         self.cases = [{"id": "case-" + str(index), "request": "Write a short synthetic report.",
                        "sources": [{"id": "s1", "content": "A synthetic fact.", "use": "public"}],
-                       "min_words": 2, "max_words": 10, "reviewer_notes": ["SECRET RUBRIC MARKER"]}
+                       "min_words": 2, "max_words": 10, "reviewer_notes": ["SECRET RUBRIC MARKER"],
+                       "required_reference": "references/editing.md"}
                       for index in range(6)]
         self.dataset.write_bytes(ab.json_bytes({"cases": self.cases}))
         for name in ab.SKILL_FILES:
@@ -54,11 +55,15 @@ class RunnerTests(unittest.TestCase):
         manifest = self.prepare()
         self.assertEqual((self.run_dir / "snapshots/cases.json").read_bytes(), self.dataset.read_bytes())
         self.assertEqual(len(manifest["jobs"]), 24)
-        self.assertEqual(manifest["injection_mode"], "full-injection-not-native-loading")
+        self.assertEqual(manifest["injection_mode"], "skill-plus-one-required-reference")
         for job in manifest["jobs"]:
             prompt = (self.run_dir / job["prompt_path"]).read_text(encoding="utf-8")
             self.assertNotIn("SECRET RUBRIC MARKER", prompt)
             self.assertEqual("SYNTHETIC DOCUMENT" in prompt, job["arm"] == "treatment")
+            if job["arm"] == "treatment":
+                self.assertIn("SYNTHETIC DOCUMENT SKILL.md", prompt)
+                self.assertIn("SYNTHETIC DOCUMENT references/editing.md", prompt)
+                self.assertNotIn("SYNTHETIC DOCUMENT references/voice.md", prompt)
             self.assertIn(ab.COMMON, prompt)
         self.assertEqual([job["arm"] for job in manifest["jobs"][:4]],
                          ["baseline", "treatment", "treatment", "baseline"])
@@ -152,6 +157,7 @@ class RunnerTests(unittest.TestCase):
         self.assertIsNone(record["resolved_model"])
         self.assertIsNone(record["usage"]["cached_input_tokens"])
         self.assertIsNone(record["temperature"])
+        self.assertTrue((self.run_dir / "attempts" / (manifest["jobs"][0]["output_id"] + ".json")).is_file())
         resumed, repeated = self.run_fake()
         repeated.assert_not_called()
         self.assertEqual(resumed["skipped"], 24)
@@ -169,6 +175,15 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(packet["pairs"], [])
         self.assertEqual(len(packet["not_comparable"]), 12)
         self.assertIn("timeout", packet["not_comparable"][0]["reasons"])
+
+    def test_interrupted_author_attempt_is_never_retried(self):
+        manifest = self.prepare()
+        attempt = self.run_dir / "attempts" / (manifest["jobs"][0]["output_id"] + ".json")
+        attempt.parent.mkdir()
+        attempt.write_bytes(b"{}\n")
+        with patch.object(ab.subprocess, "run") as call, self.assertRaises(ValueError):
+            ab.run(self.run_dir, execute=True)
+        call.assert_not_called()
 
     def test_blind_retains_successful_pairs_when_one_attempt_fails(self):
         self.prepare()

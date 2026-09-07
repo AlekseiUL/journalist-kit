@@ -22,7 +22,8 @@ class SummaryTests(unittest.TestCase):
         dataset = {"cases": [{"id": "case_" + str(index), "request": "Короткий вымышленный текст.",
                               "sources": [{"id": "s", "content": "Вымышленная запись.",
                                            "origin": "Тест", "kind": "record", "use": "public"}],
-                              "min_words": 2, "max_words": 8, "reviewer_notes": {}}
+                              "min_words": 2, "max_words": 8, "reviewer_notes": {},
+                              "required_reference": "references/editing.md"}
                              for index in range(6)]}
         data_path = root / "evals/ab-2026-09-07/cases.json"
         ab.save(data_path, ab.json_bytes(dataset))
@@ -45,8 +46,12 @@ class SummaryTests(unittest.TestCase):
                       "requested_model": ab.MODEL, "resolved_model": None,
                       "usage": {"input_tokens": 100, "cached_input_tokens": 25, "output_tokens": 10},
                       "wall_seconds": 1.25, "agent_messages": ["PRIVATE AGENT MESSAGE"],
+                      "raw_stdout_sha256": ab.digest(b"PRIVATE RAW"),
+                      "raw_stderr_sha256": ab.digest(b"PRIVATE STDERR"),
                       "raw_error": "PRIVATE ERROR " + SYNTHETIC_LOCAL + "/private-file", "thread_id": "PRIVATE THREAD"}
             ab.save(run / "records" / (job["output_id"] + ".json"), ab.json_bytes(record))
+            ab.save(run / "raw" / (job["output_id"] + ".jsonl"), b"PRIVATE RAW")
+            ab.save(run / "raw" / (job["output_id"] + ".stderr.txt"), b"PRIVATE STDERR")
         packet_dir = base / "packet"
         ab.blind(run, packet_dir)
         rubric = base / "rubric.txt"

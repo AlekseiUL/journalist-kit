@@ -14,7 +14,9 @@ import time
 import run_ab as ab
 
 
-JUDGES = ("gpt-5.6-sol", "gpt-6-astra")
+# Two independently blinded invocations use the same known-available model so
+# reviewer differences are not confounded with an unverified backend.
+JUDGES = ("gpt-5.6-sol", "gpt-5.6-sol")
 TIMEOUT = 300
 
 

@@ -18,8 +18,11 @@ ROOT = Path(__file__).resolve().parents[1]
 SEED = 20260907
 MODEL = "gpt-5.6-sol"
 TIMEOUT = 180
-SKILL_FILES = ("SKILL.md", "references/editing.md", "references/voice.md",
-               "references/journalism.md", "references/review.md")
+CORE_SKILL_FILE = "SKILL.md"
+REFERENCE_FILES = ("references/editing.md", "references/voice.md",
+                   "references/journalism.md", "references/review.md")
+SKILL_FILES = (CORE_SKILL_FILE, *REFERENCE_FILES)
+REVIEW_JOB_IDS = ("judge1-batch1", "judge1-batch2", "judge2-batch1", "judge2-batch2")
 CLI_ARGS = [
     "exec", "--ignore-user-config", "--ephemeral", "--skip-git-repo-check",
     "--sandbox", "read-only", "--json", "--color", "never", "--model", MODEL,
@@ -77,6 +80,9 @@ def validate_cases(data):
         if not isinstance(case["id"], str) or not case["id"] or case["id"] in seen:
             raise ValueError("case IDs must be unique nonempty strings")
         seen.add(case["id"])
+        if ("required_reference" in case
+                and case["required_reference"] not in REFERENCE_FILES):
+            raise ValueError("required_reference must name one supported reference")
         if not isinstance(case["request"], str) or not case["request"].strip():
             raise ValueError("request must be a nonempty string")
         if not isinstance(case["sources"], list):
@@ -91,11 +97,13 @@ def validate_cases(data):
     return cases
 
 
-def prompt_for(case, documents=None):
+def prompt_for(case, documents=None, document_names=None):
     prompt = COMMON
     if documents is not None:
         prompt += "\nРедакционные инструкции:\n"
-        for name in SKILL_FILES:
+        selected = document_names or (
+            CORE_SKILL_FILE, case.get("required_reference", "references/editing.md"))
+        for name in selected:
             prompt += "\n<document name=\"" + name + "\">\n"
             prompt += documents[name]  # Exact document text, including trailing newlines.
             prompt += "\n</document>\n"
@@ -156,11 +164,15 @@ def prepare(dest, dataset=None, root=ROOT, *, protocol=None, rubric=None):
                 "case_count": 6, "repeats": 2, "output_count": 24,
                 "requested_model": MODEL, "requested_reasoning_effort": "medium",
                 "timeout_seconds": TIMEOUT, "execution": "sequential-no-retries",
-                "injection_mode": "full-injection-not-native-loading",
-                "treatment_documents": list(SKILL_FILES), "cli_args": CLI_ARGS,
+                "injection_mode": "skill-plus-one-required-reference",
+                "treatment_documents_by_case": {
+                    case["id"]: [CORE_SKILL_FILE,
+                                 case.get("required_reference", "references/editing.md")]
+                    for case in cases},
+                "planned_review_job_ids": list(REVIEW_JOB_IDS), "cli_args": CLI_ARGS,
                 "limitations": ["host system prompt is not fully captured",
                                 "backend model snapshot is unknown unless emitted by CLI",
-                                "full document injection does not test native skill discovery",
+                                "direct document injection does not test native skill discovery",
                                 "provider generation seed and temperature are unknown",
                                 "final text is the last completed agent_message in one completed turn"],
                 "publication": "local-only; no automatic publication",
@@ -262,7 +274,8 @@ def parse_events(raw):
 
 
 def read_record(run_dir, job):
-    record = read_json(Path(run_dir) / "records" / (job["output_id"] + ".json"))
+    run_dir = Path(run_dir)
+    record = read_json(run_dir / "records" / (job["output_id"] + ".json"))
     if (record.get("output_id") != job["output_id"]
             or record.get("status") not in {"completed", "failed"}
             or record.get("prompt_sha256") != job["prompt_sha256"]
@@ -271,6 +284,9 @@ def read_record(run_dir, job):
     final = record.get("final_text")
     if record.get("final_sha256") != (digest(final.encode("utf-8")) if isinstance(final, str) else None):
         raise ValueError("record final text hash mismatch")
+    for suffix, key in ((".jsonl", "raw_stdout_sha256"), (".stderr.txt", "raw_stderr_sha256")):
+        if digest((run_dir / "raw" / (job["output_id"] + suffix)).read_bytes()) != record.get(key):
+            raise ValueError("record raw artifact hash mismatch")
     return record
 
 
@@ -284,6 +300,8 @@ def run(run_dir, execute=False):
     for job in jobs:
         if (run_dir / "records" / (job["output_id"] + ".json")).exists():
             read_record(run_dir, job)  # Failed attempts are terminal, too.
+        elif (run_dir / "attempts" / (job["output_id"] + ".json")).exists():
+            raise ValueError("unfinished author attempt exists; refusing a possible duplicate model call")
         else:
             pending.append(job)
     executable = shutil.which("codex") if pending else None
@@ -292,6 +310,9 @@ def run(run_dir, execute=False):
     for job in pending:
         prompt = (run_dir / job["prompt_path"]).read_bytes()
         started_at, started = utc_now(), time.monotonic()
+        save(run_dir / "attempts" / (job["output_id"] + ".json"), json_bytes({
+            "output_id": job["output_id"], "started_at_utc": started_at,
+            "prompt_sha256": job["prompt_sha256"]}))
         raw, stderr, returncode, failure = b"", b"", None, None
         try:
             with tempfile.TemporaryDirectory(prefix="source-voice-ab-") as workdir:
