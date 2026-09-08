@@ -18,7 +18,7 @@ MODES = {"angle_only", "interview_plan", "fact_gap_map", "sourced_explainer",
          "full_article", "investigation_brief"}
 FORMS = {"straight_news", "explainer_service", "interview_profile",
          "reported_narrative", "analysis", "solutions"}
-MAX_ENTRYPOINT_BYTES = 6_500
+MAX_ENTRYPOINT_BYTES = 4_200
 SENSITIVE = (
     ("personal absolute path", re.compile(r"[/]Users[/][\w.-]+[/]|[/]home[/][\w.-]+[/]")),
     ("private production identifier", re.compile(r"MIKE[_]CENTER|mike[-](?:smm|hank|tuco)|alexey[-]voice[-]pack")),

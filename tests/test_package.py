@@ -33,11 +33,13 @@ class PackageTests(unittest.TestCase):
 
     def test_source_first_candidate_contract_is_discoverable(self):
         skill = (self.root / "skills/source-and-voice/SKILL.md").read_text(encoding="utf-8")
-        self.assertIn('version: "0.2.0-alpha.1"', skill)
+        self.assertIn('version: "0.2.0-alpha.2"', skill)
         self.assertIn("templates/source-fidelity-review.md", skill)
-        self.assertIn("Не загружай все справочники автоматически", skill)
         self.assertIn("редактируй его, а не переписывай заново", skill)
-        self.assertLessEqual(len(skill.encode("utf-8")), validator.MAX_ENTRYPOINT_BYTES)
+        self.assertIn("Каждая новая конкретная деталь", skill)
+        self.assertIn("Не загружай справочник", skill)
+        self.assertIn("соблюди заданный объём", skill)
+        self.assertLessEqual(len(skill.encode("utf-8")), 4200)
 
     def test_oversized_entrypoint_is_rejected(self):
         path = self.root / "skills/source-and-voice/SKILL.md"

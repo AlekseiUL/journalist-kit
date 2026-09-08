@@ -1,6 +1,18 @@
 # Changelog
 
-## Unreleased — 0.2.0-alpha.1 source-first candidate
+## Unreleased — 0.2.0-alpha.2 compact source-first candidate
+
+- Reduced the entrypoint from 6,223 to 4,150 bytes and lowered the enforced
+  package budget to 4,200 bytes.
+- Made zero-reference execution the default for ordinary editing, posts, news,
+  explainers and profiles; references now require a concrete unmet need.
+- Added an explicit evidence gate for every newly introduced concrete detail,
+  including decorative scene details.
+- Added usefulness guards for requested length, supported practical detail and
+  minimal changes to already-good copy.
+- This candidate is not yet behaviorally validated and is not release-ready.
+
+## 0.2.0-alpha.1 — 2026-09-08 — holdout HOLD
 
 - Reframed the default path around minimal source-fidelity editing rather than
   loading all journalism forms for every task.
@@ -11,7 +23,8 @@
   no regression against baseline, joint practical preference in at least 10/12
   fixed pairs, and no more than 15% mean input growth.
 - Added a security reporting and public-release boundary.
-- No behavioral improvement is claimed until the new holdout is executed.
+- The frozen 28-call holdout completed, but the candidate failed the distortion,
+  practical-preference, input-growth and invented-scene gates. It was not merged.
 
 ## 0.1.0-beta.1 — 2026-09-07 — local candidate
 

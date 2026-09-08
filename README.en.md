@@ -21,12 +21,15 @@ not a claim of equivalent editorial quality in every language.
 **Beta:** no guaranteed factual accuracy, human authorship, detector evasion,
 automatic publication, or superiority over other writing skills.
 
-**Next candidate: editor-first.** Given a draft, it locks subject, action, time,
-conditions, confidence and author position before making the smallest useful
-edit, then reviews changed claims. Journalism references are selected by task,
-not injected by default. This candidate has not passed a new behavioral holdout
-and does not change the beta.3 findings below. See the
-[precommitted next gate](evals/next-source-first-holdout/PROTOCOL.md).
+**Source-first alpha.1 received HOLD.** All 28 calls completed without retry,
+but the candidate introduced one unsupported scene detail, received only 2/12
+and 3/12 practical preferences from the two reviewers, and increased input by
+28.2% against a 15% limit. See the [exact audit](evals/next-source-first-holdout/FINAL_AUDIT.md).
+
+**Alpha.2 is a new unverified candidate.** Its entrypoint is reduced from 6,223
+to 4,150 bytes; ordinary editing, posts, news, explainers and profiles no longer
+load a reference by default. Every added concrete detail now requires exact
+source support. Alpha.2 is not an improvement claim until a fresh holdout passes.
 
 **Beta.3 reliability pilot:** instructions shortened by about a quarter; 36 new
 outputs compared with a plain writer and beta.1. Both blinded model judges more
