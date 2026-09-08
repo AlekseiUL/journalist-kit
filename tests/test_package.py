@@ -64,6 +64,12 @@ class PackageTests(unittest.TestCase):
             handle.write("\n[missing](docs/missing.md)\n")
         self.assertTrue(any("broken/nonportable link" in error for error in validator.validate(self.root)))
 
+    def test_invalid_public_jpeg_is_detected(self):
+        image = self.root / "assets" / "journalist-kit-cover.jpg"
+        image.write_bytes(b"not a jpeg")
+        self.assertIn("invalid or oversized public JPEG: assets/journalist-kit-cover.jpg",
+                      validator.validate(self.root))
+
     def test_nonportable_path_is_detected_without_scanning_local_notes(self):
         (self.root / "unsafe.md").write_text("/" + "Users/example/private.txt", encoding="utf-8")
         errors = validator.validate(self.root)

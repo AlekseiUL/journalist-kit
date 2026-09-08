@@ -1,5 +1,7 @@
 # Journalist Kit
 
+![Hermes Journalist Kit cover](assets/journalist-kit-cover.jpg)
+
 Source-first editing and journalistic work for the writing agent you already use.
 
 [Русский](README.md) · [Golden path](docs/golden-path.md) · [Example](examples/library-hours/README.md) · [Installation](docs/integrations.md) · [Evaluation](docs/evaluation.md)

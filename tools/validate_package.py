@@ -19,6 +19,8 @@ MODES = {"angle_only", "interview_plan", "fact_gap_map", "sourced_explainer",
 FORMS = {"straight_news", "explainer_service", "interview_profile",
          "reported_narrative", "analysis", "solutions"}
 MAX_ENTRYPOINT_BYTES = 4_200
+MAX_PUBLIC_IMAGE_BYTES = 5_000_000
+JPEG_MAGIC = b"\xff\xd8\xff"
 MIT_HEADER = "MIT License\n\nCopyright (c) 2026 Aleksei Ulianov / Sprut_AI\n"
 PUBLIC_RESOURCES = "\n".join((
     "- YouTube: https://youtube.com/@alekseiulianov",
@@ -67,6 +69,16 @@ def validate(root=ROOT, *, release=False):
             continue
         if path.name.startswith(".env") or path.suffix in {".db", ".sqlite", ".sqlite3", ".log", ".pem"}:
             failures.append("private artifact type: " + relative)
+        if path.suffix.lower() in {".jpg", ".jpeg"}:
+            try:
+                image = path.read_bytes()
+            except OSError:
+                failures.append("unreadable public JPEG: " + relative)
+                continue
+            if (len(image) > MAX_PUBLIC_IMAGE_BYTES or
+                    not image.startswith(JPEG_MAGIC) or not image.endswith(b"\xff\xd9")):
+                failures.append("invalid or oversized public JPEG: " + relative)
+            continue
         try:
             text = path.read_text(encoding="utf-8")
         except (UnicodeError, OSError):

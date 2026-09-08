@@ -1,5 +1,7 @@
 # Journalist Kit
 
+![Обложка Hermes Journalist Kit](assets/journalist-kit-cover.jpg)
+
 Source-first редактура и журналистская работа для агента, который у вас уже есть.
 
 [English](README.en.md) · [Быстрый маршрут](docs/golden-path.md) · [Пример](examples/library-hours/README.md) · [Установка](docs/integrations.md) · [Оценка](docs/evaluation.md)
