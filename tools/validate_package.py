@@ -19,6 +19,14 @@ MODES = {"angle_only", "interview_plan", "fact_gap_map", "sourced_explainer",
 FORMS = {"straight_news", "explainer_service", "interview_profile",
          "reported_narrative", "analysis", "solutions"}
 MAX_ENTRYPOINT_BYTES = 4_200
+MIT_HEADER = "MIT License\n\nCopyright (c) 2026 Aleksei Ulianov / Sprut_AI\n"
+PUBLIC_RESOURCES = "\n".join((
+    "- YouTube: https://youtube.com/@alekseiulianov",
+    "- Telegram SPRUT_AI: https://t.me/Sprut_AI",
+    "- Telegram chat: https://t.me/+eH-qNIDmud8zNDZi",
+    "- AI Операционка: https://t.me/tribute/app?startapp=sJyg",
+    "- GitHub: https://github.com/AlekseiUL",
+))
 SENSITIVE = (
     ("personal absolute path", re.compile(r"[/]Users[/][\w.-]+[/]|[/]home[/][\w.-]+[/]")),
     ("private production identifier", re.compile(r"MIKE[_]CENTER|mike[-](?:smm|hank|tuco)|alexey[-]voice[-]pack")),
@@ -43,7 +51,7 @@ def validate(root=ROOT, *, release=False):
     root = Path(root).resolve()
     failures = []
     skill = root / "skills" / NAME
-    required = ["README.md", "LICENSE", "SECURITY.md", "THIRD_PARTY_NOTICES.md",
+    required = ["README.md", "README.en.md", "LICENSE", "SECURITY.md", "THIRD_PARTY_NOTICES.md",
                 "docs/integrations.md", "docs/evaluation.md", "docs/golden-path.md",
                 "evals/cases.json", "evals/next-source-first-holdout/PROTOCOL.md",
                 ".github/workflows/check.yml"]
@@ -140,8 +148,21 @@ def validate(root=ROOT, *, release=False):
     if root_license.is_file() and skill_license.is_file():
         if root_license.read_bytes() != skill_license.read_bytes():
             failures.append("root/installed license mismatch")
-        if release and "decision pending" in root_license.read_text(encoding="utf-8").lower():
-            failures.append("public release blocked: license decision is pending")
+        if release:
+            license_text = root_license.read_text(encoding="utf-8")
+            if "decision pending" in license_text.lower():
+                failures.append("public release blocked: license decision is pending")
+            elif not license_text.startswith(MIT_HEADER) or "Permission is hereby granted" not in license_text:
+                failures.append("public release blocked: standard MIT license missing")
+    if release:
+        for relative in ("README.md", "README.en.md"):
+            readme = root / relative
+            if readme.is_file():
+                text = readme.read_text(encoding="utf-8")
+                if not text.rstrip().endswith(PUBLIC_RESOURCES):
+                    failures.append("public release blocked: canonical resources missing or not final: " + relative)
+                if "MIT License" not in text:
+                    failures.append("public release blocked: MIT claim missing: " + relative)
     return failures
 
 

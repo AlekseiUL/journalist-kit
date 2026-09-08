@@ -1,55 +1,47 @@
 # Journalist Kit
 
-A Russian-first source-fidelity editor for the writing agent you already use.
+Source-first editing and journalistic work for the writing agent you already use.
 
-[Русский README](README.md) · [Golden path](docs/golden-path.md) · [Installation](docs/integrations.md) · [Evaluation](docs/evaluation.md)
+[Русский](README.md) · [Golden path](docs/golden-path.md) · [Example](examples/library-hours/README.md) · [Installation](docs/integrations.md) · [Evaluation](docs/evaluation.md)
 
-**New six-form pilot:** 24 fresh outputs did not establish a consistent beta.3
-advantage over a plain writer; source-based auditing found meaning distortions.
-A reader packet is ready, with zero human reviews so far.
-[Results and limitations](evals/product-six-forms-2026-09-07/README.md).
-A separate Astra editor repaired 6/6 known defects, but it is not installed
-or tested in combination with the skill on new tasks.
-[Editor regression](evals/editor-astra-2026-09-07/README.md).
+Journalist Kit ships one portable skill, `source-and-voice`. It helps preserve
+source meaning, author voice, and the requested form, then applies one
+coordinated editorial pass. It is a set of model instructions plus a standalone
+local diagnostic, not a new agent, model, or service.
 
-Source-bound journalism, a configurable author voice, and structural anti-slop
-editing. One writer by default; specialist help only when it adds real value.
-The core workflow is provider-independent. The reference material and primary
-evaluation suite are in Russian; the checker includes selected English signals,
-not a claim of equivalent editorial quality in every language.
+## What is included
 
-**Beta:** no guaranteed factual accuracy, human authorship, detector evasion,
-automatic publication, or superiority over other writing skills.
+- six work products: story angle, interview plan, fact-and-gap map, sourced
+  explainer, full article, and investigation brief;
+- six forms: straight news, service explainer, interview/profile, reported
+  narrative, analysis/column, and solutions journalism;
+- a shorter route for a post or minimal edit;
+- an optional user-owned voice profile;
+- the `editorial_check.py` Python CLI: exact UTF-8 hashing, length measurements,
+  bounded style signals, and limited structural source-use diagnostics;
+- synthetic examples, tests, and recorded experimental evaluations.
 
-**Source-first alpha.1 received HOLD.** All 28 calls completed without retry,
-but the candidate introduced one unsupported scene detail, received only 2/12
-and 3/12 practical preferences from the two reviewers, and increased input by
-28.2% against a 15% limit. See the [exact audit](evals/next-source-first-holdout/FINAL_AUDIT.md).
+## Limitations
 
-**Alpha.2 is a new unverified candidate.** Its entrypoint is reduced from 6,223
-to 4,150 bytes; ordinary editing, posts, news, explainers and profiles no longer
-load a reference by default. Every added concrete detail now requires exact
-source support. Alpha.2 is not an improvement claim until a fresh holdout passes.
+The package does not perform research, interviews, fact-checking, model
+generation, or publication. It does not prove truth, human authorship, freedom
+from editorial errors, superiority over other skills, or compatibility with
+every client. The diagnostic always leaves semantic source review as
+`NOT_REVIEWED`; exit code 0 is not permission to publish.
 
-**Beta.3 reliability pilot:** instructions shortened by about a quarter; 36 new
-outputs compared with a plain writer and beta.1. Both blinded model judges more
-often preferred beta.3 to the plain writer. However, improved reliability over
-beta.1 was not established: both flagged more critical outputs in beta.3.
-This is an **experimental beta**, not an unconditionally recommended upgrade.
-[Every output, results, costs and limitations](evals/reliability-2026-09-07/README.md).
-The [first beta.1 pilot](evals/ab-2026-09-07/README.md) and
-[beta.2 experiment](evals/revision-2026-09-07/README.md) remain unchanged.
+Published evaluations use synthetic materials. Model reviewers are not human
+reviewers. The latest completed source-first holdout received `HOLD`: the
+candidate introduced an unsupported scene detail, received 2/12 and 3/12
+preferences from two model reviewers, and increased input by 28.2% against a
+15% limit. See the [exact audit](evals/next-source-first-holdout/FINAL_AUDIT.md).
+The current `0.2.0-alpha.2` is a new unverified candidate, not a proven
+improvement.
 
-This is a private beta in `AlekseiUL/journalist-kit`. The clone command below
-requires repository access and GitHub authentication. A public release and
-distribution license have not been approved.
+## Requirements and clean installation
 
-## Install
-
-Journalist Kit ships one skill with the stable installation ID `source-and-voice`.
-
-Requires Python 3.10+ and your existing agent. No runtime dependencies, network
-requests, telemetry, or model credentials are embedded in the package.
+You need Git, Python 3.10+, and an agent that supports skill directories. The
+package has no third-party Python dependencies, network requests, telemetry,
+model credentials, services, MCP server, or automatic configuration changes.
 
 ```bash
 git clone https://github.com/AlekseiUL/journalist-kit.git
@@ -58,40 +50,112 @@ python3 tools/install.py --dest "$HOME/.hermes/skills"
 python3 tools/install.py --dest "$HOME/.hermes/skills" --apply
 ```
 
-Preview first; apply copies one new skill without overwriting existing files.
-Use the appropriate profile's skills directory, then start a new session.
-For another client, choose its documented skills directory. This is not an
-all-clients compatibility claim.
+If the repository is still private, cloning requires access and GitHub
+authentication. The first command previews the plan; the second copies one new
+directory. The installer does not select a profile, overwrite an existing
+`source-and-voice`, restart services, or change memory, history, or
+configuration. For a named profile, use its actual `skills` directory; see the
+[integration guide](docs/integrations.md).
 
-## What is included
+## Verify the installation
 
-- Six journalism modes and six forms, with a lighter route for ordinary posts.
-- A single coordinated composition, voice, and language edit followed by a
-  source-fidelity reread.
-- Source meaning takes priority over a smoother phrase: when a flourish requires
-  an assumption, keep the supported wording and improve selection, order and rhythm.
-- Optional user-owned voice preferences; no private example corpus included.
-- The requested tone works without a separate voice profile; supported author
-  intent is preserved alongside factual constraints, not replaced with neutral prose.
-- A standalone standard-library Python checker: exact UTF-8 hashing, measured
-  length, bounded style findings, and limited source-use diagnostics.
-- Synthetic examples and evaluation cases with explicit failure criteria.
+From the repository root, install into a temporary directory and run the
+installed copy itself:
 
-The checker always reports semantic source review as `NOT_REVIEWED`. In the
-earlier 36-output beta.2 pilot it raised no style signals and missed semantic errors;
-a clean lint is not a fact-check. See [the checker audit](evals/revision-2026-09-07/AUDIT.md),
-[the checker contract](docs/checker.md) and
-[the release evidence](docs/release-check.md).
+```bash
+tmp="$(mktemp -d)"
+python3 tools/install.py --dest "$tmp/skills"
+python3 tools/install.py --dest "$tmp/skills" --apply
+python3 "$tmp/skills/source-and-voice/scripts/editorial_check.py" \
+  examples/library-hours/after.txt \
+  --sources examples/library-hours/sources.json
+```
 
-An optional [reference author configuration](docs/author-agent.md) uses the same
-skill; you do not need to create another agent to use this project.
+Expect `DRY_RUN`, then `INSTALLED`, and
+`source_review.status: NOT_REVIEWED` in the final JSON. This verifies files and
+CLI execution, not editorial quality or skill discovery by a specific agent.
+Start a new session and explicitly ask the agent to use `source-and-voice`.
 
-## Test
+## Short usage examples
+
+Edit a post:
+
+```text
+Use source-and-voice. Edit this draft minimally: move the main point earlier,
+remove repetition, preserve my position, and add no new facts.
+Materials: ...
+Draft: ...
+```
+
+Write from sources:
+
+```text
+Use source-and-voice. Prepare a sourced explainer from the attached sources.
+Separate established information from unknowns, preserve caveats, and do not
+invent background. Sources: ...
+```
+
+The local checker exposes these actual flags:
+
+```bash
+python3 skills/source-and-voice/scripts/editorial_check.py BODY.txt \
+  --sources SOURCES.json --voice VOICE.json \
+  --min-words 100 --max-chars 3000
+```
+
+See [docs/checker.md](docs/checker.md) for the full schema, limits, and exit-code
+contract.
+
+## When installation or checking fails
+
+The installer returns JSON with `status: ERROR` and exit code 2. It does not
+modify an existing skill. If failure occurs after a new directory was created,
+the error explicitly asks you to inspect that incomplete new copy; there is no
+automatic deletion. Check the path, permissions, and absence of an existing
+`source-and-voice`, then use a new empty destination.
+
+The diagnostic CLI returns 1 for a detected objective blocking issue and 2 for
+invalid arguments, schema, encoding, size, or I/O. Do not replace a failed run
+with a manual PASS claim.
+
+## Safe update, uninstall, and rollback
+
+The installer intentionally does not update in place. End the active session,
+save the installed directory under a new name outside the discovered skills
+directory, and install the new version into the released path. Keep personal
+voice data outside the package.
+
+To disable or uninstall, move only the installed `source-and-voice` directory
+to a backup location you choose. To roll back, move the new copy out of the
+skills directory and return the saved copy to its previous path. Do not remove
+other skills, the profile, or history. Start a new session and repeat the
+installed-CLI check after any change.
+
+## Verify the repository
 
 ```bash
 python3 -m unittest discover -s tests -v
-python3 tools/validate_package.py
+python3 tools/validate_package.py --release
+python3 -m compileall -q skills tools tests
+git diff --check
 ```
 
-See [contribution guidelines](CONTRIBUTING.md), [methodological provenance](THIRD_PARTY_NOTICES.md),
-and [license](LICENSE).
+Tests cover code, package completeness, links, syntax, schemas, installation,
+and safety constraints. They do not assess literary quality or factual truth.
+Reproducible reports must use permitted, anonymized materials; see
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License and provenance
+
+The code and installable skill are available under the [MIT License](LICENSE).
+Methodological references and reuse boundaries are listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Private correspondence,
+personal voice corpora, and closed production integrations are not included.
+
+## Resources
+
+- YouTube: https://youtube.com/@alekseiulianov
+- Telegram SPRUT_AI: https://t.me/Sprut_AI
+- Telegram chat: https://t.me/+eH-qNIDmud8zNDZi
+- AI Операционка: https://t.me/tribute/app?startapp=sJyg
+- GitHub: https://github.com/AlekseiUL

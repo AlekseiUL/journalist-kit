@@ -91,6 +91,20 @@ class PackageTests(unittest.TestCase):
         self.assertIn("public release blocked: license decision is pending",
                       validator.validate(self.root, release=True))
 
+    def test_release_requires_mit_and_bilingual_resources(self):
+        (self.root / "LICENSE").write_text("Custom license\n", encoding="utf-8")
+        (self.root / "skills/source-and-voice/LICENSE").write_text("Custom license\n", encoding="utf-8")
+        self.assertIn("public release blocked: standard MIT license missing",
+                      validator.validate(self.root, release=True))
+
+        for relative in ("LICENSE", "skills/source-and-voice/LICENSE"):
+            (self.root / relative).write_bytes((ROOT / relative).read_bytes())
+        readme = self.root / "README.en.md"
+        readme.write_text(readme.read_text(encoding="utf-8").replace(
+            "- GitHub: https://github.com/AlekseiUL", "- GitHub: missing"), encoding="utf-8")
+        self.assertIn("public release blocked: canonical resources missing or not final: README.en.md",
+                      validator.validate(self.root, release=True))
+
     def test_api_does_not_call_itself_a_quality_evaluation(self):
         run = subprocess.run([sys.executable, str(self.root / "tools/validate_package.py")],
                              cwd=self.root, capture_output=True, text=True, check=False)
