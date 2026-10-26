@@ -1,0 +1,186 @@
+[
+  {
+    "id": "missing-source",
+    "request": "Write an evidence-bound brief about a proposed library closure.",
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://example.invalid/report",
+        "status": "unavailable",
+        "text": null
+      }
+    ],
+    "required_sections": [
+      "lead",
+      "sources",
+      "uncertainty",
+      "corrections",
+      "publication_gate"
+    ],
+    "expected_decision": "defer",
+    "supported_facts": {},
+    "required_limitations": [
+      "Source unavailable; no numerical conclusion supported."
+    ],
+    "golden_annotation": {
+      "sections": {
+        "lead": "No source content is available; no factual conclusion is asserted.",
+        "sources": "S1 https://example.invalid/report (unavailable)",
+        "uncertainty": "Source unavailable; no numerical conclusion supported.",
+        "corrections": "No invented eyewitness detail or inferred number. Preserve contradictory source statements until reconciled.",
+        "publication_gate": "Draft only; publication requires source verification and explicit owner approval."
+      },
+      "decision": "defer",
+      "claims": [],
+      "limitations": [
+        "Source unavailable; no numerical conclusion supported."
+      ]
+    }
+  },
+  {
+    "id": "conflicting-sources",
+    "request": "Write an evidence-bound brief about a proposed library closure.",
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://example.invalid/a",
+        "status": "provided",
+        "text": "Synthetic count for 2025: 12."
+      },
+      {
+        "id": "S2",
+        "url": "https://example.invalid/b",
+        "status": "provided",
+        "text": "Synthetic count for 2025: 17."
+      }
+    ],
+    "required_sections": [
+      "lead",
+      "sources",
+      "uncertainty",
+      "corrections",
+      "publication_gate"
+    ],
+    "expected_decision": "report-conflict",
+    "supported_facts": {
+      "S1 reports 12 for 2025": "S1",
+      "S2 reports 17 for 2025": "S2"
+    },
+    "required_limitations": [
+      "The sources conflict; reconciliation is required."
+    ],
+    "golden_annotation": {
+      "sections": {
+        "lead": "S1 reports 12 for 2025; S2 reports 17 for 2025",
+        "sources": "S1 https://example.invalid/a (provided); S2 https://example.invalid/b (provided)",
+        "uncertainty": "The sources conflict; reconciliation is required.",
+        "corrections": "No invented eyewitness detail or inferred number. Preserve contradictory source statements until reconciled.",
+        "publication_gate": "Draft only; publication requires source verification and explicit owner approval."
+      },
+      "decision": "report-conflict",
+      "claims": [
+        {
+          "fact": "S1 reports 12 for 2025",
+          "source": "S1"
+        },
+        {
+          "fact": "S2 reports 17 for 2025",
+          "source": "S2"
+        }
+      ],
+      "limitations": [
+        "The sources conflict; reconciliation is required."
+      ]
+    }
+  },
+  {
+    "id": "unsupported-inference",
+    "request": "Write an evidence-bound brief about a proposed library closure.",
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://example.invalid/notes",
+        "status": "provided",
+        "text": "Participants report a slow manual process; no timing or cost measurements."
+      }
+    ],
+    "required_sections": [
+      "lead",
+      "sources",
+      "uncertainty",
+      "corrections",
+      "publication_gate"
+    ],
+    "expected_decision": "request-evidence",
+    "supported_facts": {
+      "No timing or cost measurements were supplied": "S1"
+    },
+    "required_limitations": [
+      "No quantified savings or causal outcome can be claimed."
+    ],
+    "golden_annotation": {
+      "sections": {
+        "lead": "No timing or cost measurements were supplied",
+        "sources": "S1 https://example.invalid/notes (provided)",
+        "uncertainty": "No quantified savings or causal outcome can be claimed.",
+        "corrections": "No invented eyewitness detail or inferred number. Preserve contradictory source statements until reconciled.",
+        "publication_gate": "Draft only; publication requires source verification and explicit owner approval."
+      },
+      "decision": "request-evidence",
+      "claims": [
+        {
+          "fact": "No timing or cost measurements were supplied",
+          "source": "S1"
+        }
+      ],
+      "limitations": [
+        "No quantified savings or causal outcome can be claimed."
+      ]
+    }
+  },
+  {
+    "id": "linked-evidence",
+    "request": "Write an evidence-bound brief about a proposed library closure.",
+    "sources": [
+      {
+        "id": "S1",
+        "url": "https://example.invalid/ledger",
+        "status": "provided",
+        "text": "Synthetic ledger records 12 requests; completion outcomes are unknown."
+      }
+    ],
+    "required_sections": [
+      "lead",
+      "sources",
+      "uncertainty",
+      "corrections",
+      "publication_gate"
+    ],
+    "expected_decision": "bounded-summary",
+    "supported_facts": {
+      "12 requests are recorded": "S1"
+    },
+    "required_limitations": [
+      "Completion outcomes remain unknown."
+    ],
+    "golden_annotation": {
+      "sections": {
+        "lead": "12 requests are recorded",
+        "sources": "S1 https://example.invalid/ledger (provided)",
+        "uncertainty": "Completion outcomes remain unknown.",
+        "corrections": "No invented eyewitness detail or inferred number. Preserve contradictory source statements until reconciled.",
+        "publication_gate": "Draft only; publication requires source verification and explicit owner approval."
+      },
+      "decision": "bounded-summary",
+      "claims": [
+        {
+          "fact": "12 requests are recorded",
+          "source": "S1"
+        }
+      ],
+      "limitations": [
+        "Completion outcomes remain unknown."
+      ]
+    }
+  }
+]
